@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Aggregate Limitations &mdash; Open Data Kit Docs</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/odk-favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Stichwortverzeichnis"
+              href="genindex.html"/>
+        <link rel="search" title="Suche" href="search.html"/>
+    <link rel="top" title="Open Data Kit Docs" href="index.html"/>
+        <link rel="next" title="ODK Briefcase" href="briefcase-guide.html"/>
+        <link rel="prev" title="Visualizing Geographic Data" href="visualize.html"/>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91951913-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/odk-logo-wide.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Collect</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="collect-intro.html">ODK Collect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collect-setup.html">Setting Up ODK Collect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collect-using.html">Using ODK Collect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collect-best-practices.html">Tips and Best Practices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Aggregate</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="aggregate-guide.html">ODK Aggregate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-install.html">Aggregate Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-deployment-planning.html">Aggregate Deployment Planning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-use.html">Aggregate Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-upgrade.html">Aggregate Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-backup.html">Backup Strategies for Aggregate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-uploader.html">Form Uploader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oauth2-service.html">OAuth2 Service Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualize.html">Visualizing Geographic Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Aggregate Limitations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Briefcase</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-guide.html">ODK Briefcase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-install.html">Briefcase Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-forms.html">Briefcase Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-vs-aggregate.html">Briefcase vs Aggregate</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Form Building</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="form-design-intro.html">Intro to Forms in ODK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odk-build.html">ODK Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xlsform.html">XLSForm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-widgets.html">Form Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-interaction.html">Interaction of constraints, relevants and read only</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-update.html">Updating forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyxform.html">pyxform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="validate.html">ODK Form Validate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch-apps-from-collect.html">Launching External Apps from Collect Forms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to ODK Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cygwin.html">Working with Docs in Windows using Cygwin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing-tips.html">Tips for Making Good Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style-guide.html">Style Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developing with ODK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="openrosa.html">OpenRosa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javarosa.html">ODK JavaRosa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch-collect-from-app.html">Launching ODK Collect from External Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-api.html">Briefcase Aggregate API</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Integration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="encrypted-forms.html">Encrypted Forms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="security-privacy.html">Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verify-downloads.html">Verifying Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Open Data Kit</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Aggregate Limitations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/aggregate-limitations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aggregate-limitations">
+<h1>Aggregate Limitations<a class="headerlink" href="#aggregate-limitations" title="Link zu dieser Überschrift">¶</a></h1>
+<ul class="simple">
+<li>Push of data to the server should be serialized. Within ODK Aggregate, there is a global mutex (<em>TaskLock</em> across all server instances, mediated by the datastore layer) in the server when inserting submissions. Having multiple push requests occurring simultaneously will cause them to block on the mutex, chewing up their 60-second request limit, as they get processed in single file no matter how many server instances are spun up.</li>
+<li>The 60-second request limit can be very commonly exceeded over low-bandwidth connections, and even text-only submissions can be impacted on satellite connections. That is why ODK Collect splits submissions into multiple 10MB submission requests. The timer starts upon receipt of the first byte, so a slow connection can account for a sizeable portion of those 60 seconds. Same applies for sending a response. The processing on the server is generally negligible in relation to the transmission times.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<ul class="last simple">
+<li>The above two limitations, the global mutex and the in-memory copies/full-packet-assembly, are a result of implementing on top of AppEngine and its Datastore.</li>
+<li>A server that used database transactions and that used streaming servlet 3.0 functionality would have less trouble with concurrent requests.</li>
+</ul>
+</div>
+<ul class="simple">
+<li>Pull of data can be overlapped. However, for submissions with many media attachments, keep in mind that ODK Aggregate holds all media attachments in memory, then copies them into the HttpEntity, so this can consume a fair amount of memory (everything is held in memory at least twice). The same memory consumption applies on pushes / submission of forms. i.e., you probably want to manage how many media attachment download requests you have in play at the same time.</li>
+<li>Spinning up of copies of the frontend will incur faster quota usage on AppEngine. For that reason, the Aggregate configuration here specifies a 14-second queuing time threshold before a new instance is spun up. Only if at least one request is queued for longer than 14 seconds will a new instance be spun up, and then that new instance will take about 30 seconds to become live. Leaving a 15-second processing interval. This is why ODK Collect tried twice before failing a submit.</li>
+<li>Adding blank forms through the ODK Aggregate website is limited to an overall form-and-media size of 10MB; beyond that, you have to perform multiple uploads of the form definition file with different subsets of the media files in order to fully upload the blank form and its media attachments.</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<p class="last">If you have many media attachments or more than 10MB of media attachments, <a class="reference internal" href="form-uploader.html"><span class="doc">Form Uploader</span></a> provides a quick and easy means to upload forms into ODK Aggregate.</p>
+</div>
+<ul class="simple">
+<li>ODK Aggregate 1.4.7 and earlier use a deprecated backend technology. Google may terminate support for that at any time with little warning. You should consider upgrading to 1.4.8.</li>
+<li>Aggregate v1.4.15 fixed rev 210 sync protocol. Prior to this User permissions were incorrectly being computed and filtered. This prevented resetting the server with new content from the device (but syncing with existing content worked fine). The rev 210 sync protocol is incompatible with anything prior to rev 210.</li>
+<li>Prior to Aggregate v1.4.14, the capability of Basic Auth being configured and working was not exposed in the wizard-based installer/configurer; existing passwords needed to be changed before they can be used in a Basic Auth configuration.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">Aggregate v1.4.14 added SHA-1 library to browser so that Basic Auth can now be configured and will now work.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="visualize.html" class="btn btn-neutral" title="Visualizing Geographic Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Visualizing Geographic Data</a>
+       
+      
+        <a href="briefcase-guide.html" class="btn btn-neutral float-right" title="ODK Briefcase" accesskey="n" rel="next">ODK Briefcase <span class="fa fa-arrow-circle-right"></span></a>
+      
+    </div>
+  
+
+  <hr/>
+  <p class="footerText"> 
+
+If you still need help, you can ask support questions in the
+
+ <a href="
+
+https://forum.opendatakit.org/
+
+"> 
+
+ODK Forum
+
+ </a> </p>
+  <p class="footerText"> 
+
+If you find a problem with this documentation, please 
+
+ <a href="
+
+https://github.com/opendatakit/docs/issues
+
+"> 
+
+file an issue
+
+ </a> </p>
+  <p class="footerText"> 
+
+You are also encouraged to
+
+ <a href=" 
+
+https://github.com/opendatakit/docs/
+
+"> 
+
+fork our Github repo 
+
+ </a>  
+
+and 
+
+ <a href="
+
+/contributing/
+
+"> 
+
+become a contributor
+
+ </a></p>
+  
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Open Data Kit. This document is licensed under a Creative Commons Attribution 4.0 International License.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/js/custom.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

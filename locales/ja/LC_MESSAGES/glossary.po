@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Open Data Kit. This document is licensed under a
+# Creative Commons Attribution 4.0 International License
+# This file is distributed under the same license as the Open Data Kit
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Data Kit 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-05 12:11+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: ../../glossary.rst:15
+msgid "Glossary"
+msgstr ""
+
+#: ../../glossary.rst:38
+msgid "Aggregate"
+msgstr ""
+
+#: ../../glossary.rst:35 ../../glossary.rst:41 ../../glossary.rst:47
+#: ../../glossary.rst:56 ../../glossary.rst:62 ../../glossary.rst:68
+#: ../../glossary.rst:74 ../../glossary.rst:80 ../../glossary.rst:88
+msgid "Part of ODK."
+msgstr ""
+
+#: ../../glossary.rst:43
+msgid "A server-side data storage and analysis tool."
+msgstr ""
+
+#: ../../glossary.rst:71
+msgid "Briefcase"
+msgstr ""
+
+#: ../../glossary.rst:76
+msgid ""
+"A tool for packaging and transferring forms and data between instances of"
+" Collect and Aggregate."
+msgstr ""
+
+#: ../../glossary.rst:44
+msgid "Build"
+msgstr ""
+
+#: ../../glossary.rst:49
+msgid ""
+"An application that lets you design forms with a drag-and-drop form "
+"interface."
+msgstr ""
+
+#: ../../glossary.rst:51
+msgid "`Use ODK Build online <https://build.opendatakit.org/>`_."
+msgstr ""
+
+#: ../../glossary.rst:52
+msgid ""
+"`Download a desktop version of ODK Build "
+"<https://opendatakit.org/downloads/download-category/build/>`_."
+msgstr ""
+
+#: ../../glossary.rst:32
+msgid "Collect"
+msgstr ""
+
+#: ../../glossary.rst:37
+msgid "An Android mobile app that replaces paper-based forms."
+msgstr ""
+
+#: ../../glossary.rst:24
+msgid "enumerator"
+msgstr ""
+
+#: ../../glossary.rst:27
+msgid "A person who conducts a survey."
+msgstr ""
+
+#: ../../glossary.rst:93
+msgid "form"
+msgstr ""
+
+#: ../../glossary.rst:96
+msgid ""
+"A defined set of questions and answer choices displayed by an application"
+" that can render forms written in the XForm standard."
+msgstr ""
+
+#: ../../glossary.rst:65
+msgid "Form Uploader"
+msgstr ""
+
+#: ../../glossary.rst:70
+msgid "A tool for uploading blank forms and their media files to ODK Aggregate."
+msgstr ""
+
+#: ../../glossary.rst:101
+msgid "hint"
+msgstr ""
+
+#: ../../glossary.rst:104
+msgid "Additional help text on a single question, displayed after the label."
+msgstr ""
+
+#: ../../glossary.rst:28
+msgid "instance"
+msgstr ""
+
+#: ../../glossary.rst:31
+msgid "The file representing a filled-in form."
+msgstr ""
+
+#: ../../glossary.rst:85
+msgid "ODK JavaRosa"
+msgstr ""
+
+#: ../../glossary.rst:90
+msgid "A Java library that renders ODK Compliant XForms."
+msgstr ""
+
+#: ../../glossary.rst:92
+msgid "`ODK JavaRosa source on Github <https://github.com/opendatakit/javarosa>`_"
+msgstr ""
+
+#: ../../glossary.rst:77
+msgid "ODK XForm"
+msgstr ""
+
+#: ../../glossary.rst:82
+msgid ""
+"A specification defining valid XML-based forms for ODK. It is a subset of"
+" the `W3C XForms 1.0 specification <https://www.w3.org/TR/xforms/>`_"
+msgstr ""
+
+#: ../../glossary.rst:84
+msgid ""
+"`View ODK XForms Specification <https://opendatakit.github.io/xforms-"
+"spec/>`_"
+msgstr ""
+
+#: ../../glossary.rst:20
+msgid "participant"
+msgstr ""
+
+#: ../../glossary.rst:23
+msgid ""
+"A person being interviewed by a user of :term:`Collect`. (Also sometimes "
+"called a \"subject\".)"
+msgstr ""
+
+#: ../../glossary.rst:105
+msgid "question label"
+msgstr ""
+
+#: ../../glossary.rst:106
+msgid "question text"
+msgstr ""
+
+#: ../../glossary.rst:109
+msgid ""
+"The main body of a form question or widget. In an :term:`XLSForm`, the "
+"contents of the :th:`label`."
+msgstr ""
+
+#: ../../glossary.rst:59
+msgid "Validate"
+msgstr ""
+
+#: ../../glossary.rst:64
+msgid ""
+"A tool for validating forms against the :term:`ODK XForms specification "
+"<ODK XForm>`."
+msgstr ""
+
+#: ../../glossary.rst:97
+msgid "widget"
+msgstr ""
+
+#: ../../glossary.rst:100
+msgid ""
+"A single question, answer set, and attendant GUI elements, as rendered in"
+" a XForm compliant app such as :term:`Collect`."
+msgstr ""
+
+#: ../../glossary.rst:53
+msgid "XLSForm"
+msgstr ""
+
+#: ../../glossary.rst:58
+msgid "A tool for building forms with Microsoft Excel."
+msgstr ""
+

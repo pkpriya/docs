@@ -1,0 +1,778 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Open Data Kit. This document is licensed under a Creative Commons Attribution 4.0 International License
+# This file is distributed under the same license as the Open Data Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Data Kit 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-05 12:11+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../aggregate-install.rst:16
+msgid "Aggregate Installation and Setup"
+msgstr ""
+
+#: ../../aggregate-install.rst:18
+msgid "Before going through this section, make sure you have used :doc:`ODK Collect  <collect-intro>` and are familiar with how it works."
+msgstr ""
+
+#: ../../aggregate-install.rst:22
+msgid "Try the ODK Aggregate `demo server <https://opendatakit.appspot.com>`_ to explore the core functionality."
+msgstr ""
+
+#: ../../aggregate-install.rst:23
+msgid "Decide whether to install a cloud instance or a local instance. It is strongly recommended to try an App Engine cloud instance first. If you wish to host locally, see :ref:`Aggregate Deployment Planning <deployment-planning>`"
+msgstr ""
+
+#: ../../aggregate-install.rst:24
+msgid "Local hosting implies that you are taking ownership of the off-site back up and restoration of your data and are documenting the steps necessary to return your systems to operation in circumstances that might include a full hardware failure or the destruction of your facility."
+msgstr ""
+
+#: ../../aggregate-install.rst:25
+msgid "You must also plan for the security of your data and systems. And finally, it requires that you `configure your network routers <https://opendatakit.org/use/aggregate/tomcat-install/#Configure_for_Network_Access>`_. It is recommended to seek assistance from your local computer-technical-support community before proceeding. The set-up of the ODK Aggregate web server and database are very easy in comparison."
+msgstr ""
+
+#: ../../aggregate-install.rst:30
+msgid "Installing on App Engine"
+msgstr ""
+
+#: ../../aggregate-install.rst:32
+msgid "Make sure `Java 8 <https://java.com/en/download/>`_ or higher is installed on your system. See `MacOSX Java install <https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html>`_ if you are a Mac user."
+msgstr ""
+
+#: ../../aggregate-install.rst:33
+msgid "You will need a Gmail account to use App Engine; this Gmail account will be the owner of the Google Cloud Platform `project` under which your App Engine will execute."
+msgstr ""
+
+#: ../../aggregate-install.rst:37
+msgid "Google Cloud Platform hosts projects `under these terms <https://cloud.google.com/terms/>`_."
+msgstr ""
+
+#: ../../aggregate-install.rst:38
+msgid "There is no cost to set up these projects and App Engine projects that are lightly used will incur no charges."
+msgstr ""
+
+#: ../../aggregate-install.rst:40
+msgid "To set up a Google Cloud Platform project, go to `Google Cloud Platform <https://cloud.google.com/>`_ and click on :guilabel:`Console` in the top right corner."
+msgstr ""
+
+#: ../../aggregate-install.rst:45
+msgid "You will now be asked to provide a Gmail account which you will use throughout. Sign in with a Gmail account which you wish to use."
+msgstr ""
+
+#: ../../aggregate-install.rst:50
+msgid "If you have never configured a Google Cloud Platform project, click on :guilabel:`Create an Empty Project`."
+msgstr ""
+
+#: ../../aggregate-install.rst:55
+msgid "If you have configured a Google Cloud Platform project before, this link will open onto either a page with a :guilabel:`Create Project` button and a table listing all of your projects, or it will open into one of your existing projects. In the later case, click on that project name at the top of the window. In the below image, the older project is `Project-edu`."
+msgstr ""
+
+#: ../../aggregate-install.rst:60
+msgid "On clicking on the project name (In this case `Project-edu`), a window appears with a :guilabel:`+` symbol. Click on it to create a new project."
+msgstr ""
+
+#: ../../aggregate-install.rst:65
+msgid "On the project-creation pop-up dialog, type in a project name that makes sense to you. You can enter a project name and click on :guilabel:`Create` if you don't want to edit the project-id. You can choose :guilabel:`Edit` if you want to edit the project id. The project id will be the first part of the URL to your ODK Aggregate server."
+msgstr ""
+
+#: ../../aggregate-install.rst:70
+msgid "If you click on :guilabel:`Edit`, a window will appear where you can enter a project id. After changing the project id click on :guilabel:`Create` to create your project."
+msgstr ""
+
+#: ../../aggregate-install.rst:77
+msgid "You may want to use a project id that combines your organization name and the name of your data collection group or project. You may also need to accept Google's terms-and-conditions."
+msgstr ""
+
+#: ../../aggregate-install.rst:79
+msgid "After few seconds, you will see a notification in the top right corner of the window."
+msgstr ""
+
+#: ../../aggregate-install.rst:84
+msgid "Click on the notification icon and select the first option from the dropdown menu then. The option is labelled as *Create Project:your project name*."
+msgstr ""
+
+#: ../../aggregate-install.rst:89
+msgid "Upon creating the Google Cloud Platform project, you will be on an empty-project screen, showing the project info. If you want to change any settings, click on :guilabel:`Go to project settings`. Otherwise click on the menu icon (three horizontal bars) to the left of :guilabel:`Google Cloud Platform` in the upper left side of the screen."
+msgstr ""
+
+#: ../../aggregate-install.rst:94
+msgid "Now and select :guilabel:`App Engine` from the dropdown menu."
+msgstr ""
+
+#: ../../aggregate-install.rst:99
+msgid "Click on the :guilabel:`Select a language` dropdown under the *Your first app* heading."
+msgstr ""
+
+#: ../../aggregate-install.rst:104
+msgid "Now choose *Java*."
+msgstr ""
+
+#: ../../aggregate-install.rst:109
+msgid "Select the datacenter location where this server will operate and click :guilabel:`Next`."
+msgstr ""
+
+#: ../../aggregate-install.rst:114
+msgid "Google will then begin configuring the server."
+msgstr ""
+
+#: ../../aggregate-install.rst:119
+msgid "When this completes, you will be directed to begin a tutorial to install a sample application. Choose :guilabel:`Cancel Tutorial` and confirm that you want to not perform that tutorial."
+msgstr ""
+
+#: ../../aggregate-install.rst:124
+msgid "Download `ODK Aggregate <https://opendatakit.org/downloads/>`_. Select the latest release for your operating system."
+msgstr ""
+
+#: ../../aggregate-install.rst:128
+msgid "You can :doc:`verify the download <verify-downloads>` using *SHA256 signatures*."
+msgstr ""
+
+#: ../../aggregate-install.rst:129
+msgid "If you are running OSX, you must unzip the downloaded file before running the installer within it."
+msgstr ""
+
+#: ../../aggregate-install.rst:130
+msgid "If you are on MacOSX Mountain Lion or onward, you will need to fiddle with `GateKeeper settings <http://osxdaily.com/2012/07/27/app-cant-be-opened-because-it-is-from-an-unidentified-developer/>`_ in order to run the installer."
+msgstr ""
+
+#: ../../aggregate-install.rst:131
+msgid "If you are on Windows 10, you will need to approve running an unsigned installer."
+msgstr ""
+
+#: ../../aggregate-install.rst:132
+msgid "If you are on Linux, you will need to change the downloaded file's permissions to enable running it as a program. Right click on the file and click on :guilabel:`Properties`. Click on :guilabel:`Permissions` tab. Now check the box labelled as :guilabel:`Allow executing file as program`. Now double click on the file to run it."
+msgstr ""
+
+#: ../../aggregate-install.rst:134
+msgid "The installer will guide you through configuring ODK Aggregate for App Engine. Click on :guilabel:`Forward` button each time you complete a step to move ahead."
+msgstr ""
+
+#: ../../aggregate-install.rst:139
+msgid "Accept the license agreement and click on :guilabel:`Forward` button."
+msgstr ""
+
+#: ../../aggregate-install.rst:144
+msgid "Select a parent directory under which an *ODK Aggregate* directory will be created to contain the configured software. Click on the :guilabel:`folder` icon to choose a directory."
+msgstr ""
+
+#: ../../aggregate-install.rst:149
+msgid "In the next window choose *Google App Engine* as the platform for the Aggregate server."
+msgstr ""
+
+#: ../../aggregate-install.rst:154
+msgid "Enter a name for your ODK Aggregate instance."
+msgstr ""
+
+#: ../../aggregate-install.rst:161
+msgid "The ODK Aggregate instance name will be displayed to your users when they log into ODK Aggregate using their username and password."
+msgstr ""
+
+#: ../../aggregate-install.rst:165
+msgid "Including the name of your organization in the instance name can help users confirm that they have contacted the correct website."
+msgstr ""
+
+#: ../../aggregate-install.rst:167
+msgid "Enter a superuser name in the next window."
+msgstr ""
+
+#: ../../aggregate-install.rst:174
+msgid "The user with the superuser account will have full permissions on the system."
+msgstr ""
+
+#: ../../aggregate-install.rst:175
+msgid "The password for this user will be set to **aggregate** initially."
+msgstr ""
+
+#: ../../aggregate-install.rst:176
+msgid "Only this user will be allowed to log onto the system when ODK Aggregate is run for the first time."
+msgstr ""
+
+#: ../../aggregate-install.rst:177
+msgid "Upon first logging in, the superuser should change the password and complete the configuration of ODK Aggregate by specifying additional users and what permissions they will have on the system."
+msgstr ""
+
+#: ../../aggregate-install.rst:179
+msgid "In the next window enter the project id of the project you created on the Google Cloud platform."
+msgstr ""
+
+#: ../../aggregate-install.rst:184
+msgid "Now the installer will configure Aggregate and launch a upload tool."
+msgstr ""
+
+#: ../../aggregate-install.rst:188
+msgid "Beginning with Java 7 Update 51, there are security level settings that may prevent the upload tool from running. A reported workaround is to add the *file: path* (e.g., :file:```file:///```) to the Exception Site list."
+msgstr ""
+
+#: ../../aggregate-install.rst:190
+msgid "Enter the Gmail account in the upload tool that you specified to use the App Engine. This will enable the :guilabel:`Get Token` button."
+msgstr ""
+
+#: ../../aggregate-install.rst:195
+msgid "Click the :guilabel:`Get Token` button. Two things happen after this:"
+msgstr ""
+
+#: ../../aggregate-install.rst:197
+msgid "Your default browser will open to a Google site (accounts.google.com) where you are asked to choose a Gmail account (select the account specified by you to use the App Engine), and then approve allowing *Google App Engine appcfg* to view and manage your AppEngine instances and datastores. Click :guilabel:`Allow`. This will take you to a screen with instructions to copy a code."
+msgstr ""
+
+#: ../../aggregate-install.rst:198
+msgid "At the same time, a pop-up dialog should be displayed by the upload tool."
+msgstr ""
+
+#: ../../aggregate-install.rst:202
+msgid "If the pop-up dialog does not show, close the upload tool and open a file browser or Finder window in the directory you specified for the installer to place its files. Navigate to the ODK Aggregate directory."
+msgstr ""
+
+#: ../../aggregate-install.rst:203
+msgid "If on Windows, double-click the :file:`ODKAggregateAppEngineUpdater.jar` file."
+msgstr ""
+
+#: ../../aggregate-install.rst:204
+msgid "If on Mac OSX, double-click the uploadAggregateToAppEngine.app file."
+msgstr ""
+
+#: ../../aggregate-install.rst:205
+msgid "If on Linux, open a bash shell and run uploadAggregateToAppEngine.sh. These should all re-launch the upload tool."
+msgstr ""
+
+#: ../../aggregate-install.rst:206
+msgid "Re-enter the e-mail address, and once again click :guilabel:`Get Token`. The pop-up dialog should now appear."
+msgstr ""
+
+#: ../../aggregate-install.rst:208
+msgid "Copy the code from the browser into the upload tool's pop-up dialog and click :guilabel:`OK`."
+msgstr ""
+
+#: ../../aggregate-install.rst:215
+msgid "The text box on Google's site is not as wide as the code; be sure to copy the entire code."
+msgstr ""
+
+#: ../../aggregate-install.rst:217
+msgid "The output should look something like that in the image."
+msgstr ""
+
+#: ../../aggregate-install.rst:224
+msgid "If the output does not look like that, you may have delayed too long between getting the code and pasting it into the tool. Click :guilabel:`Delete Token` and try again."
+msgstr ""
+
+#: ../../aggregate-install.rst:225
+msgid "If you see a failure message in the output window, then it is likely that you have several different Gmail accounts and Google has gotten confused during the token-issuing process. In this case, when the browser window opens, before selecting an account, copy the URL, open a Private Browsing or Incognito Window in your browser, and paste the URL into that. Then proceed to get the token, etc. This should fix this issue."
+msgstr ""
+
+#: ../../aggregate-install.rst:227
+msgid "Now click :guilabel:`Upload ODK Aggregate`."
+msgstr ""
+
+#: ../../aggregate-install.rst:234
+msgid "Clicking on :guilabel:`Upload ODK Aggregate` will spew a very long list of progress messages into the Output window. The `listBackends :` and `deleteBackendBackground :` sections may report \"500 Internal Server Error\" and Severe errors, and Warnings about the use of Backends, a deprecated feature. This is expected. Here is a list of few of those errors:"
+msgstr ""
+
+#: ../../aggregate-install.rst:265
+msgid "Toward the bottom, the *update :* section should not report errors and at the end, a *status : Action Succeeded!* line should be written. This indicates that the upload completed successfully."
+msgstr ""
+
+#: ../../aggregate-install.rst:266
+msgid "To get a more clear view, you can see an `example log <https://opendatakit.org/wp-content/uploads/Apr2016-GoogleCloud/exampleUploadScriptOutput.txt>`_."
+msgstr ""
+
+#: ../../aggregate-install.rst:269
+msgid "Once the updater script has run and uploaded the ODK Aggregate configuration to App Engine, return to the Google Cloud Platform console. With the console displaying your project, click on the menu icon (three horizontal bars) to the right of *Google Cloud Platform* in the upper left side of the screen and select App Engine from the menu."
+msgstr ""
+
+#: ../../aggregate-install.rst:271
+msgid "Click on :guilabel:`ALLOW` in the next window."
+msgstr ""
+
+#: ../../aggregate-install.rst:276
+msgid "Click on the project-id URL in the top right corner of the window."
+msgstr ""
+
+#: ../../aggregate-install.rst:281
+msgid "You will go to now your ODK Aggregate server. You can click on :guilabel:`Log In` to log in, enter the ODK Aggregate username (superuser) that you specified within the installer (the initial password for this username will be aggregate) and access the site administration screens for your server."
+msgstr ""
+
+#: ../../aggregate-install.rst:289
+msgid "Changing size of App Engine Server"
+msgstr ""
+
+#: ../../aggregate-install.rst:291
+msgid "If you have many form definitions on your server, you may get better performance and reduce the likelihood of data corruption if you increase the size of your server."
+msgstr ""
+
+#: ../../aggregate-install.rst:295
+msgid "Data corruption is generally caused by the premature termination of an action (e.g., saving of a submission) because it took longer than the allotted time. The likelihood of data corruption occurring is tied to the quantity of form definitions on the server, the size of the individual submissions, the number of devices simultaneously submitting data, and the speed of the network. Increasing the web server size enables it to handle larger workloads faster, which can reduce the likelihood of hitting this time limit thereby avoiding data corruption."
+msgstr ""
+
+#: ../../aggregate-install.rst:296
+msgid "For data corruption caused by slow network speeds, you might also be able to change more aspects of the App Engine configuration (specified in these files) to make your web server always-available and to replace it with a Bx instance that does not have an automatic request time limit (the documentation provided by Google is currently unclear on whether this is still possible with the new services constructions)."
+msgstr ""
+
+#: ../../aggregate-install.rst:298
+msgid "To change Google App Engine configuration, you must edit the configuration files produced by the installer and re-run the uploader script to push the changes to Google's servers. There are two server settings that can be changed:"
+msgstr ""
+
+#: ../../aggregate-install.rst:300
+msgid "**Web Server Size**: The web server handles all browser interactions and all data-submission and form-download requests from ODK Collect and ODK Briefcase. Increasing the size of the web server should reduce the likelihood of data corruption if it is not caused by slow network speeds. To change the Google App Engine web server size, go to the folder you specified to the installer. Within that folder, navigate to :file:`ODKAggregate/default/WEB-INF`. Within that directory, there will be a file :file:`appengine-web.xml`. Open that file in a text editor like Notepad++ or Notepad. The file contents will look something like:"
+msgstr ""
+
+#: ../../aggregate-install.rst:312
+msgid "To change the size of the web server, replace **F2** with a different instance class size. There are several different instance classes available. Select from among the instance classes beginning with the letter **F**. See `instance classes <https://cloud.google.com/appengine/docs/about-the-standard-environment#instance_classes>`_  for their descriptions or search for `Google AppEngine instance classes standard environment` on the web. Then re-run the upload tool within the ODKAggregate folder either by double-clicking the :file:`ODKAggregateAppEngineUpdater.jar` file (Windows), or double-clicking the :file:`uploadAggregateToAppEngine.app` file (Mac OSX), or double-clicking the :file:`uploadAggregateToAppEngine.sh` file (linux). Once you have uploaded these changes to App Engine, your server will be running on the instance size that you have specified."
+msgstr ""
+
+#: ../../aggregate-install.rst:314
+msgid "**Background Server Size**: App Engine deployments use a \"background\" copy of the website to process long-running actions like generating CSV and KML files for export and for publishing all accumulated data to an external server. If you experience difficulty exporting to CSV or KML, the size of that server will also need to be updated. In that case, go to :file:`ODKAggregate/background/WEB-INF`. Within that directory, there will be a slightly different file with the same :file:`appengine-web.xml` filename. Open that file in a text editor like Notepad++ or Notepad. The file contents will look something like:"
+msgstr ""
+
+#: ../../aggregate-install.rst:326
+msgid "To change the size of the server, replace **B2** with a different instance class size. There are several different instance classes available. Select from among the instance classes beginning with the letter **B**. See instance classes for their descriptions or search for `Google AppEngine instance classes standard environment` on the web as described in Web Server Size. And, as above, re-run the upload tool to make these changes take effect on Google's servers."
+msgstr ""
+
+#: ../../aggregate-install.rst:331
+msgid "Installing VM (Local or Cloud)"
+msgstr ""
+
+#: ../../aggregate-install.rst:333
+msgid "The `ODK Aggregate VM <https://gumroad.com/l/odk-aggregate-vm>`_ is a fully-configured install of Aggregate that you can run on any computer. It requires very little setup, works well without Internet connectivity, and gives you complete control over your data collection campaign."
+msgstr ""
+
+#: ../../aggregate-install.rst:338
+msgid "Installing on Tomcat (Local or Cloud)"
+msgstr ""
+
+#: ../../aggregate-install.rst:340
+msgid "To run on ODK Aggregate on a Tomcat server backed with a MySQL or PostgreSQL database follow the following steps:"
+msgstr ""
+
+#: ../../aggregate-install.rst:342
+msgid "Define your server requirements and install your server."
+msgstr ""
+
+#: ../../aggregate-install.rst:344
+msgid "**Availability**: Decide the availability of your server depending on how frequently you want to update and upload forms. If you do need a high-availability server, you need to talk to your Internet Service Provider (ISP) as to their availability guarantees."
+msgstr ""
+
+#: ../../aggregate-install.rst:345
+msgid "**Data Loss**: Your tolerance to data loss will impact your backup schedule and your server hardware.  Invest in a storage system based on your tolerance to data loss. Seek technical assistance for these requirements. If you cannot tolerate any data loss, or less than 24 hours of data loss, you should invest in a RAID storage array with battery-backed controller cards. If you can tolerate a day or longer interval of data loss, be sure you have a periodic tape or other means of backup for your system that matches or is shorter than the data loss interval."
+msgstr ""
+
+#: ../../aggregate-install.rst:346
+msgid "**Dataset Size**: The quantity of data you intend to collect will affect the size of the machine required to host the ODK Aggregate instance and of your database server. For most applications, the default size should be fine. If you are collecting more than 6000 submissions, you may need to increase the JVM size. Note that the maximum size of the JVM is limited by the size of the physical memory on your machine."
+msgstr ""
+
+#: ../../aggregate-install.rst:347
+msgid "**Secure and Protected Data**: If you need to prevent eavesdroppers from seeing your data as it is transmitted to your ODK Aggregate instance, you should either (1) only connect to ODK Aggregate from within your organization's network (when the ODK Collect devices are on your premises), (2) obtain an SSL certificate and install it on your Tomcat server (a certificate is required to secure transmissions over https:), or (3) use `Encrypted Forms <https://opendatakit.org/help/encrypted-forms/>`_. If you are not using encrypted forms and are handling sensitive data, a computer security specialist should review your system and your security procedures. When operating without an SSL certificate, do not access ODK Aggregate from a remote location when changing passwords."
+msgstr ""
+
+#: ../../aggregate-install.rst:349
+msgid "Install Tomcat on your server."
+msgstr ""
+
+#: ../../aggregate-install.rst:351
+msgid "Install `Java 8 <https://java.com/en/download/>`_ or higher on your system."
+msgstr ""
+
+#: ../../aggregate-install.rst:355
+msgid "You generally need to launch installers with Run as administrator privileges (available under the right-click menu). Accept all the defaults."
+msgstr ""
+
+#: ../../aggregate-install.rst:357
+msgid "Add the installed Java bin directory to the `PATH variable <https://docs.oracle.com/javase/tutorial/essential/environment/paths.html>`_."
+msgstr ""
+
+#: ../../aggregate-install.rst:358
+msgid "Download and install `Tomcat 8 <https://tomcat.apache.org/download-80.cgi>`_"
+msgstr ""
+
+#: ../../aggregate-install.rst:362
+msgid "If using the Windows installer, change to use port 80 for the HTTP/1.1 port. If you are going to set up an SSL certificate, change the HTTPS/1.1 port to 443. Use all other defaults."
+msgstr ""
+
+#: ../../aggregate-install.rst:363
+msgid "Verify that Tomcat 8 is running by opening a browser on this server to *http://localhost/* You should see the Apache Tomcat administration page. If you didn't request port 80 during the install, you will need to specify the port you chose (*http://localhost:port/*). If you didn't configure a port, the default port is 8080 (and 8443 for HTTPS)."
+msgstr ""
+
+#: ../../aggregate-install.rst:364
+msgid "**Linux Installs**"
+msgstr ""
+
+#: ../../aggregate-install.rst:366
+msgid "To ensure that the proper java settings are found by the web server, you may need to specify the **-E** flag when restarting the webserver. Example -"
+msgstr ""
+
+#: ../../aggregate-install.rst:374
+msgid "Now open :file:`/.bashrc` with your editor and add: export JAVA_HOME = :file:`/usr/lib/jvm/java-7-openjdk-amd64` at the bottom of that file. Change this to whatever path is appropriate for your java installation."
+msgstr ""
+
+#: ../../aggregate-install.rst:380
+msgid "The **E** flag on the last command is critical. It forces Ubuntu to reload the environment settings for the service, causing it to pick up the new *JAVA_HOME* setting."
+msgstr ""
+
+#: ../../aggregate-install.rst:382
+msgid "Apply or change the administrator password for Tomcat; the administration functions should be secured."
+msgstr ""
+
+#: ../../aggregate-install.rst:383
+msgid "ODK Aggregate v1.4.13 and higher are supported on Tomcat 8.0; these newer releases should also work, without modification on other webservers."
+msgstr ""
+
+#: ../../aggregate-install.rst:384
+msgid "Prior to ODK Aggregate v1.4.13, we only supported Tomcat 6. Tomcat 7, Tomcat 8, Glassfish and Jetty require additional configuration steps to run ODK Aggregate v1.4.12 and earlier. All of these webservers require configuration settings to enable cookies under HTTPS."
+msgstr ""
+
+#: ../../aggregate-install.rst:386
+msgid "**For Tomcat 7**: Edit :file:`context.xml` (under Tomcat 7's conf directory) to have the attribute 'useHttpOnly' set to false."
+msgstr ""
+
+#: ../../aggregate-install.rst:392
+msgid "**For Tomcat 8**: My ODK Aggregate file is installed as :file:`/var/lib/tomcat8/webapps/ODKAggregate.war`. The following content needed to be placed in the file :file:`webapps/ODKAggregate/META-INF/context.xml` (this is within the expanded content of the war file, once the Tomcat 8 server has exploded it)."
+msgstr ""
+
+#: ../../aggregate-install.rst:398
+msgid "**For Glassfish 4**: Add :file:`glassfish-web.xml` under ODK Aggregate's WEB-INF directory with the content:"
+msgstr ""
+
+#: ../../aggregate-install.rst:411
+msgid "**For Jetty**: Add :file:`jetty-web.xml` under ODK Aggregate's WEB-INF directory with the content:"
+msgstr ""
+
+#: ../../aggregate-install.rst:427
+msgid "`Configure your server and network devices <https://opendatakit.org/use/aggregate/tomcat-install/#Configure_for_Network_Access>`_ so that laptops or Android devices connecting to the internet from an external access point can access your server. If your organization has a network or systems administrator, contact them for assistance. The steps for this are:"
+msgstr ""
+
+#: ../../aggregate-install.rst:429
+msgid "configure your server firewall to allow access"
+msgstr ""
+
+#: ../../aggregate-install.rst:430
+msgid "make your server visible on the internet (optional)"
+msgstr ""
+
+#: ../../aggregate-install.rst:431
+msgid "establish a DNS name for the server"
+msgstr ""
+
+#: ../../aggregate-install.rst:433
+msgid "`Obtain and Install <https://gist.github.com/yanokwa/399a7fcbc3d9ad8a0bd3>`_ an SSL certificate if you need secure (https:) access."
+msgstr ""
+
+#: ../../aggregate-install.rst:435
+msgid "Select and Install your database server (MySQL or PostgreSQL or Microsoft SQL Server or Azure SQL Server)."
+msgstr ""
+
+#: ../../aggregate-install.rst:437
+msgid "ODK Aggregate works with any of these database servers:"
+msgstr ""
+
+#: ../../aggregate-install.rst:439
+msgid "MySQL"
+msgstr ""
+
+#: ../../aggregate-install.rst:440
+msgid "PostgreSQL"
+msgstr ""
+
+#: ../../aggregate-install.rst:441
+msgid "Microsoft SQL Server"
+msgstr ""
+
+#: ../../aggregate-install.rst:442
+msgid "Azure SQL Server (requires Java 8)"
+msgstr ""
+
+#: ../../aggregate-install.rst:444
+msgid "A database server manages one or more databases. The database server stores and retrieves data from tables within these databases."
+msgstr ""
+
+#: ../../aggregate-install.rst:445
+msgid "For MySQL, download and install MySQL Community Server 5.7 or higher from `MySQL download site <https://dev.mysql.com/downloads/>`_. Be sure to set a root password for the database. Stop the MySQL database server, then configure the database (via the :file:`my.cnf` or the :file:`my.ini` file) with these lines added to the [mysqld] section:"
+msgstr ""
+
+#: ../../aggregate-install.rst:453
+msgid "and restart the MySQL databaseserver. Then, download the `MySQL Connector/J`, unzip it, and copy the :file:`mysql-connector-java-x.x.x-bin.jar` file into the Tomcat server's libs directory. After copying it into that directory, you should stop and restart the Tomcat server. The `max_allowed_packet` setting defines the maximum size of the communications buffer to the server. The value used in the snippet above is 1GB, the maximum value supported. For ODK Aggregate 1.4.11 through 1.4.7, and 1.2.x, the maximum media (e.g., image or video) attachment is limited to the value you set for max_allowed_packet minus some unknown overhead -- e.g., a storage size of something less than 1GB. For ODK Aggregate 1.4.6 and earlier (excluding 1.2.x), the maximum media attachment is unlimited and the setting for max_allowed_packet does not need to be specified. For ODK Aggregate 1.4.12 and later, the max_allowed_packet value should be set to a value greater than 16842752 (this is the minimum value that should be used: 16MB plus 64kB); with that setting, media attachments of unlimited size are once again supported. If you are upgrading to a newer ODK Aggregate, you must continue to use the setting you already have, or 16842752, whichever is greater. If you experience problems uploading large attachments, change this setting to its maximum value, 1073741824. Finally, if you are using MySQL 5.7 or later, some of releases `expire all database passwords <https://dev.mysql.com/doc/refman/5.7/en/password-management.html>`_ after 360 days. Please verify the behavior of your version of MySQL and either change the password expiration policy or create a calendar reminder to change the password before it expires. For ODK Aggregate, you will need to re-run the installer to specify the new password."
+msgstr ""
+
+#: ../../aggregate-install.rst:455
+msgid "For PostgreSQL, download and install the appropriate binary package from `PostgreSQL download site <https://www.postgresql.org/download/>`_. Be sure to set the password for the postgres (root) user and set the default character set and collation sequence."
+msgstr ""
+
+#: ../../aggregate-install.rst:456
+msgid "For either database, you should ensure that the default character set is configured to be UTF-8 and that the collation sequence (dictionary order) is set appropriately for your circumstances. If it isn't, any non-Latin characters may display as question marks. Refer to the character set and collation sections of your database's documentation for how to do this."
+msgstr ""
+
+#: ../../aggregate-install.rst:457
+msgid "For Microsoft SQL Server or Azure SQL Server, you should configure these with UTF-8 character sets and to use Windows authentication. When using Windows authentication, the user under which the webserver executes must be granted permissions to access the SQL Server instance. The install wizard for ODK Aggregate will produce a :file:`Readme.html` file that contains additional information on how to complete the configuration of the database and webserver service."
+msgstr ""
+
+#: ../../aggregate-install.rst:459
+msgid "Download and install `ODK Aggregate <https://opendatakit.org/downloads/>`_. Select the latest Featured release for your operating system."
+msgstr ""
+
+#: ../../aggregate-install.rst:463
+msgid "The installer will guide you through configuring ODK Aggregate for Tomcat and MySQL/PostgreSQL/SQLServer. The installer will produce a WAR file (web archive) containing the configured ODK Aggregate server, a :file:`create_db_and_user.sql` script for creating the database and user that ODK Aggregate will use to access this database, and a :file:`Readme.html` file with instructions on how to complete the installation."
+msgstr ""
+
+#: ../../aggregate-install.rst:467
+msgid "When asked for the fully qualified hostname of the ODK Aggregate server, you should enter the DNS name you established above. The install also asks for a database name, user and password. The user should not be root (MySQL) or postgres (PostgreSQL). ODK Aggregate will use this user when accessing this database (and it will only access this database). By specifying different databases and users, you can set up multiple ODK Aggregate servers that share the same database server, store their data in different databases, and operate without interfering with each other."
+msgstr ""
+
+#: ../../aggregate-install.rst:468
+msgid "If you are upgrading to a newer version of ODK Aggregate, as long as you specify the same database name, user and password, you do not need to re-run the :file:`create_db_and_user.sql` script (it only needs to be executed once)."
+msgstr ""
+
+#: ../../aggregate-install.rst:473
+msgid "Installing on AWS (Cloud)"
+msgstr ""
+
+#: ../../aggregate-install.rst:475
+msgid "Following are basic details on setting up ODK Aggregate to run on a Linux micro-instance on the Amazon Web Services EC2 infrastructure."
+msgstr ""
+
+#: ../../aggregate-install.rst:477
+msgid "For screenshots and more on the general set-up of Tomcat on AWS, see the excellent three-part `Cat in the cloud Apache Tomcat Series <http://www.excelsior-usa.com/articles/tomcat-amazon-ec2-basic.html>`_. `Amazon’s getting-started guides <https://aws.amazon.com/documentation/gettingstarted/>`_ are also quite helpful."
+msgstr ""
+
+#: ../../aggregate-install.rst:479
+msgid "First, sign up for Amazon Web Services EC2 at `<http://aws.amazon.com/ec2/>`_."
+msgstr ""
+
+#: ../../aggregate-install.rst:483
+msgid "You will need to confirm a working phone number."
+msgstr ""
+
+#: ../../aggregate-install.rst:484
+msgid "If you want to use a U.S. number but are presently overseas, you can use a Google Voice number routed to Google Chat."
+msgstr ""
+
+#: ../../aggregate-install.rst:486
+msgid "Go to the AWS/EC2 management console and note your region (shown in the upper-left)."
+msgstr ""
+
+#: ../../aggregate-install.rst:487
+msgid "Launch a new instance with the :guilabel:`Launch Instance` button prominently displayed on the EC2 console home screen. Accept the default behavior and use the quick-launch wizard."
+msgstr ""
+
+#: ../../aggregate-install.rst:488
+msgid "For the launch configuration, choose the :guilabel:`Amazon Linux AMI: EBS-Backed (64-bit)` option. This is one of the instance types that you can run on a micro-instance as part of their `free tier <http://aws.amazon.com/free/>`_. Leave everything else at the defaults, including the instance type. The instance type will default to *t2.micro* which is a small, limited instance that can be run for free. For a price, you can upgrade the instance type later if you need better performance."
+msgstr ""
+
+#: ../../aggregate-install.rst:492
+msgid "The exact AMI name and ID will depend on your region."
+msgstr ""
+
+#: ../../aggregate-install.rst:494
+msgid "Create a new key pair, download the private key, and keep the private key safe. This will be your only method of communicating with your new instance and you will not be allowed to download it again."
+msgstr ""
+
+#: ../../aggregate-install.rst:495
+msgid "After creating the instance, add security rules for allowing both HTTP and HTTPS. Choose the :guilabel:`Security Groups` tab and click on the auto-created security group associated with your new instance. This might have been called *launch-wizard-1*. If you’re not sure, you can go to the Instances tab to see which Security Group is listed for the new instance."
+msgstr ""
+
+#: ../../aggregate-install.rst:497
+msgid "In the properties pane at the bottom, click on the :guilabel:`Inbound tab`, select HTTP from the :guilabel:`create a new rule` drop-down, then click :guilabel:`Add Rule`. Do the same for HTTPS. Then click :guilabel:`Apply Rule Changes`."
+msgstr ""
+
+#: ../../aggregate-install.rst:501
+msgid "To avoid potential problems with MTU settings and packet loss, also add a rule to allow *All ICMP*. Add a rule for both IPv4 and IPv6. After you create the new rule, click :guilabel:`Apply Rule Changes`."
+msgstr ""
+
+#: ../../aggregate-install.rst:505
+msgid "Tomcat defaults to listening on nonstandard ports 8080 and 8443. Below will be instructions to use the standard HTTP and HTTPS ports instead. However, if you want to leave Aggregate on the non-standard ports, you can certainly do so; in that case, simply add two additional security rules to allow access via 8080 and 8443."
+msgstr ""
+
+#: ../../aggregate-install.rst:507
+msgid "Switch to the :guilabel:`Instances` tab, click on your instance, and note its Public DNS Address in the properties pane below. This is the default address that you will use to access your instance."
+msgstr ""
+
+#: ../../aggregate-install.rst:508
+msgid "Presuming that you want a friendlier way to access your instance, allocate it an *elastic IP* and domain name. Navigate to Elastic IPs and click :guilabel:`Allocate New Address`. Associate it with your new instance.  Note your new IP. Also, if possible, configure DNS to route one or more names to this address. You can then use this IP and/or name to access your instance (and can forget the Public DNS Address assigned by AWS)."
+msgstr ""
+
+#: ../../aggregate-install.rst:512
+msgid "The IP is free so long as you keep it associated with a running instance. If you stop your instance and do not release the IP address for others to use (in essence, wasting it), then Amazon will begin charging you for holding the unused address."
+msgstr ""
+
+#: ../../aggregate-install.rst:516
+msgid "When you set up Aggregate below, you will need to configure it with the domain name you will use to access it. Thus, it is best if you configure the domain name first."
+msgstr ""
+
+#: ../../aggregate-install.rst:518
+msgid "Connect to your instance. Go to the :guilabel:`Instances` tab and select :menuselection:`Connect` from the Instance Actions drop-down (alternatively, you can right-click on the instance and choose Connect). From here AWS presents you with several options."
+msgstr ""
+
+#: ../../aggregate-install.rst:520
+msgid "The easiest is to connect using their Java SSH client. If you choose that option, you just have to specify the location of your private key file (created above) and AWS launches an in-browser SSH client to connect to your instance."
+msgstr ""
+
+#: ../../aggregate-install.rst:521
+msgid "You can also select to connect with a stand-alone SSH client. If you choose this option, AWS will provide extremely helpful instructions, including an SSH command that you can cut and paste into your local command window. It will also inform you that you may need to update the permissions on your local private key file in order for the ssh client to run properly, and it will even give you the command to run (e.g., :command:`chmod 400 xxx.pem`)."
+msgstr ""
+
+#: ../../aggregate-install.rst:522
+msgid "Once you connect, you will probably be told that there are new security updates to install. You can run :command:`sudo yum update` to install these updates, as it advises."
+msgstr ""
+
+#: ../../aggregate-install.rst:524
+msgid "Transfer files to/from your instance. When you login via ssh, you will default to being in the (empty) ec2-user home directory. You will want to be able to transfer files between here and your local directory. You have several options."
+msgstr ""
+
+#: ../../aggregate-install.rst:526
+msgid "If you’re using the command-line ssh, you can also use the command-line scp to copy files. The syntax is similar to ssh, but of course you also need to specify the source and destination file paths."
+msgstr ""
+
+#: ../../aggregate-install.rst:527
+msgid "An easier option is to use an FTP program like FileZilla (as long as it supports SFTP). To configure FileZilla to connect to your instance, go into :menuselection:`Edit-->Settings/Preferences-->Connection-->SFTP` and add your private key to FileZilla’s keystore (it will offer to convert the key format, which you should accept). Then, go into Site Manager and create a new site. The host should be the IP, name, or Public DNS for your instance, the port can be blank, the protocol should be **SFTP – SSH File Transfer Protocol**, the login type should be Normal, and the user should be **ec2-user**. Everything else should be left at the defaults, including the password (which will be blank). When you connect, the default directory will be the ec2-user’s home directory, but you can also navigate to other directories."
+msgstr ""
+
+#: ../../aggregate-install.rst:529
+msgid "Install Tomcat 6. This can be done by running :command:`sudo yum install tomcat6`. This installs configuration files into :file:`/etc/tomcat6` and other files into :file:`/usr/share/tomcat6`. Log files go into :file:`/var/log/tomcat6`."
+msgstr ""
+
+#: ../../aggregate-install.rst:531
+msgid "Install MySQL. This can be done by running:"
+msgstr ""
+
+#: ../../aggregate-install.rst:537
+msgid "Now use vi or an editor to edit :file:`/etc/my.cnf` (e.g., :command:`sudo vi /etc/my.cnf`). In the [mysqld] section, add (the max_allowed_packet allows up to a 4GB file attachment):"
+msgstr ""
+
+#: ../../aggregate-install.rst:545
+msgid "Run MySQL. To run MySQL:"
+msgstr ""
+
+#: ../../aggregate-install.rst:551
+msgid "Install and transfer ODK Aggregate files."
+msgstr ""
+
+#: ../../aggregate-install.rst:553
+msgid "First, install ODK Aggregate on your local computer (not on your AWS instance)."
+msgstr ""
+
+#: ../../aggregate-install.rst:558
+msgid "During set-up, it’s important to specify that this will be a MySQL installation, and it is also very important that you specify the correct domain name or IP address that will be used to access your Aggregate server. Ideally, this will be a specific domain name that you have already mapped to an elastic IP (and can re-map later if you change the IP)."
+msgstr ""
+
+#: ../../aggregate-install.rst:560
+msgid "The installation will create a :file:`create_db_and_user.sql` file. Upload this to your ec2-user home directory as described in point 10."
+msgstr ""
+
+#: ../../aggregate-install.rst:561
+msgid "The installation will also create an :file:`ODKAggregate.war` file. Rename this to :file:`ROOT.war` and upload it to the :file:`/usr/share/tomcat6/webapps` folder. If you receive a *Permission Denied* error, you might need to execute :command:`chmod -R 755` or something similar for the webapps folder."
+msgstr ""
+
+#: ../../aggregate-install.rst:562
+msgid "After :file:`ROOT.war` has been copied to the server, you need to make sure tomcat has permission to use it. Run :command:`sudo chown tomcat ROOT.war` and :command:`sudo chgrp tomcat ROOT.war` in the webapps directory to ensure this is the case."
+msgstr ""
+
+#: ../../aggregate-install.rst:564
+msgid "Configure MySQL."
+msgstr ""
+
+#: ../../aggregate-install.rst:566
+msgid "On your AWS instance, run :file:`/usr/bin/mysql_secure_installation` to set a root password and generally secure your MySQL installation."
+msgstr ""
+
+#: ../../aggregate-install.rst:567
+msgid "Then, run :command:`mysql –u root -p` to log in to MySQL (specifying the password you just set), and type :command:`source ~/create_db_and_user.sql`. This will create the ODK user and database. Type :command:`quit` on the mysql prompt to quit from MySQL."
+msgstr ""
+
+#: ../../aggregate-install.rst:568
+msgid "Finally, run :command:`sudo /sbin/chkconfig --levels 235 mysqld on` to auto-start MySQL whenever your instance boots up."
+msgstr ""
+
+#: ../../aggregate-install.rst:570
+msgid "Configure Tomcat."
+msgstr ""
+
+#: ../../aggregate-install.rst:572
+msgid "Download the MySQL Connector/J from the `MySQL download page <http://dev.mysql.com/downloads/connector/j/)>`_ unzip it, and transfer the :file:`mysql‐connector‐java‐x.x.x‐bin.jar` file up to your instance’s :file:`/usr/share/tomcat6/lib` directory."
+msgstr ""
+
+#: ../../aggregate-install.rst:573
+msgid "Edit :file:`/etc/tomcat6/server.xml` in order to customize settings. (If you’re not used to Linux text editors, you can always download the file, edit it, and upload it back.)"
+msgstr ""
+
+#: ../../aggregate-install.rst:574
+msgid "Assuming that you want to run Aggregate on the standard HTTP port (80) and HTTPS port (443):"
+msgstr ""
+
+#: ../../aggregate-install.rst:576
+msgid "Change “<Connector port=\"8080\" protocol=\"HTTP/1.1\"” to “<Connector port=\"8080\" proxyPort=\"80\" protocol=\"HTTP/1.1\"” (i.e., add the proxyPort attribute)."
+msgstr ""
+
+#: ../../aggregate-install.rst:577
+msgid "If you are using SSL, also change “<Connector port=\"8443\" protocol=\"HTTP/1.1\" SSLEnabled=\"true\"” to “<Connector port=\"8443\" proxyPort=\"443\" protocol=\"HTTP/1.1\" SSLEnabled=\"true\"”."
+msgstr ""
+
+#: ../../aggregate-install.rst:578
+msgid "Execute the following commands to have Linux forward to the ports on which Tomcat listens:"
+msgstr ""
+
+#: ../../aggregate-install.rst:586
+msgid "If you have an SSL certificate for HTTPS support:"
+msgstr ""
+
+#: ../../aggregate-install.rst:588
+msgid "Make sure that the “<Connector port=\"8443\"” part of the configuration file is not commented out. If it is, un-comment it."
+msgstr ""
+
+#: ../../aggregate-install.rst:589
+msgid "Upload your SSL keystore file and the certificate(s) to the server."
+msgstr ""
+
+#: ../../aggregate-install.rst:590
+msgid "Install it as instructed. (If you buy from RapidSSL, for example, they provide you with Tomcat installation instructions. E.g., you may need to download a special P7S certificate file, then install it on the server with “keytool -import -alias YOURALIAS trustcacerts file xxxxx.p7s -keystore xxxxx.keystore”.)"
+msgstr ""
+
+#: ../../aggregate-install.rst:591
+msgid "In the “<Connector port=\"8443\"” part of the configuration file, specify the location of your keystore file and password (e.g., “keystoreFile=\"/…/xxxxx.keystore\" keystorePass=\"changeit\"”)."
+msgstr ""
+
+#: ../../aggregate-install.rst:593
+msgid "Start Tomcat with :command:`sudo service tomcat6 start`."
+msgstr ""
+
+#: ../../aggregate-install.rst:594
+msgid "Configure Tomcat to auto-start when the instance boots with :command:`sudo chkconfig --level 345 tomcat6 on`."
+msgstr ""
+
+#: ../../aggregate-install.rst:596
+msgid "Login and test. At this point, you should be able to login to your AWS-hosted Aggregate instance by going to its name or IP in your web browser (with or without HTTPS, depending on your set-up)."
+msgstr ""
+
+#: ../../aggregate-install.rst:600
+msgid "For your first login, you will need to login with the Google account you specified during the Aggregate installation process. Then you can add additional users from the :guilabel:`Site Admin` tab."
+msgstr ""
+
+#: ../../aggregate-install.rst:602
+msgid "Once you have confirmed that your Aggregate instance is working, you can back it up by creating an image of the instance (an AMI). You can do this by going to the :guilabel:`Instances` tab in the AWS-EC2 console, then selecting the :guilabel:`Create Image (EBS AMI)` Instance Action for your instance."
+msgstr ""
+
+#: ../../aggregate-install.rst:604
+msgid "Further set-up for production servers:"
+msgstr ""
+
+#: ../../aggregate-install.rst:606
+msgid "You will want to create a system to monitor and manage the log files in :file:`/var/log/tomcat6`."
+msgstr ""
+
+#: ../../aggregate-install.rst:607
+msgid "You will also want to create a system for regular back-ups and a plan for how to restore them when needed. This will be needed to safely back up the MySQL database, which may be in-use at any given time."
+msgstr ""
+
+#: ../../aggregate-install.rst:611
+msgid "The micro instance is only free for 12 months from AWS sign-up, and that you may exceed the free quotas on disk space or network bandwidth before that point (`see <http://aws.amazon.com/free/>`_)."
+msgstr ""
+
+#: ../../aggregate-install.rst:612
+msgid "You may at some point need to upgrade your instance to a standard instance if the micro instance is not providing enough performance."
+msgstr ""
+

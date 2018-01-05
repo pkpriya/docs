@@ -1,0 +1,985 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Aggregate Installation and Setup &mdash; Open Data Kit Docs</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/odk-favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Stichwortverzeichnis"
+              href="genindex.html"/>
+        <link rel="search" title="Suche" href="search.html"/>
+    <link rel="top" title="Open Data Kit Docs" href="index.html"/>
+        <link rel="next" title="Aggregate Deployment Planning" href="aggregate-deployment-planning.html"/>
+        <link rel="prev" title="ODK Aggregate" href="aggregate-guide.html"/>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91951913-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/odk-logo-wide.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Collect</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="collect-intro.html">ODK Collect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collect-setup.html">Setting Up ODK Collect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collect-using.html">Using ODK Collect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collect-best-practices.html">Tips and Best Practices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Aggregate</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="aggregate-guide.html">ODK Aggregate</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Aggregate Installation and Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-on-app-engine">Installing on App Engine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changing-size-of-app-engine-server">Changing size of App Engine Server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-vm-local-or-cloud">Installing VM (Local or Cloud)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-on-tomcat-local-or-cloud">Installing on Tomcat (Local or Cloud)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-on-aws-cloud">Installing on AWS (Cloud)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-deployment-planning.html">Aggregate Deployment Planning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-use.html">Aggregate Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-upgrade.html">Aggregate Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-backup.html">Backup Strategies for Aggregate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-uploader.html">Form Uploader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oauth2-service.html">OAuth2 Service Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualize.html">Visualizing Geographic Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-limitations.html">Aggregate Limitations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Briefcase</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-guide.html">ODK Briefcase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-install.html">Briefcase Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-forms.html">Briefcase Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-vs-aggregate.html">Briefcase vs Aggregate</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Form Building</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="form-design-intro.html">Intro to Forms in ODK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odk-build.html">ODK Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xlsform.html">XLSForm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-widgets.html">Form Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-interaction.html">Interaction of constraints, relevants and read only</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-update.html">Updating forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyxform.html">pyxform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="validate.html">ODK Form Validate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch-apps-from-collect.html">Launching External Apps from Collect Forms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to ODK Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cygwin.html">Working with Docs in Windows using Cygwin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing-tips.html">Tips for Making Good Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style-guide.html">Style Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developing with ODK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="openrosa.html">OpenRosa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javarosa.html">ODK JavaRosa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch-collect-from-app.html">Launching ODK Collect from External Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-api.html">Briefcase Aggregate API</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Integration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="encrypted-forms.html">Encrypted Forms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="security-privacy.html">Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verify-downloads.html">Verifying Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Open Data Kit</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Aggregate Installation and Setup</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/aggregate-install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aggregate-installation-and-setup">
+<h1>Aggregate Installation and Setup<a class="headerlink" href="#aggregate-installation-and-setup" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Before going through this section, make sure you have used <a class="reference internal" href="collect-intro.html"><span class="doc">ODK Collect</span></a> and are familiar with how it works.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<ul class="last simple">
+<li>Try the ODK Aggregate <a class="reference external" href="https://opendatakit.appspot.com">demo server</a> to explore the core functionality.</li>
+<li>Decide whether to install a cloud instance or a local instance. It is strongly recommended to try an App Engine cloud instance first. If you wish to host locally, see <a class="reference internal" href="aggregate-deployment-planning.html#deployment-planning"><span class="std std-ref">Aggregate Deployment Planning</span></a></li>
+<li>Local hosting implies that you are taking ownership of the off-site back up and restoration of your data and are documenting the steps necessary to return your systems to operation in circumstances that might include a full hardware failure or the destruction of your facility.</li>
+<li>You must also plan for the security of your data and systems. And finally, it requires that you <a class="reference external" href="https://opendatakit.org/use/aggregate/tomcat-install/#Configure_for_Network_Access">configure your network routers</a>. It is recommended to seek assistance from your local computer-technical-support community before proceeding. The set-up of the ODK Aggregate web server and database are very easy in comparison.</li>
+</ul>
+</div>
+<div class="section" id="installing-on-app-engine">
+<span id="install-app-engine"></span><h2>Installing on App Engine<a class="headerlink" href="#installing-on-app-engine" title="Link zu dieser Überschrift">¶</a></h2>
+<ol class="arabic simple">
+<li>Make sure <a class="reference external" href="https://java.com/en/download/">Java 8</a> or higher is installed on your system. See <a class="reference external" href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html">MacOSX Java install</a> if you are a Mac user.</li>
+<li>You will need a Gmail account to use App Engine; this Gmail account will be the owner of the Google Cloud Platform <cite>project</cite> under which your App Engine will execute.</li>
+</ol>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<ul class="last simple">
+<li>Google Cloud Platform hosts projects <a class="reference external" href="https://cloud.google.com/terms/">under these terms</a>.</li>
+<li>There is no cost to set up these projects and App Engine projects that are lightly used will incur no charges.</li>
+</ul>
+</div>
+<ol class="arabic" start="3">
+<li><p class="first">To set up a Google Cloud Platform project, go to <a class="reference external" href="https://cloud.google.com/">Google Cloud Platform</a> and click on <span class="guilabel">Console</span> in the top right corner.</p>
+<img alt="An image showing the console option on the Google Cloud Platform." src="_images/cloud-console1.png" />
+</li>
+<li><p class="first">You will now be asked to provide a Gmail account which you will use throughout. Sign in with a Gmail account which you wish to use.</p>
+<img alt="Image showing the sign in window of Gmail." src="_images/email-select1.png" />
+</li>
+<li><p class="first">If you have never configured a Google Cloud Platform project, click on <span class="guilabel">Create an Empty Project</span>.</p>
+<img alt="Image showing Create an empty project option for first projects." src="_images/empty-project.png" />
+</li>
+<li><p class="first">If you have configured a Google Cloud Platform project before, this link will open onto either a page with a <span class="guilabel">Create Project</span> button and a table listing all of your projects, or it will open into one of your existing projects. In the later case, click on that project name at the top of the window. In the below image, the older project is <cite>Project-edu</cite>.</p>
+<img alt="Image showing previous project name `Project-edu`." src="_images/project.png" />
+</li>
+<li><p class="first">On clicking on the project name (In this case <cite>Project-edu</cite>), a window appears with a <span class="guilabel">+</span> symbol. Click on it to create a new project.</p>
+<img alt="Image showing the + sign which denotes creating a new project." src="_images/create-project.png" />
+</li>
+<li><p class="first">On the project-creation pop-up dialog, type in a project name that makes sense to you. You can enter a project name and click on <span class="guilabel">Create</span> if you don’t want to edit the project-id. You can choose <span class="guilabel">Edit</span> if you want to edit the project id. The project id will be the first part of the URL to your ODK Aggregate server.</p>
+<img alt="Image showing the window to enter a project name." src="_images/project-name.png" />
+</li>
+<li><p class="first">If you click on <span class="guilabel">Edit</span>, a window will appear where you can enter a project id. After changing the project id click on <span class="guilabel">Create</span> to create your project.</p>
+<img alt="Image showing the window which comes after clicking on edit option to change the project id." src="_images/project-id.png" />
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<p class="last">You may want to use a project id that combines your organization name and the name of your data collection group or project. You may also need to accept Google’s terms-and-conditions.</p>
+</div>
+</li>
+<li><p class="first">After few seconds, you will see a notification in the top right corner of the window.</p>
+<img alt="Image showing blue notification icon." src="_images/notification.png" />
+</li>
+<li><p class="first">Click on the notification icon and select the first option from the dropdown menu then. The option is labelled as <em>Create Project:your project name</em>.</p>
+<img alt="Image showing the option to create your project." src="_images/go-to-project.png" />
+</li>
+<li><p class="first">Upon creating the Google Cloud Platform project, you will be on an empty-project screen, showing the project info. If you want to change any settings, click on <span class="guilabel">Go to project settings</span>. Otherwise click on the menu icon (three horizontal bars) to the left of <span class="guilabel">Google Cloud Platform</span> in the upper left side of the screen.</p>
+<img alt="Image showing the project settings option and the menu option." src="_images/project-settings.png" />
+</li>
+<li><p class="first">Now and select <span class="guilabel">App Engine</span> from the dropdown menu.</p>
+<img alt="Image showing App Engine option." src="_images/app-engine.png" />
+</li>
+<li><p class="first">Click on the <span class="guilabel">Select a language</span> dropdown under the <em>Your first app</em> heading.</p>
+<img alt="Image showing option to select a language." src="_images/language-select.png" />
+</li>
+<li><p class="first">Now choose <em>Java</em>.</p>
+<img alt="Image showing various language options to choose from." src="_images/select-java.png" />
+</li>
+<li><p class="first">Select the datacenter location where this server will operate and click <span class="guilabel">Next</span>.</p>
+<img alt="Image showing options to choose a region where the server will operate." src="_images/select-region.png" />
+</li>
+<li><p class="first">Google will then begin configuring the server.</p>
+<img alt="Image showing Google configuring the server." src="_images/prepare-engine.png" />
+</li>
+<li><p class="first">When this completes, you will be directed to begin a tutorial to install a sample application. Choose <span class="guilabel">Cancel Tutorial</span> and confirm that you want to not perform that tutorial.</p>
+<img alt="Image showing option to cancel the tutorial." src="_images/cancel-tutorial.png" />
+</li>
+<li><p class="first">Download <a class="reference external" href="https://opendatakit.org/downloads/">ODK Aggregate</a>. Select the latest release for your operating system.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<ul class="last simple">
+<li>You can <a class="reference internal" href="verify-downloads.html"><span class="doc">verify the download</span></a> using <em>SHA256 signatures</em>.</li>
+<li>If you are running OSX, you must unzip the downloaded file before running the installer within it.</li>
+<li>If you are on MacOSX Mountain Lion or onward, you will need to fiddle with <a class="reference external" href="http://osxdaily.com/2012/07/27/app-cant-be-opened-because-it-is-from-an-unidentified-developer/">GateKeeper settings</a> in order to run the installer.</li>
+<li>If you are on Windows 10, you will need to approve running an unsigned installer.</li>
+<li>If you are on Linux, you will need to change the downloaded file’s permissions to enable running it as a program. Right click on the file and click on <span class="guilabel">Properties</span>. Click on <span class="guilabel">Permissions</span> tab. Now check the box labelled as <span class="guilabel">Allow executing file as program</span>. Now double click on the file to run it.</li>
+</ul>
+</div>
+</li>
+<li><p class="first">The installer will guide you through configuring ODK Aggregate for App Engine. Click on <span class="guilabel">Forward</span> button each time you complete a step to move ahead.</p>
+<img alt="Image showing the installer for ODK Aggregate." src="_images/setup.png" />
+</li>
+<li><p class="first">Accept the license agreement and click on <span class="guilabel">Forward</span> button.</p>
+<img alt="Image showing license agreement." src="_images/agreement.png" />
+</li>
+<li><p class="first">Select a parent directory under which an <em>ODK Aggregate</em> directory will be created to contain the configured software. Click on the <span class="guilabel">folder</span> icon to choose a directory.</p>
+<img alt="Image showing window to choose a parent directory." src="_images/directory-setup.png" />
+</li>
+<li><p class="first">In the next window choose <em>Google App Engine</em> as the platform for the Aggregate server.</p>
+<img alt="Image displaying options to choose a platform for Aggregate." src="_images/choose-platform.png" />
+</li>
+<li><p class="first">Enter a name for your ODK Aggregate instance.</p>
+<img alt="Image showing window to select a name for your Aggregate instance." src="_images/set-name.png" />
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">The ODK Aggregate instance name will be displayed to your users when they log into ODK Aggregate using their username and password.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<p class="last">Including the name of your organization in the instance name can help users confirm that they have contacted the correct website.</p>
+</div>
+</li>
+<li><p class="first">Enter a superuser name in the next window.</p>
+<img alt="Image showing window to enter a superuser name." src="_images/superuser.png" />
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<ul class="last simple">
+<li>The user with the superuser account will have full permissions on the system.</li>
+<li>The password for this user will be set to <strong>aggregate</strong> initially.</li>
+<li>Only this user will be allowed to log onto the system when ODK Aggregate is run for the first time.</li>
+<li>Upon first logging in, the superuser should change the password and complete the configuration of ODK Aggregate by specifying additional users and what permissions they will have on the system.</li>
+</ul>
+</div>
+</li>
+<li><p class="first">In the next window enter the project id of the project you created on the Google Cloud platform.</p>
+<img alt="Image showing project id of the project created earlier entered in the application id box." src="_images/application-id.png" />
+</li>
+<li><p class="first">Now the installer will configure Aggregate and launch a upload tool.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<p class="last">Beginning with Java 7 Update 51, there are security level settings that may prevent the upload tool from running. A reported workaround is to add the <em>file: path</em> (e.g., :file:<code class="docutils literal"><span class="pre">`file:///`</span></code>) to the Exception Site list.</p>
+</div>
+</li>
+<li><p class="first">Enter the Gmail account in the upload tool that you specified to use the App Engine. This will enable the <span class="guilabel">Get Token</span> button.</p>
+<img alt="Image showing the window for upload tool to enter the email id and get a token." src="_images/get-token.png" />
+</li>
+<li><p class="first">Click the <span class="guilabel">Get Token</span> button. Two things happen after this:</p>
+</li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p class="first">Your default browser will open to a Google site (accounts.google.com) where you are asked to choose a Gmail account (select the account specified by you to use the App Engine), and then approve allowing <em>Google App Engine appcfg</em> to view and manage your AppEngine instances and datastores. Click <span class="guilabel">Allow</span>. This will take you to a screen with instructions to copy a code.</p>
+</li>
+<li><p class="first">At the same time, a pop-up dialog should be displayed by the upload tool.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<ul class="last simple">
+<li>If the pop-up dialog does not show, close the upload tool and open a file browser or Finder window in the directory you specified for the installer to place its files. Navigate to the ODK Aggregate directory.</li>
+<li>If on Windows, double-click the <code class="file docutils literal"><span class="pre">ODKAggregateAppEngineUpdater.jar</span></code> file.</li>
+<li>If on Mac OSX, double-click the uploadAggregateToAppEngine.app file.</li>
+<li>If on Linux, open a bash shell and run uploadAggregateToAppEngine.sh. These should all re-launch the upload tool.</li>
+<li>Re-enter the e-mail address, and once again click <span class="guilabel">Get Token</span>. The pop-up dialog should now appear.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<ol class="arabic" start="30">
+<li><p class="first">Copy the code from the browser into the upload tool’s pop-up dialog and click <span class="guilabel">OK</span>.</p>
+<img alt="Image showing pop-up dialog to enter a token." src="_images/token.png" />
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<p class="last">The text box on Google’s site is not as wide as the code; be sure to copy the entire code.</p>
+</div>
+</li>
+<li><p class="first">The output should look something like that in the image.</p>
+<img alt="Image showing output for a successful result." src="_images/success-output.png" />
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<ul class="last simple">
+<li>If the output does not look like that, you may have delayed too long between getting the code and pasting it into the tool. Click <span class="guilabel">Delete Token</span> and try again.</li>
+<li>If you see a failure message in the output window, then it is likely that you have several different Gmail accounts and Google has gotten confused during the token-issuing process. In this case, when the browser window opens, before selecting an account, copy the URL, open a Private Browsing or Incognito Window in your browser, and paste the URL into that. Then proceed to get the token, etc. This should fix this issue.</li>
+</ul>
+</div>
+</li>
+<li><p class="first">Now click <span class="guilabel">Upload ODK Aggregate</span>.</p>
+<img alt="Image showing successful output and upload option." src="_images/upload.png" />
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<ul class="simple">
+<li>Clicking on <span class="guilabel">Upload ODK Aggregate</span> will spew a very long list of progress messages into the Output window. The <cite>listBackends :</cite> and <cite>deleteBackendBackground :</cite> sections may report „500 Internal Server Error“ and Severe errors, and Warnings about the use of Backends, a deprecated feature. This is expected. Here is a list of few of those errors:</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre><span></span>listBackends : Warning: This application uses Backends, a deprecated feature that has been replaced by Modules, which offers additional functionality. Please convert your backends to modules as described at: https://developers.google.com/appengine/docs/java/modules/converting.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>listBackends! : WARNING: Error posting to URL: https://appengine.google.com/api/backends/delete?backend=background&amp;app_id=project-123-181306&amp;
+listBackends! : 500 Internal Server Error
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>listBackends : Unable to list backends: Error posting to URL: https://appengine.google.com/api/backends/list?app_id=project-123-181306&amp;
+listBackends : 500 Internal Server Error
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>deleteBackendBackground : Warning: This application uses Backends, a deprecated feature that has been replaced by Modules, which offers additional functionality. Please convert your backends to modules as described at: https://developers.google.com/appengine/docs/java/modules/converting.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>deleteBackendBackground!: WARNING: Error posting to URL: https://appengine.google.com/api/backends/delete?backend=background&amp;app_id=project-123-181306&amp;
+deleteBackendBackground!: 400 Bad Request
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>deleteBackendBackground : Unable to delete backend: Error posting to URL: https://appengine.google.com/api/backends/delete?backend=background&amp;app_id=project-123-181306&amp;
+deleteBackendBackground : 400 Bad Request
+</pre></div>
+</div>
+<ul class="last simple">
+<li>Toward the bottom, the <em>update :</em> section should not report errors and at the end, a <em>status : Action Succeeded!</em> line should be written. This indicates that the upload completed successfully.</li>
+<li>To get a more clear view, you can see an <a class="reference external" href="https://opendatakit.org/wp-content/uploads/Apr2016-GoogleCloud/exampleUploadScriptOutput.txt">example log</a>.</li>
+</ul>
+</div>
+</li>
+<li><p class="first">Once the updater script has run and uploaded the ODK Aggregate configuration to App Engine, return to the Google Cloud Platform console. With the console displaying your project, click on the menu icon (three horizontal bars) to the right of <em>Google Cloud Platform</em> in the upper left side of the screen and select App Engine from the menu.</p>
+</li>
+<li><p class="first">Click on <span class="guilabel">ALLOW</span> in the next window.</p>
+<img alt="Image showing window asking for App Engine Permissions." src="_images/allow.png" />
+</li>
+<li><p class="first">Click on the project-id URL in the top right corner of the window.</p>
+<img alt="Image showing a window where server url is displayed on top right corner." src="_images/project-aggregate.png" />
+</li>
+<li><p class="first">You will go to now your ODK Aggregate server. You can click on <span class="guilabel">Log In</span> to log in, enter the ODK Aggregate username (superuser) that you specified within the installer (the initial password for this username will be aggregate) and access the site administration screens for your server.</p>
+<img alt="Image showing ODK Aggregate server and log in option." src="_images/server.png" />
+</li>
+</ol>
+<div class="section" id="changing-size-of-app-engine-server">
+<span id="change-size"></span><h3>Changing size of App Engine Server<a class="headerlink" href="#changing-size-of-app-engine-server" title="Link zu dieser Überschrift">¶</a></h3>
+<p>If you have many form definitions on your server, you may get better performance and reduce the likelihood of data corruption if you increase the size of your server.</p>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<ul class="last simple">
+<li>Data corruption is generally caused by the premature termination of an action (e.g., saving of a submission) because it took longer than the allotted time. The likelihood of data corruption occurring is tied to the quantity of form definitions on the server, the size of the individual submissions, the number of devices simultaneously submitting data, and the speed of the network. Increasing the web server size enables it to handle larger workloads faster, which can reduce the likelihood of hitting this time limit thereby avoiding data corruption.</li>
+<li>For data corruption caused by slow network speeds, you might also be able to change more aspects of the App Engine configuration (specified in these files) to make your web server always-available and to replace it with a Bx instance that does not have an automatic request time limit (the documentation provided by Google is currently unclear on whether this is still possible with the new services constructions).</li>
+</ul>
+</div>
+<p>To change Google App Engine configuration, you must edit the configuration files produced by the installer and re-run the uploader script to push the changes to Google’s servers. There are two server settings that can be changed:</p>
+<ul class="simple">
+<li><strong>Web Server Size</strong>: The web server handles all browser interactions and all data-submission and form-download requests from ODK Collect and ODK Briefcase. Increasing the size of the web server should reduce the likelihood of data corruption if it is not caused by slow network speeds. To change the Google App Engine web server size, go to the folder you specified to the installer. Within that folder, navigate to <code class="file docutils literal"><span class="pre">ODKAggregate/default/WEB-INF</span></code>. Within that directory, there will be a file <code class="file docutils literal"><span class="pre">appengine-web.xml</span></code>. Open that file in a text editor like Notepad++ or Notepad. The file contents will look something like:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;appengine-web-app</span> <span class="na">xmlns=</span><span class="s">&quot;http://appengine.google.com/ns/1.0&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;application&gt;</span>opendatakit-simpledemo<span class="nt">&lt;/application&gt;</span>
+  <span class="nt">&lt;module&gt;</span>default<span class="nt">&lt;/module&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1<span class="nt">&lt;/version&gt;</span>
+
+      <span class="nt">&lt;instance-class&gt;</span>F2<span class="nt">&lt;/instance-class&gt;</span>
+...
+</pre></div>
+</div>
+<p>To change the size of the web server, replace <strong>F2</strong> with a different instance class size. There are several different instance classes available. Select from among the instance classes beginning with the letter <strong>F</strong>. See <a class="reference external" href="https://cloud.google.com/appengine/docs/about-the-standard-environment#instance_classes">instance classes</a>  for their descriptions or search for <cite>Google AppEngine instance classes standard environment</cite> on the web. Then re-run the upload tool within the ODKAggregate folder either by double-clicking the <code class="file docutils literal"><span class="pre">ODKAggregateAppEngineUpdater.jar</span></code> file (Windows), or double-clicking the <code class="file docutils literal"><span class="pre">uploadAggregateToAppEngine.app</span></code> file (Mac OSX), or double-clicking the <code class="file docutils literal"><span class="pre">uploadAggregateToAppEngine.sh</span></code> file (linux). Once you have uploaded these changes to App Engine, your server will be running on the instance size that you have specified.</p>
+</div></blockquote>
+<ul class="simple">
+<li><strong>Background Server Size</strong>: App Engine deployments use a „background“ copy of the website to process long-running actions like generating CSV and KML files for export and for publishing all accumulated data to an external server. If you experience difficulty exporting to CSV or KML, the size of that server will also need to be updated. In that case, go to <code class="file docutils literal"><span class="pre">ODKAggregate/background/WEB-INF</span></code>. Within that directory, there will be a slightly different file with the same <code class="file docutils literal"><span class="pre">appengine-web.xml</span></code> filename. Open that file in a text editor like Notepad++ or Notepad. The file contents will look something like:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;appengine-web-app</span> <span class="na">xmlns=</span><span class="s">&quot;http://appengine.google.com/ns/1.0&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;application&gt;</span>opendatakit-simpledemo<span class="nt">&lt;/application&gt;</span>
+   <span class="nt">&lt;module&gt;</span>background<span class="nt">&lt;/module&gt;</span>
+   <span class="nt">&lt;version&gt;</span>1<span class="nt">&lt;/version&gt;</span>
+
+       <span class="nt">&lt;instance-class&gt;</span>B2<span class="nt">&lt;/instance-class&gt;</span>
+...
+</pre></div>
+</div>
+<p>To change the size of the server, replace <strong>B2</strong> with a different instance class size. There are several different instance classes available. Select from among the instance classes beginning with the letter <strong>B</strong>. See instance classes for their descriptions or search for <cite>Google AppEngine instance classes standard environment</cite> on the web as described in Web Server Size. And, as above, re-run the upload tool to make these changes take effect on Google’s servers.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="installing-vm-local-or-cloud">
+<span id="install-vm"></span><h2>Installing VM (Local or Cloud)<a class="headerlink" href="#installing-vm-local-or-cloud" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li>The <a class="reference external" href="https://gumroad.com/l/odk-aggregate-vm">ODK Aggregate VM</a> is a fully-configured install of Aggregate that you can run on any computer. It requires very little setup, works well without Internet connectivity, and gives you complete control over your data collection campaign.</li>
+</ul>
+</div>
+<div class="section" id="installing-on-tomcat-local-or-cloud">
+<span id="install-tomcat"></span><h2>Installing on Tomcat (Local or Cloud)<a class="headerlink" href="#installing-on-tomcat-local-or-cloud" title="Link zu dieser Überschrift">¶</a></h2>
+<p>To run on ODK Aggregate on a Tomcat server backed with a MySQL or PostgreSQL database follow the following steps:</p>
+<ol class="arabic">
+<li><p class="first">Define your server requirements and install your server.</p>
+<ul class="simple">
+<li><strong>Availability</strong>: Decide the availability of your server depending on how frequently you want to update and upload forms. If you do need a high-availability server, you need to talk to your Internet Service Provider (ISP) as to their availability guarantees.</li>
+<li><strong>Data Loss</strong>: Your tolerance to data loss will impact your backup schedule and your server hardware.  Invest in a storage system based on your tolerance to data loss. Seek technical assistance for these requirements. If you cannot tolerate any data loss, or less than 24 hours of data loss, you should invest in a RAID storage array with battery-backed controller cards. If you can tolerate a day or longer interval of data loss, be sure you have a periodic tape or other means of backup for your system that matches or is shorter than the data loss interval.</li>
+<li><strong>Dataset Size</strong>: The quantity of data you intend to collect will affect the size of the machine required to host the ODK Aggregate instance and of your database server. For most applications, the default size should be fine. If you are collecting more than 6000 submissions, you may need to increase the JVM size. Note that the maximum size of the JVM is limited by the size of the physical memory on your machine.</li>
+<li><strong>Secure and Protected Data</strong>: If you need to prevent eavesdroppers from seeing your data as it is transmitted to your ODK Aggregate instance, you should either (1) only connect to ODK Aggregate from within your organization’s network (when the ODK Collect devices are on your premises), (2) obtain an SSL certificate and install it on your Tomcat server (a certificate is required to secure transmissions over https:), or (3) use <a class="reference external" href="https://opendatakit.org/help/encrypted-forms/">Encrypted Forms</a>. If you are not using encrypted forms and are handling sensitive data, a computer security specialist should review your system and your security procedures. When operating without an SSL certificate, do not access ODK Aggregate from a remote location when changing passwords.</li>
+</ul>
+</li>
+<li><p class="first">Install Tomcat on your server.</p>
+<ul class="simple">
+<li>Install <a class="reference external" href="https://java.com/en/download/">Java 8</a> or higher on your system.</li>
+</ul>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">You generally need to launch installers with Run as administrator privileges (available under the right-click menu). Accept all the defaults.</p>
+</div>
+<ul class="simple">
+<li>Add the installed Java bin directory to the <a class="reference external" href="https://docs.oracle.com/javase/tutorial/essential/environment/paths.html">PATH variable</a>.</li>
+<li>Download and install <a class="reference external" href="https://tomcat.apache.org/download-80.cgi">Tomcat 8</a></li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<ul>
+<li><p class="first">If using the Windows installer, change to use port 80 for the HTTP/1.1 port. If you are going to set up an SSL certificate, change the HTTPS/1.1 port to 443. Use all other defaults.</p>
+</li>
+<li><p class="first">Verify that Tomcat 8 is running by opening a browser on this server to <em>http://localhost/</em> You should see the Apache Tomcat administration page. If you didn’t request port 80 during the install, you will need to specify the port you chose (<em>http://localhost:port/</em>). If you didn’t configure a port, the default port is 8080 (and 8443 for HTTPS).</p>
+</li>
+<li><p class="first"><strong>Linux Installs</strong></p>
+<ul class="simple">
+<li>To ensure that the proper java settings are found by the web server, you may need to specify the <strong>-E</strong> flag when restarting the webserver. Example -</li>
+</ul>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo apt-get install tasksel
+<span class="gp">$</span> sudo tasksel install tomcat
+<span class="gp">$</span> sudo apt-get install java8-jdk
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Now open <code class="file docutils literal"><span class="pre">/.bashrc</span></code> with your editor and add: export JAVA_HOME = <code class="file docutils literal"><span class="pre">/usr/lib/jvm/java-7-openjdk-amd64</span></code> at the bottom of that file. Change this to whatever path is appropriate for your java installation.</li>
+</ul>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo -E /etc/init.d/tomcat8 restart
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>The <strong>E</strong> flag on the last command is critical. It forces Ubuntu to reload the environment settings for the service, causing it to pick up the new <em>JAVA_HOME</em> setting.</li>
+</ul>
+</li>
+<li><p class="first">Apply or change the administrator password for Tomcat; the administration functions should be secured.</p>
+</li>
+<li><p class="first">ODK Aggregate v1.4.13 and higher are supported on Tomcat 8.0; these newer releases should also work, without modification on other webservers.</p>
+</li>
+<li><p class="first">Prior to ODK Aggregate v1.4.13, we only supported Tomcat 6. Tomcat 7, Tomcat 8, Glassfish and Jetty require additional configuration steps to run ODK Aggregate v1.4.12 and earlier. All of these webservers require configuration settings to enable cookies under HTTPS.</p>
+</li>
+</ul>
+<blockquote class="last">
+<div><ul class="simple">
+<li><strong>For Tomcat 7</strong>: Edit <code class="file docutils literal"><span class="pre">context.xml</span></code> (under Tomcat 7’s conf directory) to have the attribute ‚useHttpOnly‘ set to false.</li>
+</ul>
+<blockquote>
+<div><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;Context</span> <span class="na">useHttpOnly=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li><strong>For Tomcat 8</strong>: My ODK Aggregate file is installed as <code class="file docutils literal"><span class="pre">/var/lib/tomcat8/webapps/ODKAggregate.war</span></code>. The following content needed to be placed in the file <code class="file docutils literal"><span class="pre">webapps/ODKAggregate/META-INF/context.xml</span></code> (this is within the expanded content of the war file, once the Tomcat 8 server has exploded it).</li>
+</ul>
+<blockquote>
+<div><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;Context</span> <span class="na">path=</span><span class="s">&quot;&quot;</span> <span class="na">useHttpOnly=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li><strong>For Glassfish 4</strong>: Add <code class="file docutils literal"><span class="pre">glassfish-web.xml</span></code> under ODK Aggregate’s WEB-INF directory with the content:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;glassfish-web-app&gt;</span>
+    <span class="nt">&lt;session-config&gt;</span>
+        <span class="nt">&lt;cookie-properties&gt;</span>
+            <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;cookieHttpOnly&quot;</span> <span class="na">value=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/cookie-properties&gt;</span>
+    <span class="nt">&lt;/session-config&gt;</span>
+<span class="nt">&lt;/glassfish-web-app&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li><strong>For Jetty</strong>: Add <code class="file docutils literal"><span class="pre">jetty-web.xml</span></code> under ODK Aggregate’s WEB-INF directory with the content:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-xml"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;  encoding=&quot;ISO-8859-1&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE Configure PUBLIC &quot;-//Jetty//Configure//EN&quot; &quot;http://www.eclipse.org/jetty/configure.dtd&quot;&gt;</span>
+
+<span class="nt">&lt;Configure</span> <span class="na">class=</span><span class="s">&quot;org.eclipse.jetty.webapp.WebAppContext&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;Get</span> <span class="na">name=</span><span class="s">&quot;sessionHandler&quot;</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;Get</span> <span class="na">name=</span><span class="s">&quot;sessionManager&quot;</span><span class="nt">&gt;</span>
+             <span class="nt">&lt;Set</span> <span class="na">name=</span><span class="s">&quot;secureCookies&quot;</span> <span class="na">type=</span><span class="s">&quot;boolean&quot;</span><span class="nt">&gt;</span>true<span class="nt">&lt;/Set&gt;</span>
+         <span class="nt">&lt;/Get&gt;</span>
+     <span class="nt">&lt;/Get&gt;</span>
+<span class="nt">&lt;/Configure&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first"><a class="reference external" href="https://opendatakit.org/use/aggregate/tomcat-install/#Configure_for_Network_Access">Configure your server and network devices</a> so that laptops or Android devices connecting to the internet from an external access point can access your server. If your organization has a network or systems administrator, contact them for assistance. The steps for this are:</p>
+</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>configure your server firewall to allow access</li>
+<li>make your server visible on the internet (optional)</li>
+<li>establish a DNS name for the server</li>
+</ul>
+</div></blockquote>
+<ol class="arabic" start="4">
+<li><p class="first"><a class="reference external" href="https://gist.github.com/yanokwa/399a7fcbc3d9ad8a0bd3">Obtain and Install</a> an SSL certificate if you need secure (https:) access.</p>
+</li>
+<li><p class="first">Select and Install your database server (MySQL or PostgreSQL or Microsoft SQL Server or Azure SQL Server).</p>
+<ul>
+<li><p class="first">ODK Aggregate works with any of these database servers:</p>
+<blockquote>
+<div><ul class="simple">
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>Microsoft SQL Server</li>
+<li>Azure SQL Server (requires Java 8)</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">A database server manages one or more databases. The database server stores and retrieves data from tables within these databases.</p>
+</li>
+<li><p class="first">For MySQL, download and install MySQL Community Server 5.7 or higher from <a class="reference external" href="https://dev.mysql.com/downloads/">MySQL download site</a>. Be sure to set a root password for the database. Stop the MySQL database server, then configure the database (via the <code class="file docutils literal"><span class="pre">my.cnf</span></code> or the <code class="file docutils literal"><span class="pre">my.ini</span></code> file) with these lines added to the [mysqld] section:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>character_set_server=utf8
+collation_server=utf8_unicode_ci
+max_allowed_packet=1073741824
+</pre></div>
+</div>
+</li>
+</ul>
+<blockquote>
+<div><p>and restart the MySQL databaseserver. Then, download the <cite>MySQL Connector/J</cite>, unzip it, and copy the <code class="file docutils literal"><span class="pre">mysql-connector-java-x.x.x-bin.jar</span></code> file into the Tomcat server’s libs directory. After copying it into that directory, you should stop and restart the Tomcat server. The <cite>max_allowed_packet</cite> setting defines the maximum size of the communications buffer to the server. The value used in the snippet above is 1GB, the maximum value supported. For ODK Aggregate 1.4.11 through 1.4.7, and 1.2.x, the maximum media (e.g., image or video) attachment is limited to the value you set for max_allowed_packet minus some unknown overhead – e.g., a storage size of something less than 1GB. For ODK Aggregate 1.4.6 and earlier (excluding 1.2.x), the maximum media attachment is unlimited and the setting for max_allowed_packet does not need to be specified. For ODK Aggregate 1.4.12 and later, the max_allowed_packet value should be set to a value greater than 16842752 (this is the minimum value that should be used: 16MB plus 64kB); with that setting, media attachments of unlimited size are once again supported. If you are upgrading to a newer ODK Aggregate, you must continue to use the setting you already have, or 16842752, whichever is greater. If you experience problems uploading large attachments, change this setting to its maximum value, 1073741824. Finally, if you are using MySQL 5.7 or later, some of releases <a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/password-management.html">expire all database passwords</a> after 360 days. Please verify the behavior of your version of MySQL and either change the password expiration policy or create a calendar reminder to change the password before it expires. For ODK Aggregate, you will need to re-run the installer to specify the new password.</p>
+</div></blockquote>
+<ul class="simple">
+<li>For PostgreSQL, download and install the appropriate binary package from <a class="reference external" href="https://www.postgresql.org/download/">PostgreSQL download site</a>. Be sure to set the password for the postgres (root) user and set the default character set and collation sequence.</li>
+<li>For either database, you should ensure that the default character set is configured to be UTF-8 and that the collation sequence (dictionary order) is set appropriately for your circumstances. If it isn’t, any non-Latin characters may display as question marks. Refer to the character set and collation sections of your database’s documentation for how to do this.</li>
+<li>For Microsoft SQL Server or Azure SQL Server, you should configure these with UTF-8 character sets and to use Windows authentication. When using Windows authentication, the user under which the webserver executes must be granted permissions to access the SQL Server instance. The install wizard for ODK Aggregate will produce a <code class="file docutils literal"><span class="pre">Readme.html</span></code> file that contains additional information on how to complete the configuration of the database and webserver service.</li>
+</ul>
+</li>
+<li><p class="first">Download and install <a class="reference external" href="https://opendatakit.org/downloads/">ODK Aggregate</a>. Select the latest Featured release for your operating system.</p>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">The installer will guide you through configuring ODK Aggregate for Tomcat and MySQL/PostgreSQL/SQLServer. The installer will produce a WAR file (web archive) containing the configured ODK Aggregate server, a <code class="file docutils literal"><span class="pre">create_db_and_user.sql</span></code> script for creating the database and user that ODK Aggregate will use to access this database, and a <code class="file docutils literal"><span class="pre">Readme.html</span></code> file with instructions on how to complete the installation.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<ul class="last simple">
+<li>When asked for the fully qualified hostname of the ODK Aggregate server, you should enter the DNS name you established above. The install also asks for a database name, user and password. The user should not be root (MySQL) or postgres (PostgreSQL). ODK Aggregate will use this user when accessing this database (and it will only access this database). By specifying different databases and users, you can set up multiple ODK Aggregate servers that share the same database server, store their data in different databases, and operate without interfering with each other.</li>
+<li>If you are upgrading to a newer version of ODK Aggregate, as long as you specify the same database name, user and password, you do not need to re-run the <code class="file docutils literal"><span class="pre">create_db_and_user.sql</span></code> script (it only needs to be executed once).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="installing-on-aws-cloud">
+<span id="install-aws"></span><h2>Installing on AWS (Cloud)<a class="headerlink" href="#installing-on-aws-cloud" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Following are basic details on setting up ODK Aggregate to run on a Linux micro-instance on the Amazon Web Services EC2 infrastructure.</p>
+<p>For screenshots and more on the general set-up of Tomcat on AWS, see the excellent three-part <a class="reference external" href="http://www.excelsior-usa.com/articles/tomcat-amazon-ec2-basic.html">Cat in the cloud Apache Tomcat Series</a>. <a class="reference external" href="https://aws.amazon.com/documentation/gettingstarted/">Amazon’s getting-started guides</a> are also quite helpful.</p>
+<ol class="arabic">
+<li><p class="first">First, sign up for Amazon Web Services EC2 at <a class="reference external" href="http://aws.amazon.com/ec2/">http://aws.amazon.com/ec2/</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<ul class="last simple">
+<li>You will need to confirm a working phone number.</li>
+<li>If you want to use a U.S. number but are presently overseas, you can use a Google Voice number routed to Google Chat.</li>
+</ul>
+</div>
+</li>
+<li><p class="first">Go to the AWS/EC2 management console and note your region (shown in the upper-left).</p>
+</li>
+<li><p class="first">Launch a new instance with the <span class="guilabel">Launch Instance</span> button prominently displayed on the EC2 console home screen. Accept the default behavior and use the quick-launch wizard.</p>
+</li>
+<li><p class="first">For the launch configuration, choose the <span class="guilabel">Amazon Linux AMI: EBS-Backed (64-bit)</span> option. This is one of the instance types that you can run on a micro-instance as part of their <a class="reference external" href="http://aws.amazon.com/free/">free tier</a>. Leave everything else at the defaults, including the instance type. The instance type will default to <em>t2.micro</em> which is a small, limited instance that can be run for free. For a price, you can upgrade the instance type later if you need better performance.</p>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">The exact AMI name and ID will depend on your region.</p>
+</div>
+</li>
+<li><p class="first">Create a new key pair, download the private key, and keep the private key safe. This will be your only method of communicating with your new instance and you will not be allowed to download it again.</p>
+</li>
+<li><p class="first">After creating the instance, add security rules for allowing both HTTP and HTTPS. Choose the <span class="guilabel">Security Groups</span> tab and click on the auto-created security group associated with your new instance. This might have been called <em>launch-wizard-1</em>. If you’re not sure, you can go to the Instances tab to see which Security Group is listed for the new instance.</p>
+<p>In the properties pane at the bottom, click on the <span class="guilabel">Inbound tab</span>, select HTTP from the <span class="guilabel">create a new rule</span> drop-down, then click <span class="guilabel">Add Rule</span>. Do the same for HTTPS. Then click <span class="guilabel">Apply Rule Changes</span>.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<p class="last">To avoid potential problems with MTU settings and packet loss, also add a rule to allow <em>All ICMP</em>. Add a rule for both IPv4 and IPv6. After you create the new rule, click <span class="guilabel">Apply Rule Changes</span>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">Tomcat defaults to listening on nonstandard ports 8080 and 8443. Below will be instructions to use the standard HTTP and HTTPS ports instead. However, if you want to leave Aggregate on the non-standard ports, you can certainly do so; in that case, simply add two additional security rules to allow access via 8080 and 8443.</p>
+</div>
+</li>
+<li><p class="first">Switch to the <span class="guilabel">Instances</span> tab, click on your instance, and note its Public DNS Address in the properties pane below. This is the default address that you will use to access your instance.</p>
+</li>
+<li><p class="first">Presuming that you want a friendlier way to access your instance, allocate it an <em>elastic IP</em> and domain name. Navigate to Elastic IPs and click <span class="guilabel">Allocate New Address</span>. Associate it with your new instance.  Note your new IP. Also, if possible, configure DNS to route one or more names to this address. You can then use this IP and/or name to access your instance (and can forget the Public DNS Address assigned by AWS).</p>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">The IP is free so long as you keep it associated with a running instance. If you stop your instance and do not release the IP address for others to use (in essence, wasting it), then Amazon will begin charging you for holding the unused address.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<p class="last">When you set up Aggregate below, you will need to configure it with the domain name you will use to access it. Thus, it is best if you configure the domain name first.</p>
+</div>
+</li>
+<li><p class="first">Connect to your instance. Go to the <span class="guilabel">Instances</span> tab and select <span class="menuselection">Connect</span> from the Instance Actions drop-down (alternatively, you can right-click on the instance and choose Connect). From here AWS presents you with several options.</p>
+<ul class="simple">
+<li>The easiest is to connect using their Java SSH client. If you choose that option, you just have to specify the location of your private key file (created above) and AWS launches an in-browser SSH client to connect to your instance.</li>
+<li>You can also select to connect with a stand-alone SSH client. If you choose this option, AWS will provide extremely helpful instructions, including an SSH command that you can cut and paste into your local command window. It will also inform you that you may need to update the permissions on your local private key file in order for the ssh client to run properly, and it will even give you the command to run (e.g., <strong class="command">chmod 400 xxx.pem</strong>).</li>
+<li>Once you connect, you will probably be told that there are new security updates to install. You can run <strong class="command">sudo yum update</strong> to install these updates, as it advises.</li>
+</ul>
+</li>
+<li><p class="first">Transfer files to/from your instance. When you login via ssh, you will default to being in the (empty) ec2-user home directory. You will want to be able to transfer files between here and your local directory. You have several options.</p>
+<ul class="simple">
+<li>If you’re using the command-line ssh, you can also use the command-line scp to copy files. The syntax is similar to ssh, but of course you also need to specify the source and destination file paths.</li>
+<li>An easier option is to use an FTP program like FileZilla (as long as it supports SFTP). To configure FileZilla to connect to your instance, go into <span class="menuselection">Edit‣Settings/Preferences‣Connection‣SFTP</span> and add your private key to FileZilla’s keystore (it will offer to convert the key format, which you should accept). Then, go into Site Manager and create a new site. The host should be the IP, name, or Public DNS for your instance, the port can be blank, the protocol should be <strong>SFTP – SSH File Transfer Protocol</strong>, the login type should be Normal, and the user should be <strong>ec2-user</strong>. Everything else should be left at the defaults, including the password (which will be blank). When you connect, the default directory will be the ec2-user’s home directory, but you can also navigate to other directories.</li>
+</ul>
+</li>
+<li><p class="first">Install Tomcat 6. This can be done by running <strong class="command">sudo yum install tomcat6</strong>. This installs configuration files into <code class="file docutils literal"><span class="pre">/etc/tomcat6</span></code> and other files into <code class="file docutils literal"><span class="pre">/usr/share/tomcat6</span></code>. Log files go into <code class="file docutils literal"><span class="pre">/var/log/tomcat6</span></code>.</p>
+</li>
+<li><p class="first">Install MySQL. This can be done by running:</p>
+</li>
+</ol>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo yum install mysql mysql-server
+</pre></div>
+</div>
+<p>Now use vi or an editor to edit <code class="file docutils literal"><span class="pre">/etc/my.cnf</span></code> (e.g., <strong class="command">sudo vi /etc/my.cnf</strong>). In the [mysqld] section, add (the max_allowed_packet allows up to a 4GB file attachment):</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>character_set_server=utf8
+collation_server=utf8_unicode_ci
+max_allowed_packet=1073741824
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="13">
+<li>Run MySQL. To run MySQL:</li>
+</ol>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo service mysqld start
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic" start="14">
+<li><p class="first">Install and transfer ODK Aggregate files.</p>
+<ul class="simple">
+<li>First, install ODK Aggregate on your local computer (not on your AWS instance).</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">During set-up, it’s important to specify that this will be a MySQL installation, and it is also very important that you specify the correct domain name or IP address that will be used to access your Aggregate server. Ideally, this will be a specific domain name that you have already mapped to an elastic IP (and can re-map later if you change the IP).</p>
+</div>
+<ul class="simple">
+<li>The installation will create a <code class="file docutils literal"><span class="pre">create_db_and_user.sql</span></code> file. Upload this to your ec2-user home directory as described in point 10.</li>
+<li>The installation will also create an <code class="file docutils literal"><span class="pre">ODKAggregate.war</span></code> file. Rename this to <code class="file docutils literal"><span class="pre">ROOT.war</span></code> and upload it to the <code class="file docutils literal"><span class="pre">/usr/share/tomcat6/webapps</span></code> folder. If you receive a <em>Permission Denied</em> error, you might need to execute <strong class="command">chmod -R 755</strong> or something similar for the webapps folder.</li>
+<li>After <code class="file docutils literal"><span class="pre">ROOT.war</span></code> has been copied to the server, you need to make sure tomcat has permission to use it. Run <strong class="command">sudo chown tomcat ROOT.war</strong> and <strong class="command">sudo chgrp tomcat ROOT.war</strong> in the webapps directory to ensure this is the case.</li>
+</ul>
+</li>
+<li><p class="first">Configure MySQL.</p>
+<ul class="simple">
+<li>On your AWS instance, run <code class="file docutils literal"><span class="pre">/usr/bin/mysql_secure_installation</span></code> to set a root password and generally secure your MySQL installation.</li>
+<li>Then, run <strong class="command">mysql –u root -p</strong> to log in to MySQL (specifying the password you just set), and type <strong class="command">source ~/create_db_and_user.sql</strong>. This will create the ODK user and database. Type <strong class="command">quit</strong> on the mysql prompt to quit from MySQL.</li>
+<li>Finally, run <strong class="command">sudo /sbin/chkconfig –levels 235 mysqld on</strong> to auto-start MySQL whenever your instance boots up.</li>
+</ul>
+</li>
+<li><p class="first">Configure Tomcat.</p>
+<ul>
+<li><p class="first">Download the MySQL Connector/J from the <a class="reference external" href="http://dev.mysql.com/downloads/connector/j/)">MySQL download page</a> unzip it, and transfer the <code class="file docutils literal"><span class="pre">mysql‐connector‐java‐x.x.x‐bin.jar</span></code> file up to your instance’s <code class="file docutils literal"><span class="pre">/usr/share/tomcat6/lib</span></code> directory.</p>
+</li>
+<li><p class="first">Edit <code class="file docutils literal"><span class="pre">/etc/tomcat6/server.xml</span></code> in order to customize settings. (If you’re not used to Linux text editors, you can always download the file, edit it, and upload it back.)</p>
+</li>
+<li><p class="first">Assuming that you want to run Aggregate on the standard HTTP port (80) and HTTPS port (443):</p>
+<ul class="simple">
+<li>Change “&lt;Connector port=“8080“ protocol=“HTTP/1.1“” to “&lt;Connector port=“8080“ proxyPort=“80“ protocol=“HTTP/1.1“” (i.e., add the proxyPort attribute).</li>
+<li>If you are using SSL, also change “&lt;Connector port=“8443“ protocol=“HTTP/1.1“ SSLEnabled=“true“” to “&lt;Connector port=“8443“ proxyPort=“443“ protocol=“HTTP/1.1“ SSLEnabled=“true“”.</li>
+<li>Execute the following commands to have Linux forward to the ports on which Tomcat listens:</li>
+</ul>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport <span class="m">80</span> -j REDIRECT --to-port <span class="m">8080</span>
+<span class="gp">$</span> sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport <span class="m">443</span> -j REDIRECT --to-port <span class="m">8443</span>
+<span class="gp">$</span> sudo /sbin/service iptables save
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>If you have an SSL certificate for HTTPS support:<ul>
+<li>Make sure that the “&lt;Connector port=“8443“” part of the configuration file is not commented out. If it is, un-comment it.</li>
+<li>Upload your SSL keystore file and the certificate(s) to the server.</li>
+<li>Install it as instructed. (If you buy from RapidSSL, for example, they provide you with Tomcat installation instructions. E.g., you may need to download a special P7S certificate file, then install it on the server with “keytool -import -alias YOURALIAS trustcacerts file xxxxx.p7s -keystore xxxxx.keystore”.)</li>
+<li>In the “&lt;Connector port=“8443“” part of the configuration file, specify the location of your keystore file and password (e.g., “keystoreFile=“/…/xxxxx.keystore“ keystorePass=“changeit“”).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first">Start Tomcat with <strong class="command">sudo service tomcat6 start</strong>.</p>
+</li>
+<li><p class="first">Configure Tomcat to auto-start when the instance boots with <strong class="command">sudo chkconfig –level 345 tomcat6 on</strong>.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Login and test. At this point, you should be able to login to your AWS-hosted Aggregate instance by going to its name or IP in your web browser (with or without HTTPS, depending on your set-up).</p>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">For your first login, you will need to login with the Google account you specified during the Aggregate installation process. Then you can add additional users from the <span class="guilabel">Site Admin</span> tab.</p>
+</div>
+<p>Once you have confirmed that your Aggregate instance is working, you can back it up by creating an image of the instance (an AMI). You can do this by going to the <span class="guilabel">Instances</span> tab in the AWS-EC2 console, then selecting the <span class="guilabel">Create Image (EBS AMI)</span> Instance Action for your instance.</p>
+</li>
+<li><p class="first">Further set-up for production servers:</p>
+</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>You will want to create a system to monitor and manage the log files in <code class="file docutils literal"><span class="pre">/var/log/tomcat6</span></code>.</li>
+<li>You will also want to create a system for regular back-ups and a plan for how to restore them when needed. This will be needed to safely back up the MySQL database, which may be in-use at any given time.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<ul class="last simple">
+<li>The micro instance is only free for 12 months from AWS sign-up, and that you may exceed the free quotas on disk space or network bandwidth before that point (<a class="reference external" href="http://aws.amazon.com/free/">see</a>).</li>
+<li>You may at some point need to upgrade your instance to a standard instance if the micro instance is not providing enough performance.</li>
+</ul>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="aggregate-guide.html" class="btn btn-neutral" title="ODK Aggregate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> ODK Aggregate</a>
+       
+      
+        <a href="aggregate-deployment-planning.html" class="btn btn-neutral float-right" title="Aggregate Deployment Planning" accesskey="n" rel="next">Aggregate Deployment Planning <span class="fa fa-arrow-circle-right"></span></a>
+      
+    </div>
+  
+
+  <hr/>
+  <p class="footerText"> 
+
+If you still need help, you can ask support questions in the
+
+ <a href="
+
+https://forum.opendatakit.org/
+
+"> 
+
+ODK Forum
+
+ </a> </p>
+  <p class="footerText"> 
+
+If you find a problem with this documentation, please 
+
+ <a href="
+
+https://github.com/opendatakit/docs/issues
+
+"> 
+
+file an issue
+
+ </a> </p>
+  <p class="footerText"> 
+
+You are also encouraged to
+
+ <a href=" 
+
+https://github.com/opendatakit/docs/
+
+"> 
+
+fork our Github repo 
+
+ </a>  
+
+and 
+
+ <a href="
+
+/contributing/
+
+"> 
+
+become a contributor
+
+ </a></p>
+  
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Open Data Kit. This document is licensed under a Creative Commons Attribution 4.0 International License.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/js/custom.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

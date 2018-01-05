@@ -1,0 +1,2406 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Open Data Kit. This document is licensed under a Creative Commons Attribution 4.0 International License
+# This file is distributed under the same license as the Open Data Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Data Kit 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-05 12:11+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../form-widgets.rst:16
+msgid "Form Widgets"
+msgstr ""
+
+#: ../../form-widgets.rst:18
+msgid "This document is a list of available ODK :term:`Collect` :term:`form` :term:`widgets <widget>` (question types), with:"
+msgstr ""
+
+#: ../../form-widgets.rst:20
+msgid "example images from the ODK Collect app"
+msgstr ""
+
+#: ../../form-widgets.rst:21
+msgid "example Excel spreadsheet rows for creating form widgets with :term:`XLSForm`"
+msgstr ""
+
+#: ../../form-widgets.rst:22
+msgid "example :term:`ODK XForm` XML snippets"
+msgstr ""
+
+#: ../../form-widgets.rst:27
+msgid "Basic Form Widgets"
+msgstr ""
+
+#: ../../form-widgets.rst:29
+msgid "This section shows examples of all the form widgets types, with no additional options displayed."
+msgstr ""
+
+#: ../../form-widgets.rst:34
+msgid "String Input"
+msgstr ""
+
+#: ../../form-widgets.rst:36
+msgid "A simple text input."
+msgstr ""
+
+#: ../../form-widgets.rst:43
+#: ../../form-widgets.rst:74
+#: ../../form-widgets.rst:150
+#: ../../form-widgets.rst:218
+#: ../../form-widgets.rst:247
+#: ../../form-widgets.rst:285
+#: ../../form-widgets.rst:341
+#: ../../form-widgets.rst:382
+#: ../../form-widgets.rst:417
+#: ../../form-widgets.rst:452
+#: ../../form-widgets.rst:487
+#: ../../form-widgets.rst:528
+#: ../../form-widgets.rst:595
+#: ../../form-widgets.rst:730
+#: ../../form-widgets.rst:770
+#: ../../form-widgets.rst:801
+#: ../../form-widgets.rst:834
+#: ../../form-widgets.rst:880
+#: ../../form-widgets.rst:913
+#: ../../form-widgets.rst:946
+#: ../../form-widgets.rst:978
+#: ../../form-widgets.rst:1007
+#: ../../form-widgets.rst:1040
+#: ../../form-widgets.rst:1076
+#: ../../form-widgets.rst:1110
+#: ../../form-widgets.rst:1145
+#: ../../form-widgets.rst:1184
+#: ../../form-widgets.rst:1230
+#: ../../form-widgets.rst:1266
+#: ../../form-widgets.rst:1317
+#: ../../form-widgets.rst:1380
+#: ../../form-widgets.rst:1410
+#: ../../form-widgets.rst:1459
+#: ../../form-widgets.rst:1489
+#: ../../form-widgets.rst:1516
+#: ../../form-widgets.rst:1556
+#: ../../form-widgets.rst:1613
+#: ../../form-widgets.rst:1669
+#: ../../form-widgets.rst:1726
+#: ../../form-widgets.rst:1783
+#: ../../form-widgets.rst:1840
+#: ../../form-widgets.rst:1894
+#: ../../form-widgets.rst:1948
+#: ../../form-widgets.rst:2003
+#: ../../form-widgets.rst:2058
+#: ../../form-widgets.rst:2115
+#: ../../form-widgets.rst:2170
+#: ../../form-widgets.rst:2226
+#: ../../form-widgets.rst:2283
+#: ../../form-widgets.rst:2341
+#: ../../form-widgets.rst:2531
+msgid "XLSForm Rows"
+msgstr ""
+
+#: ../../form-widgets.rst:45
+#: ../../form-widgets.rst:76
+#: ../../form-widgets.rst:152
+#: ../../form-widgets.rst:220
+#: ../../form-widgets.rst:249
+#: ../../form-widgets.rst:287
+#: ../../form-widgets.rst:343
+#: ../../form-widgets.rst:384
+#: ../../form-widgets.rst:419
+#: ../../form-widgets.rst:454
+#: ../../form-widgets.rst:489
+#: ../../form-widgets.rst:530
+#: ../../form-widgets.rst:565
+#: ../../form-widgets.rst:597
+#: ../../form-widgets.rst:633
+#: ../../form-widgets.rst:704
+#: ../../form-widgets.rst:732
+#: ../../form-widgets.rst:772
+#: ../../form-widgets.rst:803
+#: ../../form-widgets.rst:836
+#: ../../form-widgets.rst:882
+#: ../../form-widgets.rst:915
+#: ../../form-widgets.rst:948
+#: ../../form-widgets.rst:980
+#: ../../form-widgets.rst:1009
+#: ../../form-widgets.rst:1042
+#: ../../form-widgets.rst:1078
+#: ../../form-widgets.rst:1111
+#: ../../form-widgets.rst:1147
+#: ../../form-widgets.rst:1186
+#: ../../form-widgets.rst:1232
+#: ../../form-widgets.rst:1319
+#: ../../form-widgets.rst:1352
+#: ../../form-widgets.rst:1382
+#: ../../form-widgets.rst:1412
+#: ../../form-widgets.rst:1461
+#: ../../form-widgets.rst:1491
+#: ../../form-widgets.rst:1518
+#: ../../form-widgets.rst:1558
+#: ../../form-widgets.rst:1615
+#: ../../form-widgets.rst:1671
+#: ../../form-widgets.rst:1728
+#: ../../form-widgets.rst:1785
+#: ../../form-widgets.rst:1842
+#: ../../form-widgets.rst:1896
+#: ../../form-widgets.rst:1950
+#: ../../form-widgets.rst:2005
+#: ../../form-widgets.rst:2060
+#: ../../form-widgets.rst:2117
+#: ../../form-widgets.rst:2172
+#: ../../form-widgets.rst:2228
+#: ../../form-widgets.rst:2285
+#: ../../form-widgets.rst:2343
+#: ../../form-widgets.rst:2533
+msgid "survey"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "type"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "name"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "label"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "text"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "What is your name?"
+msgstr ""
+
+#: ../../form-widgets.rst:52
+#: ../../form-widgets.rst:96
+#: ../../form-widgets.rst:172
+#: ../../form-widgets.rst:226
+#: ../../form-widgets.rst:255
+#: ../../form-widgets.rst:293
+#: ../../form-widgets.rst:349
+#: ../../form-widgets.rst:390
+#: ../../form-widgets.rst:425
+#: ../../form-widgets.rst:460
+#: ../../form-widgets.rst:495
+#: ../../form-widgets.rst:536
+#: ../../form-widgets.rst:571
+#: ../../form-widgets.rst:603
+#: ../../form-widgets.rst:639
+#: ../../form-widgets.rst:669
+#: ../../form-widgets.rst:710
+#: ../../form-widgets.rst:738
+#: ../../form-widgets.rst:778
+#: ../../form-widgets.rst:809
+#: ../../form-widgets.rst:843
+#: ../../form-widgets.rst:888
+#: ../../form-widgets.rst:921
+#: ../../form-widgets.rst:954
+#: ../../form-widgets.rst:986
+#: ../../form-widgets.rst:1015
+#: ../../form-widgets.rst:1048
+#: ../../form-widgets.rst:1084
+#: ../../form-widgets.rst:1117
+#: ../../form-widgets.rst:1153
+#: ../../form-widgets.rst:1193
+#: ../../form-widgets.rst:1238
+#: ../../form-widgets.rst:1275
+#: ../../form-widgets.rst:1325
+#: ../../form-widgets.rst:1358
+#: ../../form-widgets.rst:1388
+#: ../../form-widgets.rst:1418
+#: ../../form-widgets.rst:1467
+#: ../../form-widgets.rst:1497
+#: ../../form-widgets.rst:1524
+#: ../../form-widgets.rst:1572
+#: ../../form-widgets.rst:1629
+#: ../../form-widgets.rst:1685
+#: ../../form-widgets.rst:1742
+#: ../../form-widgets.rst:1800
+#: ../../form-widgets.rst:1856
+#: ../../form-widgets.rst:1910
+#: ../../form-widgets.rst:1964
+#: ../../form-widgets.rst:2019
+#: ../../form-widgets.rst:2074
+#: ../../form-widgets.rst:2131
+#: ../../form-widgets.rst:2186
+#: ../../form-widgets.rst:2242
+#: ../../form-widgets.rst:2299
+#: ../../form-widgets.rst:2364
+#: ../../form-widgets.rst:2539
+msgid "XForm XML"
+msgstr ""
+
+#: ../../form-widgets.rst:65
+msgid "Single Select"
+msgstr ""
+
+#: ../../form-widgets.rst:67
+msgid "A radio-button single choice from several options."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one fruit_list"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "fruits"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "What is your favorite fruit?"
+msgstr ""
+
+#: ../../form-widgets.rst:81
+#: ../../form-widgets.rst:157
+#: ../../form-widgets.rst:1563
+#: ../../form-widgets.rst:1620
+#: ../../form-widgets.rst:1676
+#: ../../form-widgets.rst:1733
+#: ../../form-widgets.rst:1790
+#: ../../form-widgets.rst:1847
+#: ../../form-widgets.rst:1901
+#: ../../form-widgets.rst:1955
+#: ../../form-widgets.rst:2010
+#: ../../form-widgets.rst:2065
+#: ../../form-widgets.rst:2122
+#: ../../form-widgets.rst:2177
+#: ../../form-widgets.rst:2233
+#: ../../form-widgets.rst:2290
+#: ../../form-widgets.rst:2355
+msgid "choices"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "list_name"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "fruit_list"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "apple"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "pear"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "peach"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "strawberry"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "pineapple"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "orange"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "grape"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "plum"
+msgstr ""
+
+#: ../../form-widgets.rst:93
+#: ../../form-widgets.rst:168
+msgid "The **list_name** in the **choices** table matches the string *after* ``select_one`` in the **type** column of the **survey** table."
+msgstr ""
+
+#: ../../form-widgets.rst:141
+msgid "Multi-select"
+msgstr ""
+
+#: ../../form-widgets.rst:143
+msgid "A checkbox-list selection of multiple items. (The example includes a :term:`hint`.)"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "hint"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_multiple veggie_list"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "veggies"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Which vegetables do you enjoy?"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Select all that apply."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "veggie_list"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "broccoli. broccoli"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "carrot"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "spinach"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "tomato"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "bell_pepper"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "bell pepper"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "asparagus"
+msgstr ""
+
+#: ../../form-widgets.rst:169
+msgid "The content of **name** can not have spaces."
+msgstr ""
+
+#: ../../form-widgets.rst:210
+msgid "Integer"
+msgstr ""
+
+#: ../../form-widgets.rst:212
+msgid "A whole number entry input. Integer widgets will not accept decimal points."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "integer"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "age"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "What is your age in years?"
+msgstr ""
+
+#: ../../form-widgets.rst:239
+msgid "Decimal"
+msgstr ""
+
+#: ../../form-widgets.rst:241
+msgid "A numerical entry input that will accept decimal points."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "decimal"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "weight"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Weight in kilograms."
+msgstr ""
+
+#: ../../form-widgets.rst:268
+msgid "Geopoint"
+msgstr ""
+
+#: ../../form-widgets.rst:270
+msgid "A single set of GPS coordinates. The example includes a :term:`hint`."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "geopoint"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "current_location"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Current location."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "You might have to turn on your GPS."
+msgstr ""
+
+#: ../../form-widgets.rst:307
+msgid "GeoTrace"
+msgstr ""
+
+#: ../../form-widgets.rst:309
+msgid "A line or polygon of GPS coordinates tracking actual device movement. The user can specify one of two location-recording modes:"
+msgstr ""
+
+#: ../../form-widgets.rst:311
+msgid "Manual Mode — The user taps the device to place a marker as desired while moving."
+msgstr ""
+
+#: ../../form-widgets.rst:312
+msgid "Automatic Mode — The app creates a marker on a regular time interval (default: 20 seconds) as the user moves."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "geotrace"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "trace_example"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Where have you been?"
+msgstr ""
+
+#: ../../form-widgets.rst:362
+msgid "GeoShape"
+msgstr ""
+
+#: ../../form-widgets.rst:364
+msgid "A user-entered series of GPS coordinates, forming a polygon."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "geoshape"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "shape_example"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Select an area."
+msgstr ""
+
+#: ../../form-widgets.rst:403
+msgid "Date"
+msgstr ""
+
+#: ../../form-widgets.rst:405
+msgid "A date selector."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "date"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "birthday"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "What is your birthday?"
+msgstr ""
+
+#: ../../form-widgets.rst:438
+msgid "Time"
+msgstr ""
+
+#: ../../form-widgets.rst:440
+msgid "A time selector. Captures only a specific time-of-day, not a date and time. For date and time, see :ref:`datetime`."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "time"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "wakeup"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "What time do you usually wakeup?"
+msgstr ""
+
+#: ../../form-widgets.rst:473
+#: ../../form-widgets.rst:1
+msgid "Ethiopian Calendar"
+msgstr ""
+
+#: ../../form-widgets.rst:475
+msgid "An Ethiopian-calendar. The main calendar used in Ethiopia. Users can enter a date according to the Ethiopian calendar system, and also see the corresponding Gregorian (standard) calendar date."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "ethiopian-calendar"
+msgstr ""
+
+#: ../../form-widgets.rst:508
+msgid "Datetime"
+msgstr ""
+
+#: ../../form-widgets.rst:510
+msgid "A datetime selector. For date only, see :ref:`date`. For time only, see :ref:`time`."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "dateTime"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "previous_meal"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "When was the last time you ate?"
+msgstr ""
+
+#: ../../form-widgets.rst:549
+msgid "Image"
+msgstr ""
+
+#: ../../form-widgets.rst:551
+msgid "An image collector. The user can choose to select an image stored on the device or take a new picture. The example includes :term:`hint` text."
+msgstr ""
+
+#: ../../form-widgets.rst:563
+msgid "XLSForm"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "image"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "selfie"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Please take a self portrait."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "A \"selfie.\""
+msgstr ""
+
+#: ../../form-widgets.rst:585
+msgid "Audio"
+msgstr ""
+
+#: ../../form-widgets.rst:587
+msgid "An audio recording collector."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "audio"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "name_pronounce"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Please record your name."
+msgstr ""
+
+#: ../../form-widgets.rst:616
+msgid "Video"
+msgstr ""
+
+#: ../../form-widgets.rst:618
+msgid "A video collector. The example includes :term:`hint` text."
+msgstr ""
+
+#: ../../form-widgets.rst:631
+#: ../../form-widgets.rst:661
+#: ../../form-widgets.rst:702
+#: ../../form-widgets.rst:1350
+msgid "XSLForm Rows"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "video"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "blinking"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Please record a video of yourself blinking."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Three times is probably sufficient."
+msgstr ""
+
+#: ../../form-widgets.rst:653
+msgid "Note"
+msgstr ""
+
+#: ../../form-widgets.rst:655
+msgid "A note to the user, accepting no input. This example includes :term:`hint` text."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "note"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "note_1"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "This is an example note."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "The text displays, but there is no input."
+msgstr ""
+
+#: ../../form-widgets.rst:683
+msgid "Barcode"
+msgstr ""
+
+#: ../../form-widgets.rst:685
+msgid "Captures the text from a barcode using the device camera. Supported barcode formats are described [here](https://github.com/zxing/zxing/#supported-formats). Non-printing control codes are removed."
+msgstr ""
+
+#: ../../form-widgets.rst:687
+msgid "The flash can be used as a light source when scanning barcodes in a poorly-lit environment."
+msgstr ""
+
+#: ../../form-widgets.rst:690
+msgid "Barcode scanning is built into ODK Collect versions 1.7.0 and greater. Versions of ODK Collect prior to 1.7.0 require the [ZXing app](https://play.google.com/store/apps/details?id=com.google.zxing.client.android) to be installed."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "barcode"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "barcode_example"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Scan any barcode."
+msgstr ""
+
+#: ../../form-widgets.rst:722
+msgid "Acknowledge"
+msgstr ""
+
+#: ../../form-widgets.rst:724
+msgid "An acknowledgement prompt with a single checkbox. In :term:`Aggregate`, a completed acknowledgement is stored as the string response ``OK``."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "acknowledge"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "ack_sample"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "I acknowledge this acknowledgement."
+msgstr ""
+
+#: ../../form-widgets.rst:751
+msgid "Widget Formatting with Appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:753
+msgid "In your :term:`xlsform` sheet, you can optionally specify an :th:`appearance` column. This will affect widget display and functionality in :term:`Collect`."
+msgstr ""
+
+#: ../../form-widgets.rst:758
+msgid "Text Widgets"
+msgstr ""
+
+#: ../../form-widgets.rst:763
+msgid "Default Appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "string_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "String widget"
+msgstr ""
+
+#: ../../form-widgets.rst:793
+msgid "String Number"
+msgstr ""
+
+#: ../../form-widgets.rst:795
+msgid "A numerical input that treats the input as a string, rather than a number."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "string_number_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "String number widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "numbers"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "text type with numbers appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:824
+msgid "URL Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:826
+msgid "Provides a link which the user can open from the survey. Takes no input."
+msgstr ""
+
+#: ../../form-widgets.rst:828
+msgid "The URL to open is specified with :th:`default`."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "default"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "url_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "URL widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "url"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "text type with url appearance and default value of http://opendatakit.org/"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "http://opendatakit.org/"
+msgstr ""
+
+#: ../../form-widgets.rst:867
+msgid "External App String Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:869
+msgid "Launches an external app and receives a string input back from the external app. If the specified external app is not available, a manual input is prompted."
+msgstr ""
+
+#: ../../form-widgets.rst:871
+msgid "The external app widget is displayed when the :th:`appearance` attribute begins with :tc:`ex:`. The rest of the :th:`appearance` string specifies the application to launch."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "ex_string_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Ex string widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "ex:change.uw.android.BREATHCOUNT"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "text type with ex:change.uw.android.BREATHCOUNT appearance (can use other external apps)"
+msgstr ""
+
+#: ../../form-widgets.rst:903
+msgid "External Printer Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:905
+msgid "Connects to an external printer. See `printing widget <https://opendatakit.org/help/form-design/examples/#printing_widgets>`_ for complete details."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "ex_printer_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Ex printer widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "printer:org.opendatakit.sensors.ZebraPrinter"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "text type with printer:org.opendatakit.sensors.ZebraPrinter"
+msgstr ""
+
+#: ../../form-widgets.rst:935
+msgid "Number Widgets"
+msgstr ""
+
+#: ../../form-widgets.rst:940
+msgid "Default Integer Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "integer_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Integer widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "integer type with no appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:967
+msgid "External Integer Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:969
+msgid "Launches an external app and receives an integer input back from the external app. If the specified external app is not available, a manual input is prompted."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "ex_integer_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Ex integer widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "integer type with ex:change.uw.android.BREATHCOUNT appearance (can use other external apps)"
+msgstr ""
+
+#: ../../form-widgets.rst:1001
+msgid "Default Decimal Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "decimal_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Decimal widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "decimal type with no appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1029
+msgid "External Decimal Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1031
+msgid "Launches an external app and receives a decimal number input back from the external app. If the specified external app is not available, a manual input is prompted."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "ex_decimal_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Ex decimal widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "decimal type with ex:change.uw.android.BREATHCOUNT appearance (can use other external apps)"
+msgstr ""
+
+#: ../../form-widgets.rst:1062
+msgid "Bearing Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1064
+msgid "Captures a compass reading."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "bearing_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Bearing widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "bearing"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "decimal type with bearing appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1099
+msgid "Image Widgets"
+msgstr ""
+
+#: ../../form-widgets.rst:1104
+msgid "Default Image Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "image_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Image widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "image type with no appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1131
+msgid "Selfie Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1133
+msgid "Takes a picture using the front-facing (\"selfie\") camera. The \"Choose picture\" button is not displayed."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "selfie_image_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Selfie widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "image type with selfie appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1167
+msgid "Draw Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1169
+msgid "Provides the user a drawing pad and collects the drawn image."
+msgstr ""
+
+#: ../../form-widgets.rst:0
+msgid "header"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "draw_image_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Draw widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "draw"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "image type with draw appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1207
+msgid "Annotate Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1209
+msgid "Allows the user to take or select an image and then draw on it."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "annotate_image_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Annotate widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "annotate"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "image type with annotate appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1252
+msgid "Signature Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1254
+msgid "Collects a signature from the user."
+msgstr ""
+
+#: ../../form-widgets.rst:1268
+msgid "table"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "signature_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Signature widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "signature"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "image type with signature appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1289
+msgid "Media Widgets"
+msgstr ""
+
+#: ../../form-widgets.rst:1291
+msgid "The media widgets do not accept any appearance attributes. They are documented in :ref:`basic-form-widgets` above:"
+msgstr ""
+
+#: ../../form-widgets.rst:1293
+msgid ":ref:`barcode`"
+msgstr ""
+
+#: ../../form-widgets.rst:1294
+msgid ":ref:`audio`"
+msgstr ""
+
+#: ../../form-widgets.rst:1295
+msgid ":ref:`video`"
+msgstr ""
+
+#: ../../form-widgets.rst:1300
+msgid "Date and Time Widgets"
+msgstr ""
+
+#: ../../form-widgets.rst:1305
+msgid "Default Date Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "date_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "Date widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "date type with no appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1339
+msgid "Date, No Calendar"
+msgstr ""
+
+#: ../../form-widgets.rst:1341
+msgid "The :tc:`no-calendar` appearance displays a \"spinner\" type date selection. This is especially appropriate for selecting dates more than in the past."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "date_widget_nocalendar"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Date Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "no-calendar"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "date type with no-calendar appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1372
+msgid "Month and Year Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1374
+msgid "Collects only a month and year."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "date_widget_month_year"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "month-year"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "date type with month-year appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1402
+msgid "Year Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1404
+msgid "Collects only a year."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "date_widget_year"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "year"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "date type with year appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1432
+msgid "Time Widgets"
+msgstr ""
+
+#: ../../form-widgets.rst:1434
+msgid "The :tc:`time` widget does not accept an appearance attribute."
+msgstr ""
+
+#: ../../form-widgets.rst:1436
+msgid "See :ref:`basic-form-widgets` for details on:"
+msgstr ""
+
+#: ../../form-widgets.rst:1438
+msgid ":ref:`time`"
+msgstr ""
+
+#: ../../form-widgets.rst:1439
+msgid ":ref:`datetime`"
+msgstr ""
+
+#: ../../form-widgets.rst:1441
+msgid "The :ref:`datetime` widget accepts a :tc:`no-calendar` appearance. This changes the date selector to the \"spinner\" style shown in :ref:`date-no-calendar`."
+msgstr ""
+
+#: ../../form-widgets.rst:1446
+msgid "GPS Widgets"
+msgstr ""
+
+#: ../../form-widgets.rst:1451
+msgid "Default Geopoint"
+msgstr ""
+
+#: ../../form-widgets.rst:1453
+msgid "The default :ref:`geopoint` widget collects the current GPS position (if available) from the device."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "geopoint_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "Geopoint widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "geopoint type with no appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1481
+msgid "Geopoint Placement Map Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1483
+msgid "A geopoint with the appearance attribute :tc:`placement-map` allows the user to select a geopoint from a map."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "geopoint_widget_placementmap"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "placement-map"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "geopoint type with placement-map appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1511
+msgid "Geopoint with Map"
+msgstr ""
+
+#: ../../form-widgets.rst:1513
+msgid "The default :ref:`geopoint` widget does not display a map to the user. With the added :tc:`maps` appearance attribute, a map of the recorded location is shown to the user. The user cannot select a different location on the map. (See :ref:`placement-map-widget` for a geopoint with a user-selected location.)"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "geopoint_widget_maps"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "maps"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "geopoint type with maps appearance"
+msgstr ""
+
+#: ../../form-widgets.rst:1538
+msgid "Geoshape and Geotrace"
+msgstr ""
+
+#: ../../form-widgets.rst:1540
+msgid "The :ref:`geopoint` and :ref:`geotrace` widgets do not accept any appearance attributes."
+msgstr ""
+
+#: ../../form-widgets.rst:1545
+msgid "Single Select Widgets"
+msgstr ""
+
+#: ../../form-widgets.rst:1550
+msgid "Default Single Select"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "select_one opt_abcd"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Select one widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one type with no appearance, 4 text choices"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "opt_abcd"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "a"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "A"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "b"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "B"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "c"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "C"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "d"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "D"
+msgstr ""
+
+#: ../../form-widgets.rst:1602
+msgid "Spinner Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1604
+#: ../../form-widgets.rst:2274
+msgid "Adding the :tc:`minimal` appearance attribute places the choices into a drop-down style menu."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "spinner_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Spinner widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "minimal"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one type with minimal appearance, 4 text choices"
+msgstr ""
+
+#: ../../form-widgets.rst:1660
+msgid "Autoadvance Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1662
+msgid "Advances immediately to the next question once a selection is made."
+msgstr ""
+
+#: ../../form-widgets.rst:1666
+msgid "Video showing auto-advance after the questions are answered."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one_autoadvance_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Select one autoadvance widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "quick"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one type with quick appearance, 4 text choices"
+msgstr ""
+
+#: ../../form-widgets.rst:1715
+msgid "Select with Search Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1717
+msgid "A set of radio buttons with a search and filter function."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one_search_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "Select one search widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "search"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one type with search appearance, 4 text choices"
+msgstr ""
+
+#: ../../form-widgets.rst:1772
+msgid "Select with Autocomplete Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1774
+msgid "A set of radio buttons with a search and filter function. The search input has an autocomplete feature."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one_autocomplete_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "autocomplete"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one type with autocomplete appearance, 4 text choices"
+msgstr ""
+
+#: ../../form-widgets.rst:1830
+msgid "Default Single Select with Images"
+msgstr ""
+
+#: ../../form-widgets.rst:1832
+msgid "A set of radio buttons with text labels and accompanying images."
+msgstr ""
+
+#: ../../form-widgets.rst:1834
+msgid "See :ref:`image-options` to learn more about including images in surveys."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "select_one abcd_icon"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "grid_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "Grid select one widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one type with no appearance, 4 image choices (a.jpg, b.jpg, c.jpg, d.jpg)"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "media::image"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "abcd_icon"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "a.jpg"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "b.jpg"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "c.jpg"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "d.jpg"
+msgstr ""
+
+#: ../../form-widgets.rst:1886
+msgid "Compact Single Select with Images"
+msgstr ""
+
+#: ../../form-widgets.rst:1888
+msgid "Image options are placed on a single line."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "grid_widget_compact"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "compact"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one type with compact appearance, 4 image choices (a.jpg, b.jpg, c.jpg, d.jpg)"
+msgstr ""
+
+#: ../../form-widgets.rst:1940
+msgid "Compact Single Select with Images, width specified"
+msgstr ""
+
+#: ../../form-widgets.rst:1942
+msgid "With the :tc:`compact-{x}` style, you can specify the number of images to display on each row. To display two images on each row, specify an :th:`appearance` of :tc:`compact-2`."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "grid_widget_compact2"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "compact-2"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one type with compact-2 appearance, 4 image choices (a.jpg, b.jpg, c.jpg, d.jpg)"
+msgstr ""
+
+#: ../../form-widgets.rst:1994
+msgid "Compact Single Select with Images and Autoadvance"
+msgstr ""
+
+#: ../../form-widgets.rst:1996
+msgid "The :tc:`quickcompact` appearance attribute combines the design of the :ref:`compact-single-image-select` widget with the :ref:`autoadvance-widget` functionality."
+msgstr ""
+
+#: ../../form-widgets.rst:2000
+msgid "Video showing Compact single select widget and auto-advance after the question is answered."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "grid_widget_quickcompact"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "quickcompact"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one type with quickcompact appearance, 4 image choices (a.jpg, b.jpg, c.jpg, d.jpg)"
+msgstr ""
+
+#: ../../form-widgets.rst:2049
+msgid "Compact Single Select with Images and Autoadvance, width specified"
+msgstr ""
+
+#: ../../form-widgets.rst:2051
+msgid "As with :ref:`compact <compact-2>`, you can specify a width when using :tc:`quickcompact`. To display two images on each row, set the :th:`appearance` attribute to :tc:`quickcompact-2`."
+msgstr ""
+
+#: ../../form-widgets.rst:2055
+msgid "Video showing Compact-2 widget and auto-advance after the question is answered."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "grid_widget_quickcompact2"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "quickcompact-2"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_one type with quickcompact-2 appearance, 4 image choices (a.jpg, b.jpg, c.jpg, d.jpg)"
+msgstr ""
+
+#: ../../form-widgets.rst:2104
+msgid "Multiselect Widgets"
+msgstr ""
+
+#: ../../form-widgets.rst:2109
+msgid "Default Multiselect Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "select_multiple opt_abcd"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_multi_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Multi select widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_multiple type with no appearance, 4 text choices"
+msgstr ""
+
+#: ../../form-widgets.rst:2161
+msgid "Compact Multiselect with Images"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "select_multiple abcd_icon"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "grid_multi_widget_compact"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "Grid select multiple widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_multiple type with compact appearance, 4 image choices"
+msgstr ""
+
+#: ../../form-widgets.rst:2216
+msgid "Compact Multiselect with Image Choices, style 2"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "grid_multi_widget_compact2"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_multiple type with compact-2 appearance, 4 image choices"
+msgstr ""
+
+#: ../../form-widgets.rst:2272
+msgid "Multiselect Spinner Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "spinner_multi_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Spinner widget: select multiple"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "select_multiple type with minimal appearance, 4 image choices"
+msgstr ""
+
+#: ../../form-widgets.rst:2330
+msgid "Field List"
+msgstr ""
+
+#: ../../form-widgets.rst:2332
+msgid "The :tc:`field-list` appearance attribute, applied to a group of questions, displays them all on a single screen."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "begin_group"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "table_list_test"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "List group"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "field-list"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "select_one yes_no"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "table_list_test_label"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Label widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Show only the labels of these options and not the inputs (type=select_one yes_no, appearance=label)"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "select_multiple yes_no"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "table_list_test_label_2"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Label multi widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Show only the labels of these options and not the inputs (type=select_multiple yes_no, appearance=label)"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "table_list_1"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "List widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "list-nolabel"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Show only the inputs of these options and not the labels (type=select_one yes_no, appearance=list-nolabel)"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "table_list_2"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "List multi widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Show only the inputs of these options and not the labels (type=select_multiple yes_no, appearance=list-nolabel)"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "list_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "list"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "This is a normal list widget with (type = select_one, appearance = list)"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "list_multi_widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "This is a normal list widget with (type = select_multiple, appearance = list)"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "end_group"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+#: ../../form-widgets.rst:1
+msgid "yes_no"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "yes"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Yes"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "no"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "No"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "dk"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Don't Know"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "na"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Not Applicable"
+msgstr ""
+
+#: ../../form-widgets.rst:2517
+msgid "Trigger Widget"
+msgstr ""
+
+#: ../../form-widgets.rst:2519
+msgid "\"Trigger\" is another name for the :ref:`acknowledge` widget. The example shown here includes the :th:`required` attribute."
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "required"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "trigger"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "my_trigger"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Trigger widget"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "Prompts for confirmation. Useful to combine with required or relevant. (type=trigger)"
+msgstr ""
+
+#: ../../form-widgets.rst:1
+msgid "true()"
+msgstr ""
+
+#: ../../form-widgets.rst:2554
+msgid "Including Images as Choices"
+msgstr ""
+
+#: ../../form-widgets.rst:2556
+msgid "To include images as choices for select questions, specify the file name in the **choices** worksheet, in a column labeled :th:`media::image`. The media files must be uploaded to the Android device in the :file:`/sdcard/odk/forms/` directory, in a folder labeled :file:`{form-name}-media`. When uploading a form to ODK Aggregate, a second upload prompt will allow you to upload your files directory."
+msgstr ""
+

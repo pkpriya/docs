@@ -1,0 +1,1801 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Open Data Kit. This document is licensed under a Creative Commons Attribution 4.0 International License
+# This file is distributed under the same license as the Open Data Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Data Kit 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-05 12:11+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../contributing.rst:16
+msgid "Contributing to ODK Docs"
+msgstr ""
+
+#: ../../contributing.rst:21
+msgid "Authoring Tools and Environment"
+msgstr ""
+
+#: ../../contributing.rst:25
+msgid "Developer and authoring tools have lots of options and alternatives. Local tools and workflows presented in this guide are what the author feels would be easiest for a non-coding contributor to set up and use."
+msgstr ""
+
+#: ../../contributing.rst:30
+msgid "Docs as Code"
+msgstr ""
+
+#: ../../contributing.rst:32
+msgid "ODK Documentation follows (as much as possible) the `Docs like Code <http://www.writethedocs.org/guide/docs-as-code/>`_ philosophy. This means:"
+msgstr ""
+
+#: ../../contributing.rst:34
+msgid "Documentation source files are written in a plain text format. (We use `reStructuredText <http://docutils.sourceforge.net/rst.html>`_.)"
+msgstr ""
+
+#: ../../contributing.rst:35
+msgid "Documentation source files are kept under version control. (We use git and `Github <https://github.com/opendatakit/docs>`_.)"
+msgstr ""
+
+#: ../../contributing.rst:36
+msgid "Documentation is built from source to published output using a static site generator. (We use `Sphinx <http://sphinx-doc.org>`_.)"
+msgstr ""
+
+#: ../../contributing.rst:37
+msgid "Documentation builds are run, tested, and deployed automatically using continuous integration tools. (We use `CircleCI <https://circleci.com/>`_.)"
+msgstr ""
+
+#: ../../contributing.rst:39
+msgid "`The 'Docs as Code' approach has many advantages <http://hackwrite.com/posts/docs-as-code/>`_, but we are aware that this approach can feel difficult for writers who aren't used to dealing with the command line. It can also be difficult for coders who are used to this approach, but who typically use simpler authoring tools (like `Jekyll <http://jekyllrb.com>`_ and `Markdown <https://guides.github.com/features/mastering-markdown/>`_)."
+msgstr ""
+
+#: ../../contributing.rst:41
+msgid "This section of the Contributor Guide walks through our authoring and publishing workflow and toolchain, to make it as easy as possible for you to contribute."
+msgstr ""
+
+#: ../../contributing.rst:46
+msgid "Overview of Workflow"
+msgstr ""
+
+#: ../../contributing.rst:48
+msgid "When you first get started you'll need to:"
+msgstr ""
+
+#: ../../contributing.rst:50
+msgid "Fork to your own Github Account"
+msgstr ""
+
+#: ../../contributing.rst:51
+msgid "Clone it down to your local machine"
+msgstr ""
+
+#: ../../contributing.rst:52
+msgid "Install dependencies"
+msgstr ""
+
+#: ../../contributing.rst:54
+msgid "And then each time you work you will:"
+msgstr ""
+
+#: ../../contributing.rst:56
+msgid "Make a branch for a specific task"
+msgstr ""
+
+#: ../../contributing.rst:57
+msgid "Make commits as you go"
+msgstr ""
+
+#: ../../contributing.rst:58
+msgid "Build and view the docs locally - Correct any errors and commit"
+msgstr ""
+
+#: ../../contributing.rst:60
+msgid "Push your branch to your Github fork"
+msgstr ""
+
+#: ../../contributing.rst:61
+msgid "Issue a pull request against the current working branch of the main repo (usually ``master``)"
+msgstr ""
+
+#: ../../contributing.rst:62
+msgid "Pull latest back to your local machine from the main repo"
+msgstr ""
+
+#: ../../contributing.rst:63
+msgid "Repeat"
+msgstr ""
+
+#: ../../contributing.rst:68
+msgid "Setting up your Environment"
+msgstr ""
+
+#: ../../contributing.rst:73
+msgid "Terminal (Command Line)"
+msgstr ""
+
+#: ../../contributing.rst:77
+msgid "This contributor guide is written primarily from a \\*nix (Bash Terminal) perspective, which is relevant to all flavors of Linux and MacOS. We consider the Bash terminal commands to be the \"canonical\" way to build and work with the docs."
+msgstr ""
+
+#: ../../contributing.rst:79
+msgid "We have also provided explanations for how to adapt these commands to the Windows Command Prompt. (This is different than Windows Powershell, and not all the commands will work in Powershell. For more details on the Windows Command Prompt, `see this article <https://www.lifewire.com/how-to-open-command-prompt-2618089>`_"
+msgstr ""
+
+#: ../../contributing.rst:81
+msgid "If you are on a Windows machine, you may prefer to use the adapted Windows instructions here. Alternatively, you can follow the Bash commands:"
+msgstr ""
+
+#: ../../contributing.rst:83
+msgid "use the `Linux subsystem (Windows 10) <https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/>`_"
+msgstr ""
+
+#: ../../contributing.rst:84
+msgid "use a bash terminal emulator, such as"
+msgstr ""
+
+#: ../../contributing.rst:86
+msgid ":doc:`Cygwin <cygwin>`"
+msgstr ""
+
+#: ../../contributing.rst:87
+msgid "`gitbash <https://git-for-windows.github.io/>`_"
+msgstr ""
+
+#: ../../contributing.rst:89
+msgid "The lead maintainers of this docs repo are not Windows users, so we rely on our contributor community to keep Windows-specific information complete and accurate. Contributions to this guide with explanations and help for Windows users are greatly appreciated."
+msgstr ""
+
+#: ../../contributing.rst:91
+msgid "Contributing to the docs requires interacting with git, Github, Python, and Sphinx, which requires the use of the Terminal. This is common among Linux users. Mac users unfamiliar with the Terminal can learn more from `this tutorial <https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855>`_."
+msgstr ""
+
+#: ../../contributing.rst:96
+msgid "Python"
+msgstr ""
+
+#: ../../contributing.rst:101
+msgid "Python 3"
+msgstr ""
+
+#: ../../contributing.rst:103
+msgid "If you don't know, check to see if you have Python 3 installed:"
+msgstr ""
+
+#: ../../contributing.rst:110
+msgid "On windows:"
+msgstr ""
+
+#: ../../contributing.rst:117
+msgid "If you get an error, you probably don't have it and will need to `install Python 3 <https://www.python.org/downloads/>`_."
+msgstr ""
+
+#: ../../contributing.rst:119
+msgid "On Windows make sure to select the option \"Add python to the Path\", while installing (see `instructions <https://www.youtube.com/watch?v=oHOiqFs_x8Y>`_ ) otherwise you need to add it `manually <https://youtu.be/UTUlp6L2zkw>`_ ."
+msgstr ""
+
+#: ../../contributing.rst:121
+msgid "If the Python command-line interpreter starts up, type ``quit()`` to exit."
+msgstr ""
+
+#: ../../contributing.rst:126
+msgid "Virtual Environment"
+msgstr ""
+
+#: ../../contributing.rst:128
+msgid "A virtual environment is a Python tool for sandboxing dependencies. It lets you install whatever you need for a particular project, without messing up any other Python environments you might need."
+msgstr ""
+
+#: ../../contributing.rst:130
+msgid "Check to see if you have virtualenv installed:"
+msgstr ""
+
+#: ../../contributing.rst:136
+msgid "If you get a help message with information about commands, you have it. If you don't have it, you'll get a ``command not found`` message."
+msgstr ""
+
+#: ../../contributing.rst:138
+msgid "In case you don't have it, install it using ``pip`` by running:"
+msgstr ""
+
+#: ../../contributing.rst:144
+msgid "Then, create an ODK \"master\" directory. This will contain your virtualenv and the docs repo as subdirectories."
+msgstr ""
+
+#: ../../contributing.rst:151
+msgid "Now, inside that odk directory, create a python3 virtualenv."
+msgstr ""
+
+#: ../../contributing.rst:157
+#: ../../contributing.rst:172
+msgid "On Windows use:"
+msgstr ""
+
+#: ../../contributing.rst:164
+msgid "The last part, ``odkenv`` can be whatever name you'd like to call it."
+msgstr ""
+
+#: ../../contributing.rst:166
+msgid "Activate your virtual environment with:"
+msgstr ""
+
+#: ../../contributing.rst:179
+msgid "And, when you are done working, deactivate it with:"
+msgstr ""
+
+#: ../../contributing.rst:189
+msgid "Github and git"
+msgstr ""
+
+#: ../../contributing.rst:191
+msgid "Git is a distributed version control system. It makes it possible to track changes in files over time, merge changes made by different contributors, compare different versions of the same file, and revert a file to an earlier point. Git can be very complicated, but you do not need to understand its advanced features or inner workings to use it."
+msgstr ""
+
+#: ../../contributing.rst:193
+msgid "GitHub is an online service that lets individuals and organizations host git repositories. It also provides additional collaboration tools like issue trackers. Open Data Kit uses GitHub for its public code and documentation projects."
+msgstr ""
+
+#: ../../contributing.rst:195
+msgid "You will need to:"
+msgstr ""
+
+#: ../../contributing.rst:197
+msgid "`Install git <https://git-scm.com/downloads>`_"
+msgstr ""
+
+#: ../../contributing.rst:198
+msgid "Make sure that git is installed properly by typing (git) in the terminal or command prompt"
+msgstr ""
+
+#: ../../contributing.rst:200
+msgid "On windows if you get any error check if environment variables are set up correctly(`see instructions <https://stackoverflow.com/questions/26620312/installing-git-in-path-with-github-client-for-windows#answer-34767523>`_)"
+msgstr ""
+
+#: ../../contributing.rst:202
+msgid "`Start a GitHub account <https://github.com/>`_"
+msgstr ""
+
+#: ../../contributing.rst:207
+msgid "GLFS"
+msgstr ""
+
+#: ../../contributing.rst:209
+msgid "We use `Git Large File Storage (GLFS)  <https://git-lfs.github.com/>`_ to handle large binary files like images and videos. Once installed, you normally won't need to do anything else. GLFS is largely transparent when using git."
+msgstr ""
+
+#: ../../contributing.rst:211
+msgid "`Install GLFS <https://git-lfs.github.com/>`_"
+msgstr ""
+
+#: ../../contributing.rst:216
+msgid "**On Windows**"
+msgstr ""
+
+#: ../../contributing.rst:218
+msgid "Make sure :file:`git-lfs.exe` and  :file:`git.exe` are under the same \"master\" directory on Windows. (See `this page <https://github.com/git-lfs/git-lfs/issues/919>`_ for reference."
+msgstr ""
+
+#: ../../contributing.rst:220
+msgid "GLFS tracks binary files as defined in the :file:`.gitattributes` file `in the repo <https://github.com/opendatakit/docs/blob/master/.gitattributes>`_. Most common binary file formats are already listed, but there might be others we haven't thought of yet."
+msgstr ""
+
+#: ../../contributing.rst:222
+msgid "If you are adding binary files to the repo, and they are in formats not already tracked, **it is your responsibility to make sure they are tracked.** To make sure they are properly tracked, add the file type to GLFS. You can do this by editing :file:`.gitattributes` directly."
+msgstr ""
+
+#: ../../contributing.rst:229
+msgid "You can also use the command line."
+msgstr ""
+
+#: ../../contributing.rst:235
+msgid "This will add a line to :file:`.gitattributes`."
+msgstr ""
+
+#: ../../contributing.rst:237
+msgid "We would also appreciate it if you would keep that file organized by placing the new file format declaration in the appropriate section, or creating a new section as needed."
+msgstr ""
+
+#: ../../contributing.rst:241
+msgid "Updates to :file:`.gitattributes` must be done in a commit before the commit that adds the new binary files."
+msgstr ""
+
+#: ../../contributing.rst:243
+msgid "**We will not accept Pull Requests that include binary files untracked by GLFS.**"
+msgstr ""
+
+#: ../../contributing.rst:249
+msgid "Android Tools"
+msgstr ""
+
+#: ../../contributing.rst:251
+msgid "Some testing and documentation tasks (including :ref:`making screenshots from ODK Collect <screenshots>`) require the :doc:`Android Debug Bridge <collect-adb>`) command line tool. You can either install Android Studio or install ADB as standalone SDK tool."
+msgstr ""
+
+#: ../../contributing.rst:254
+msgid "Android Studio"
+msgstr ""
+
+#: ../../contributing.rst:256
+msgid ":abbr:`ADB (Android Debug Bridge)` is part of `Android Studio <https://developer.android.com/studio/index.html>`_. This is the best way to get :command:`adb` if you plan to do any other Android development. It *should* be installed by default when you install Android Studio. To use it from the command line, you'll need to add the SDK Platform tools to your path."
+msgstr ""
+
+#: ../../contributing.rst:258
+msgid "On Mac, add the following to your :file:`.bash_profile`"
+msgstr ""
+
+#: ../../contributing.rst:262
+msgid "On Windows, you have to run Android Studio once to complete the Installation of ADB. The tool can be found in :file:`C:/Users/your user name/AppData/Local/Android/sdk/platform-tools`. You need to add it to the environment variable path, use the following command:"
+msgstr ""
+
+#: ../../contributing.rst:275
+msgid "The path specified above assumes a default installation of Android Studio. You may have put Android Studio in a different location."
+msgstr ""
+
+#: ../../contributing.rst:282
+msgid "Getting Ready to Work"
+msgstr ""
+
+#: ../../contributing.rst:287
+msgid "Fork the Docs"
+msgstr ""
+
+#: ../../contributing.rst:289
+msgid "Go to the `ODK Doc repo on Github <https://github.com/opendatakit/docs>`_ and use the :guilabel:`Fork` button (top right) to create your own copy. After the process completes, you'll be looking at your own fork on Github."
+msgstr ""
+
+#: ../../contributing.rst:294
+msgid "Clone Down to Local"
+msgstr ""
+
+#: ../../contributing.rst:296
+msgid "From your own form of the repo on Github, select the :guilabel:`Clone or download` button. Copy the URI from the text box that opens up. It will be something like: ``https://github.com/your-gh-username/docs.git``"
+msgstr ""
+
+#: ../../contributing.rst:298
+msgid "Open your terminal, and `cd` to your preferred directory. Then `git clone` the repo:"
+msgstr ""
+
+#: ../../contributing.rst:308
+msgid "The rest of the documentation assumes you are in the directory for the repo (the directory containing ``conf.py`` and ``index.rst``)."
+msgstr ""
+
+#: ../../contributing.rst:311
+msgid "The ``clone`` command creates a new directory inside the current one. So you do not need to create a new `odk-docs` directory first."
+msgstr ""
+
+#: ../../contributing.rst:312
+msgid "As noted above, we recommend a master :file:`odk` directory that holds your virtualenv directory and your git repo in two separate subdirectories. So you would be in that master :file:`odk` directory when you clone down the repo."
+msgstr ""
+
+#: ../../contributing.rst:313
+msgid "Double check that right folders are in the right places"
+msgstr ""
+
+#: ../../contributing.rst:324
+msgid "Set the Upstream Remote"
+msgstr ""
+
+#: ../../contributing.rst:326
+msgid "When you clone down a repo, the local copy calls your GitHub copy ``origin``. You should also set ``upstream`` as the name of the original, main GitHub repo."
+msgstr ""
+
+#: ../../contributing.rst:333
+msgid "Or in Windows:"
+msgstr ""
+
+#: ../../contributing.rst:339
+msgid "Run ``git remote -v`` to check the status, you should see something like this:"
+msgstr ""
+
+#: ../../contributing.rst:351
+msgid "Install Dependencies"
+msgstr ""
+
+#: ../../contributing.rst:353
+msgid "The first time you clone down the repo, you'll need to install the dependencies. Make sure you have your Python 3 virtual environment set up and activated in the docs repo and then:"
+msgstr ""
+
+#: ../../contributing.rst:361
+msgid "If you are working on the design, testing, or deployment of the docs, you might find the need to install an additional PyPi package. If you do, please update the requirements.txt file with ``pip freeze > requirements.txt``. Pull Requests which change :file:`requirements.txt` should include a note about why the new packages are needed."
+msgstr ""
+
+#: ../../contributing.rst:365
+msgid "If you have problems when running the Sphinx commands (see below), you may have a dependency issue. Try running ``pip install -r requirements.txt`` again."
+msgstr ""
+
+#: ../../contributing.rst:370
+msgid "Workflow Details"
+msgstr ""
+
+#: ../../contributing.rst:375
+msgid "Pull in Updates from Upstream"
+msgstr ""
+
+#: ../../contributing.rst:377
+msgid "You probably won't need to do this the first time, but you should always pull in any changes from the main repository before working."
+msgstr ""
+
+#: ../../contributing.rst:386
+msgid "If you get this message:"
+msgstr ""
+
+#: ../../contributing.rst:395
+msgid "Try running ``git pull upstream master`` instead."
+msgstr ""
+
+#: ../../contributing.rst:400
+msgid "Make a New Branch"
+msgstr ""
+
+#: ../../contributing.rst:402
+msgid "Choose a specific, deliverable task to work on. This should be an `active issue from our issue tracker on GitHub <https://github.com/opendatakit/docs/issues>`_."
+msgstr ""
+
+#: ../../contributing.rst:404
+msgid "Create a new branch in which you will work on this specific issue. The branch name should briefly describe what you are doing. For example, the original author of this contributor guide worked in a branch he called ``contributing``. Also, make sure that all the branches are derived from the ``master`` branch to avoid intermixing of commits."
+msgstr ""
+
+#: ../../contributing.rst:412
+msgid "Branch names should be short, lowercase, and use hyphens for separators."
+msgstr ""
+
+#: ../../contributing.rst:414
+msgid "Good branch names:"
+msgstr ""
+
+#: ../../contributing.rst:416
+msgid "``getting-started-guide``"
+msgstr ""
+
+#: ../../contributing.rst:417
+msgid "``contributing``"
+msgstr ""
+
+#: ../../contributing.rst:418
+msgid "``fix-issue-13``"
+msgstr ""
+
+#: ../../contributing.rst:420
+msgid "Bad branch names:"
+msgstr ""
+
+#: ../../contributing.rst:422
+msgid "``getting started guide``"
+msgstr ""
+
+#: ../../contributing.rst:423
+msgid "``Getting started guide``"
+msgstr ""
+
+#: ../../contributing.rst:424
+msgid "``Getting_started_guide``"
+msgstr ""
+
+#: ../../contributing.rst:425
+msgid "``writing-the-getting-started-guide-adammichaelwood-july-2017-draft``"
+msgstr ""
+
+#: ../../contributing.rst:430
+msgid "Work on the Docs"
+msgstr ""
+
+#: ../../contributing.rst:432
+msgid "Write and edit files in your favorite editor."
+msgstr ""
+
+#: ../../contributing.rst:439
+msgid "Build, View, and Debug"
+msgstr ""
+
+#: ../../contributing.rst:441
+msgid "To build the documentation into a viewable website:"
+msgstr ""
+
+#: ../../contributing.rst:447
+msgid "This calls the sphinx-build utility. The :option:`-b` switch specifies the builder, which in this case is ``html`` -- as opposed to other builders like ``pdf``. The ``.`` refers to the current directory (the build source) and ``build`` refers to the target of the build (the built files will be put into a directory labeled ``build``)."
+msgstr ""
+
+#: ../../contributing.rst:449
+msgid "When you run the build, you may see error or warning messages. These indicate potential problems with the documentation, like:"
+msgstr ""
+
+#: ../../contributing.rst:451
+msgid "syntax errors"
+msgstr ""
+
+#: ../../contributing.rst:452
+msgid "broken links"
+msgstr ""
+
+#: ../../contributing.rst:453
+msgid "terms not included in the glossary"
+msgstr ""
+
+#: ../../contributing.rst:455
+msgid "Error and warning messages include a file name and line number for tracking them down. Try to resolve all your errors and warnings before issuing a pull request. However, if this is not possible, please add a note in your pull request so that we can help you debug the problem."
+msgstr ""
+
+#: ../../contributing.rst:457
+msgid "**We will not merge Pull Requests that have warnings or errors in them.**"
+msgstr ""
+
+#: ../../contributing.rst:461
+msgid "Because of `a bug in Sphinx <https://github.com/sphinx-doc/sphinx/issues/2617>`_, the line numbers in error and warning messages will be off by the length of `rst_prolog` in :file:`conf.py`."
+msgstr ""
+
+#: ../../contributing.rst:464
+msgid "To view the documentation in your web browser, you can use Python's built-in web server."
+msgstr ""
+
+#: ../../contributing.rst:471
+msgid "Then open your browser and go to `http://localhost:8000 <http://localhost:8000>`_."
+msgstr ""
+
+#: ../../contributing.rst:473
+msgid "Read through your doc edits in the browser and correct any issues in your source files. You'll need to shut down the web server (:kbd:`CTRL C`) before rebuilding, then return to the main directory of the repo ( ``cd ..`` )."
+msgstr ""
+
+#: ../../contributing.rst:475
+msgid "It's a good idea to delete the ``build`` directory before each rebuild."
+msgstr ""
+
+#: ../../contributing.rst:484
+msgid "The script ``b.sh`` is a utility script that can be run to build the directory. It not only saves typing effort but will also become the canonical build script for us, so it's good to get used to it from now."
+msgstr ""
+
+#: ../../contributing.rst:489
+msgid "Push Your Branch"
+msgstr ""
+
+#: ../../contributing.rst:491
+msgid "Once your work on the issue is completed, add the files you've changed or created additionally, and write a relevant commit message describing the changes."
+msgstr ""
+
+#: ../../contributing.rst:498
+msgid "Then it's time to push the changes. The first time you do this on any branch, you'll need to specify the branch name:"
+msgstr ""
+
+#: ../../contributing.rst:504
+msgid "After that, you can just:"
+msgstr ""
+
+#: ../../contributing.rst:511
+msgid "(Note: ``origin`` is the local label for your GitHub fork.)"
+msgstr ""
+
+#: ../../contributing.rst:516
+msgid "Issue a Pull Request"
+msgstr ""
+
+#: ../../contributing.rst:518
+msgid "A pull request (or PR) is a request from you to the ODK Docs maintainers, for us to pull in your changes to the main repo."
+msgstr ""
+
+#: ../../contributing.rst:520
+msgid "Go the `main docs repo on GitHub <https://github.com/opendatakit/docs>`_. You'll see a message there referencing your recently pushed branches. Select :guilabel:`Compare & pull request` to start a pull request."
+msgstr ""
+
+#: ../../contributing.rst:522
+msgid "Follow GitHub's instructions. The :guilabel:`Base fork` should be the main repo, and :guilabel:`base` should be ``master``. Your repo and working fork should be listed beside them. (This should all populate by default, but you should double check.) If there is a green **Able to be merged** message, you can proceed."
+msgstr ""
+
+#: ../../contributing.rst:524
+msgid "You must include a PR comment. Things to include:"
+msgstr ""
+
+#: ../../contributing.rst:526
+msgid "A summary of what you did."
+msgstr ""
+
+#: ../../contributing.rst:527
+msgid "A note about anything that probably should have been done, but you didn't do."
+msgstr ""
+
+#: ../../contributing.rst:528
+msgid "A note about any new work this PR will create."
+msgstr ""
+
+#: ../../contributing.rst:529
+msgid "The issue number you are working on. If the PR completes the issue, include the text ``Closes #`` and the issue number."
+msgstr ""
+
+#: ../../contributing.rst:530
+msgid "A note about any errors or warnings, and why you did not or could not resolve them."
+msgstr ""
+
+#: ../../contributing.rst:531
+msgid "A note justifying any changes to requirements.txt"
+msgstr ""
+
+#: ../../contributing.rst:532
+msgid "A note about any difficulties, questions, or concerns that came up while working on this issue."
+msgstr ""
+
+#: ../../contributing.rst:534
+msgid "Complete the pull request. The maintainers will review it as quickly as possible. If there are any problems the maintainers can't deal with, they will reach out to you."
+msgstr ""
+
+#: ../../contributing.rst:538
+msgid "If you happen to rename any document file(:file:`*.rst`), then be sure that you add the redirect in your PR."
+msgstr ""
+
+#: ../../contributing.rst:540
+msgid "To add the redirect go to :file:`s3_website.yml` and uncomment the **redirects:** line. Add a mapping from the old file name to the new file name below the **redirects:** line, one mapping per line. Several examples of how to format these are shown in the comments."
+msgstr ""
+
+#: ../../contributing.rst:542
+msgid "For example you rename a file to :file:`newcheck.rst` from :file:`oldcheck.rst`, then to add the redirect:"
+msgstr ""
+
+#: ../../contributing.rst:553
+msgid "Keep Going"
+msgstr ""
+
+#: ../../contributing.rst:555
+msgid "Once the PR is merged, you'll need to pull in the changes from the main repo ( ``upstream`` ) into your local copy."
+msgstr ""
+
+#: ../../contributing.rst:562
+msgid "Then you should push those change to your copy on GitHub ( ``origin`` )."
+msgstr ""
+
+#: ../../contributing.rst:568
+msgid "If you want to delete your branch from before, you can do that:"
+msgstr ""
+
+#: ../../contributing.rst:574
+msgid "Now you can find a new issue to work on, create a new branch, and get to work..."
+msgstr ""
+
+#: ../../contributing.rst:579
+msgid "Writing in Sphinx"
+msgstr ""
+
+#: ../../contributing.rst:581
+msgid "The ODK documentation is built using `Sphinx <http://sphinx-doc.org>`_, a static-site generator designed to create structured, semantic, and internally consistent documentation. Source documents are written in `reStructuredText <http://docutils.sourceforge.net/rst.html>`_, a semantic, extensible markup syntax similar to Markdown."
+msgstr ""
+
+#: ../../contributing.rst:583
+msgid "`reStructuredText Primer <http://docutils.sourceforge.net/docs/user/rst/quickstart.html>`_ — Introduction to reStructuredText"
+msgstr ""
+
+#: ../../contributing.rst:585
+msgid "`reStructuredText Quick Reference <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_"
+msgstr ""
+
+#: ../../contributing.rst:586
+msgid "`reStrcuturedTest 1-page cheat sheet <http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt>`_"
+msgstr ""
+
+#: ../../contributing.rst:588
+msgid "`Sphinx Markup <http://www.sphinx-doc.org/en/stable/markup/index.html>`_ — Detailed guide to Sphinx's markup concepts and reStructuredText extensions"
+msgstr ""
+
+#: ../../contributing.rst:592
+msgid "Sphinx and reStructuredText can be very flexible. For the sake of consistency and maintainability, this guide is *highly opinionated* about how documentation source files are organized and marked up."
+msgstr ""
+
+#: ../../contributing.rst:598
+msgid "Indentation"
+msgstr ""
+
+#: ../../contributing.rst:600
+msgid "Indentation is meaningful in Sphinx and reStructured text."
+msgstr ""
+
+#: ../../contributing.rst:602
+msgid "Use **spaces, not tabs**."
+msgstr ""
+
+#: ../../contributing.rst:603
+msgid "Indent **two spaces**."
+msgstr ""
+
+#: ../../contributing.rst:608
+msgid "Documentation Files"
+msgstr ""
+
+#: ../../contributing.rst:610
+msgid "Sphinx document files have the ``.rst`` extension. File names should be all lowercase and use hyphens (not underscores or spaces) as word separators."
+msgstr ""
+
+#: ../../contributing.rst:612
+msgid "Normally, the title of the page should be the first line of the file, followed by the line of equal-signs."
+msgstr ""
+
+#: ../../contributing.rst:621
+msgid "You can also wrap the title in two lines of asterisks."
+msgstr ""
+
+#: ../../contributing.rst:631
+msgid "The asterisks style is useful when you are combining several existing documents (and don't want to change every subsection headline) or when you are working on a document that might be split into separate documents in the future."
+msgstr ""
+
+#: ../../contributing.rst:633
+msgid "See :ref:`sections-titles` for more details."
+msgstr ""
+
+#: ../../contributing.rst:638
+msgid "Custom CSS"
+msgstr ""
+
+#: ../../contributing.rst:640
+msgid "You can add custom styling in :file:`_static/css/custom.css`. Whenever you add any custom styling, add short comments describing the changes made and the PR number in which the changes were made."
+msgstr ""
+
+#: ../../contributing.rst:642
+#: ../../contributing.rst:661
+#: ../../contributing.rst:1262
+msgid "For example:"
+msgstr ""
+
+#: ../../contributing.rst:652
+msgid "There are various sections in the :file:`custom.css` file:"
+msgstr ""
+
+#: ../../contributing.rst:654
+msgid "Styling for rst roles and directives"
+msgstr ""
+
+#: ../../contributing.rst:655
+msgid "Responsive css"
+msgstr ""
+
+#: ../../contributing.rst:656
+msgid "Styling for JS implementation"
+msgstr ""
+
+#: ../../contributing.rst:657
+msgid "Utility classes"
+msgstr ""
+
+#: ../../contributing.rst:659
+msgid "Each of these sections are enclosed between start and end comments. Make sure you add your code to the relevant section. If you don't find any section relevant, add a new section and add your code there."
+msgstr ""
+
+#: ../../contributing.rst:678
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../contributing.rst:680
+msgid "The ``index.rst`` file serves as a front-page to the documentation and contains the table of contents. The table of contents controls the documentation navigation menu. To add a new document to the table of contents, add the file new (without the ``.rst`` extension) to the list of file names in ``index.rst``."
+msgstr ""
+
+#: ../../contributing.rst:686
+msgid "Sections and Titles"
+msgstr ""
+
+#: ../../contributing.rst:688
+msgid "Headlines require two lines: the text of the headline, followed by a line filled with a single character. Each level in a headline hierarchy uses a different character:"
+msgstr ""
+
+#: ../../contributing.rst:711
+msgid "If you need to combine several existing pages together, or want to start a single-page doc that you think might be split into individual pages later on, you can add a top-level title, demoting the other headline types by one:"
+msgstr ""
+
+#: ../../contributing.rst:739
+msgid "In either case, the underline of characters needs to be *longer than* the line of text. In the case of the asterisks, the two lines of asterisks need to be the same length."
+msgstr ""
+
+#: ../../contributing.rst:743
+msgid "The exact order of underline characters is flexible in reStructuredText. However, this specific ordering should be used throughout the ODK documentation."
+msgstr ""
+
+#: ../../contributing.rst:748
+msgid "Section labels"
+msgstr ""
+
+#: ../../contributing.rst:750
+msgid "In order to facilitate efficient :ref:`cross-referencing`, sections should be labeled. This is done on the line above the section title. The format is:"
+msgstr ""
+
+#: ../../contributing.rst:752
+msgid "two dots"
+msgstr ""
+
+#: ../../contributing.rst:753
+msgid "underscore"
+msgstr ""
+
+#: ../../contributing.rst:754
+msgid "section label"
+msgstr ""
+
+#: ../../contributing.rst:756
+msgid "lowercase"
+msgstr ""
+
+#: ../../contributing.rst:757
+msgid "hyphen separators"
+msgstr ""
+
+#: ../../contributing.rst:759
+msgid "a single colon"
+msgstr ""
+
+#: ../../contributing.rst:770
+msgid "The section label is a slugified version of the section title."
+msgstr ""
+
+#: ../../contributing.rst:772
+msgid "Section titles must be unique throughout the entire documentation set. Therefore, if you write a common title that might appear in more than one document (*Learn More* or *Getting Started*, for example), you'll need to include additional words to make the label unique. The best way to do this is to add a meaningful work from the document title."
+msgstr ""
+
+#: ../../contributing.rst:789
+msgid "Basic Markup"
+msgstr ""
+
+#: ../../contributing.rst:792
+msgid "Escaping Characters"
+msgstr ""
+
+#: ../../contributing.rst:794
+msgid "Markup characters can be escaped using the ``\\`` characters."
+msgstr ""
+
+#: ../../contributing.rst:802
+msgid "*Italic.*"
+msgstr ""
+
+#: ../../contributing.rst:804
+msgid "\\*Not italic, surrounded by asterisks.\\*"
+msgstr ""
+
+#: ../../contributing.rst:809
+msgid "Emphasis and Inline Literal"
+msgstr ""
+
+#: ../../contributing.rst:820
+msgid "Single asterisks for *italic text* ( ``<em>`` )."
+msgstr ""
+
+#: ../../contributing.rst:822
+msgid "Double asterisks for **bold text** ( ``<strong>`` )."
+msgstr ""
+
+#: ../../contributing.rst:824
+msgid "Double back-ticks for ``inline literal text`` ( ``<code>`` )."
+msgstr ""
+
+#: ../../contributing.rst:828
+msgid "The **bold**, *italic*, and ``inline literal`` styles do not carry semantic meaning. They should not be used when a more semantically appropriate markup construct is available; for example, when :ref:`writing about GUI text <interface-writing>`."
+msgstr ""
+
+#: ../../contributing.rst:834
+msgid "Hyperlinks"
+msgstr ""
+
+#: ../../contributing.rst:836
+msgid "**External** hyperlinks — that is, links to resources *outside* the documentation — look like this:"
+msgstr ""
+
+#: ../../contributing.rst:842
+msgid "This is a link to `example <http://example.com>`_."
+msgstr ""
+
+#: ../../contributing.rst:844
+msgid "You can also use \"reference style\" links:"
+msgstr ""
+
+#: ../../contributing.rst:852
+msgid "This may help make paragraphs with *a lot* of links more readable. In general, the inline style is preferable. If you use the reference style, be sure to keep the link references below the paragraph where they appear."
+msgstr ""
+
+#: ../../contributing.rst:858
+msgid "You can also simply place an unadorned URI in the text: http://example.com"
+msgstr ""
+
+#: ../../contributing.rst:863
+msgid "Lists"
+msgstr ""
+
+#: ../../contributing.rst:868
+msgid "Unordered (bullet) lists"
+msgstr ""
+
+#: ../../contributing.rst:883
+msgid "Bulleted lists ( ``<ul>`` ):"
+msgstr ""
+
+#: ../../contributing.rst:885
+msgid "use hyphens"
+msgstr ""
+
+#: ../../contributing.rst:886
+msgid "are unindented at the first level"
+msgstr ""
+
+#: ../../contributing.rst:887
+msgid "must have a blank line before and after"
+msgstr ""
+
+#: ../../contributing.rst:889
+msgid "the blank line requirement means that nested list items will have a blank line before and after as well"
+msgstr ""
+
+#: ../../contributing.rst:891
+msgid "you may *optionally* put a blank line *between* list items"
+msgstr ""
+
+#: ../../contributing.rst:897
+msgid "Ordered (numbered) lists"
+msgstr ""
+
+#: ../../contributing.rst:913
+msgid "Numbered lists ( ``<ol>`` ):"
+msgstr ""
+
+#: ../../contributing.rst:915
+msgid "Start each line with a number and period"
+msgstr ""
+
+#: ../../contributing.rst:916
+msgid "Can begin on any number"
+msgstr ""
+
+#: ../../contributing.rst:917
+msgid "Must have a blank line before and after"
+msgstr ""
+
+#: ../../contributing.rst:918
+msgid "Can have nested sub-lists"
+msgstr ""
+
+#: ../../contributing.rst:920
+msgid "nested lists are numbered separately"
+msgstr ""
+
+#: ../../contributing.rst:921
+msgid "nested lists need a blank line before and after"
+msgstr ""
+
+#: ../../contributing.rst:923
+msgid "Can have an automatic number with the ``#`` character."
+msgstr ""
+
+#: ../../contributing.rst:928
+msgid "Definition Lists"
+msgstr ""
+
+#: ../../contributing.rst:946
+msgid "Definition list ( ``<dl>`` )"
+msgstr ""
+
+#: ../../contributing.rst:946
+msgid "a list with several term-defition pairs"
+msgstr ""
+
+#: ../../contributing.rst:949
+msgid "Terms"
+msgstr ""
+
+#: ../../contributing.rst:949
+msgid "should not be indented"
+msgstr ""
+
+#: ../../contributing.rst:952
+msgid "Definitions"
+msgstr ""
+
+#: ../../contributing.rst:952
+msgid "should be indented under the term"
+msgstr ""
+
+#: ../../contributing.rst:956
+msgid "Line spacing"
+msgstr ""
+
+#: ../../contributing.rst:955
+msgid "there should be a blank line between term-definition pairs"
+msgstr ""
+
+#: ../../contributing.rst:961
+msgid "Paragraph-level Markup"
+msgstr ""
+
+#: ../../contributing.rst:978
+msgid "Paragraphs are separated by blank lines. Line breaks in the source code do not create line breaks in the output."
+msgstr ""
+
+#: ../../contributing.rst:980
+msgid "This means that you *could*, in theory, include a lot of arbitrary line breaks in your source document files. These line breaks would not appear in the output. Some people like to do this because they have been trained to not exceed 80 column lines, and they like to write .txt files this way. Please do not do this."
+msgstr ""
+
+#: ../../contributing.rst:989
+msgid "There is **no reason** to put a limit on line length in source files for documentation, since this is prose and not code. Therefore, please do not put arbitrary line breaks in your files."
+msgstr ""
+
+#: ../../contributing.rst:992
+msgid "Block Quotes"
+msgstr ""
+
+#: ../../contributing.rst:1002
+msgid "This is not a block quote. Block quotes are indented, and otherwise unadorned."
+msgstr ""
+
+#: ../../contributing.rst:1004
+msgid "This is a block quote. — Adam Michael Wood"
+msgstr ""
+
+#: ../../contributing.rst:1009
+msgid "Line Blocks"
+msgstr ""
+
+#: ../../contributing.rst:1022
+msgid "Line blocks are useful for addresses,"
+msgstr ""
+
+#: ../../contributing.rst:1023
+msgid "verse, and adornment-free lists."
+msgstr ""
+
+#: ../../contributing.rst:1025
+msgid "Each new line begins with a"
+msgstr ""
+
+#: ../../contributing.rst:1026
+msgid "vertical bar (\"|\")."
+msgstr ""
+
+#: ../../contributing.rst:1027
+msgid "Line breaks and initial indents"
+msgstr ""
+
+#: ../../contributing.rst:1028
+msgid "are preserved."
+msgstr ""
+
+#: ../../contributing.rst:1034
+msgid "Tables"
+msgstr ""
+
+#: ../../contributing.rst:1039
+msgid "Grid style"
+msgstr ""
+
+#: ../../contributing.rst:1056
+msgid "Header 1"
+msgstr ""
+
+#: ../../contributing.rst:1056
+msgid "Header 2"
+msgstr ""
+
+#: ../../contributing.rst:1056
+msgid "Header 3"
+msgstr ""
+
+#: ../../contributing.rst:1058
+msgid "body row 1"
+msgstr ""
+
+#: ../../contributing.rst:1058
+msgid "column 2"
+msgstr ""
+
+#: ../../contributing.rst:1058
+msgid "column 3"
+msgstr ""
+
+#: ../../contributing.rst:1060
+msgid "body row 2"
+msgstr ""
+
+#: ../../contributing.rst:1060
+msgid "Cells may span columns."
+msgstr ""
+
+#: ../../contributing.rst:1062
+msgid "body row 3"
+msgstr ""
+
+#: ../../contributing.rst:1062
+msgid "Cells may span rows."
+msgstr ""
+
+#: ../../contributing.rst:1062
+msgid "Cells"
+msgstr ""
+
+#: ../../contributing.rst:1063
+msgid "contain"
+msgstr ""
+
+#: ../../contributing.rst:1064
+msgid "blocks."
+msgstr ""
+
+#: ../../contributing.rst:1064
+msgid "body row 4"
+msgstr ""
+
+#: ../../contributing.rst:1070
+msgid "Simple style"
+msgstr ""
+
+#: ../../contributing.rst:1087
+msgid "Inputs"
+msgstr ""
+
+#: ../../contributing.rst:1087
+msgid "Output"
+msgstr ""
+
+#: ../../contributing.rst:1089
+#: ../../contributing.rst:1
+#: ../../contributing.rst:1
+msgid "A"
+msgstr ""
+
+#: ../../contributing.rst:1089
+#: ../../contributing.rst:1
+#: ../../contributing.rst:1
+#: ../../contributing.rst:1
+msgid "B"
+msgstr ""
+
+#: ../../contributing.rst:1089
+msgid "A or B"
+msgstr ""
+
+#: ../../contributing.rst:1091
+#: ../../contributing.rst:1091
+#: ../../contributing.rst:1091
+#: ../../contributing.rst:1092
+#: ../../contributing.rst:1093
+msgid "False"
+msgstr ""
+
+#: ../../contributing.rst:1092
+#: ../../contributing.rst:1092
+#: ../../contributing.rst:1093
+#: ../../contributing.rst:1093
+#: ../../contributing.rst:1094
+#: ../../contributing.rst:1094
+#: ../../contributing.rst:1094
+msgid "True"
+msgstr ""
+
+#: ../../contributing.rst:1100
+msgid "CSV Table"
+msgstr ""
+
+#: ../../contributing.rst:1102
+msgid "The `csv-table` directive is used to create a table from CSV (comma-separated values) data. CSV is a common data format generated by spreadsheet applications and commercial databases. The data may be internal (an integral part of the document) or external (a separate file)."
+msgstr ""
+
+#: ../../contributing.rst:1117
+msgid "Example Table"
+msgstr ""
+
+#: ../../contributing.rst:1
+msgid "Treat"
+msgstr ""
+
+#: ../../contributing.rst:1
+msgid "Quantity"
+msgstr ""
+
+#: ../../contributing.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../contributing.rst:1
+msgid "Albatross"
+msgstr ""
+
+#: ../../contributing.rst:1
+msgid "2.99"
+msgstr ""
+
+#: ../../contributing.rst:1
+#: ../../contributing.rst:1
+msgid "On a stick!"
+msgstr ""
+
+#: ../../contributing.rst:1
+msgid "Crunchy Frog"
+msgstr ""
+
+#: ../../contributing.rst:1
+msgid "1.49"
+msgstr ""
+
+#: ../../contributing.rst:1
+msgid "If we took the bones out, it wouldn't be crunchy, now would it?"
+msgstr ""
+
+#: ../../contributing.rst:1
+msgid "Gannet Ripple"
+msgstr ""
+
+#: ../../contributing.rst:1
+msgid "1.99"
+msgstr ""
+
+#: ../../contributing.rst:1126
+msgid "Some of the options recognized are:"
+msgstr ""
+
+#: ../../contributing.rst:1128
+msgid "**:widths:** can contain a comma or space-separated list of relative column widths. The default is equal-width columns."
+msgstr ""
+
+#: ../../contributing.rst:1132
+msgid "The special value `auto` may be used by writers to decide whether to delegate the determination of column widths to the backend."
+msgstr ""
+
+#: ../../contributing.rst:1134
+msgid "**:header:** contains column titles. It must use the same CSV format as the main CSV data."
+msgstr ""
+
+#: ../../contributing.rst:1135
+msgid "**:delim:** contains a one character string used to separate fields. Default value is comma. It must be a single character or Unicode code."
+msgstr ""
+
+#: ../../contributing.rst:1147
+msgid "Table using # as delimiter"
+msgstr ""
+
+#: ../../contributing.rst:1
+#: ../../contributing.rst:1
+#: ../../contributing.rst:1
+msgid "Name"
+msgstr ""
+
+#: ../../contributing.rst:1
+#: ../../contributing.rst:1
+#: ../../contributing.rst:1
+msgid "Grade"
+msgstr ""
+
+#: ../../contributing.rst:1
+#: ../../contributing.rst:1
+#: ../../contributing.rst:1
+msgid "Peter"
+msgstr ""
+
+#: ../../contributing.rst:1
+#: ../../contributing.rst:1
+#: ../../contributing.rst:1
+msgid "Paul"
+msgstr ""
+
+#: ../../contributing.rst:1155
+msgid "**:align:** can be `left` ,`right` or `center`. It specifies the horizontal alignment of the table."
+msgstr ""
+
+#: ../../contributing.rst:1166
+msgid "Table aligned to right"
+msgstr ""
+
+#: ../../contributing.rst:1173
+msgid "**:file:** contains the local filesystem path to a CSV data file."
+msgstr ""
+
+#: ../../contributing.rst:1174
+msgid "**:url:** contains an Internet URL reference to a CSV data file."
+msgstr ""
+
+#: ../../contributing.rst:1178
+msgid "There is no support for checking that the number of columns in each row is the same. However, this directive supports CSV generators that do not insert \"empty\" entries at the end of short rows, by automatically adding empty entries."
+msgstr ""
+
+#: ../../contributing.rst:1188
+msgid "Table with different number of columns in each row"
+msgstr ""
+
+#: ../../contributing.rst:1194
+msgid "Whitespace delimiters are supported only for external CSV files."
+msgstr ""
+
+#: ../../contributing.rst:1197
+msgid "For more details, refer this `guide on CSV Tables <http://docutils.sourceforge.net/docs/ref/rst/directives.html#id4>`_."
+msgstr ""
+
+#: ../../contributing.rst:1202
+msgid "Sphinx-specific Markup"
+msgstr ""
+
+#: ../../contributing.rst:1205
+msgid "Roles and directives"
+msgstr ""
+
+#: ../../contributing.rst:1207
+msgid "A *role* is an inline markup construct that wraps some text, similar to an HTML or XML tag. They look like this::"
+msgstr ""
+
+#: ../../contributing.rst:1211
+msgid "A directive is a block-level markup construct. They look like this::"
+msgstr ""
+
+#: ../../contributing.rst:1221
+msgid "Most of the Sphinx-specific and ODK-specific markup will use one or both of these constructs."
+msgstr ""
+
+#: ../../contributing.rst:1226
+msgid "Cross referencing"
+msgstr ""
+
+#: ../../contributing.rst:1228
+msgid "Cross referencing is linking internally, from one place in the documentation to another. This is **not** done using the :ref:`hyperlinks` syntax, but with one of the several roles:"
+msgstr ""
+
+#: ../../contributing.rst:1243
+msgid "Links to documents (pages)"
+msgstr ""
+
+#: ../../contributing.rst:1244
+msgid "*target* is the file name, without the ``.rst`` extension"
+msgstr ""
+
+#: ../../contributing.rst:1245
+msgid "*title* is the first :ref:`headline <doc-files>` ( ``<h1>`` ) of the page"
+msgstr ""
+
+#: ../../contributing.rst:1249
+msgid "Links to :ref:`sections <sections-titles>`"
+msgstr ""
+
+#: ../../contributing.rst:1250
+msgid "*target* is the :ref:`section-labels`"
+msgstr ""
+
+#: ../../contributing.rst:1251
+msgid "*title* is the :ref:`section title (headline) <sections-titles>`"
+msgstr ""
+
+#: ../../contributing.rst:1256
+msgid "Links to items in the :doc:`glossary`"
+msgstr ""
+
+#: ../../contributing.rst:1257
+msgid "*target* is the term, in the glossary"
+msgstr ""
+
+#: ../../contributing.rst:1258
+msgid "*title* is the term itself"
+msgstr ""
+
+#: ../../contributing.rst:1260
+msgid "**To recap:** If you do not include an explicit ``<target>``, the text inside the role will be understood as the target, and the anchor text for the link in the output will be the title of the target."
+msgstr ""
+
+#: ../../contributing.rst:1281
+msgid "Link to this document:"
+msgstr ""
+
+#: ../../contributing.rst:1283
+msgid ":doc:`contributing`"
+msgstr ""
+
+#: ../../contributing.rst:1284
+msgid ":doc:`anchor text <contributing>`"
+msgstr ""
+
+#: ../../contributing.rst:1286
+msgid "Link to this section:"
+msgstr ""
+
+#: ../../contributing.rst:1288
+msgid ":ref:`cross-referencing`"
+msgstr ""
+
+#: ../../contributing.rst:1289
+msgid ":ref:`anchor text <cross-referencing>`"
+msgstr ""
+
+#: ../../contributing.rst:1291
+msgid "Link to a term:"
+msgstr ""
+
+#: ../../contributing.rst:1293
+msgid ":term:`participant`"
+msgstr ""
+
+#: ../../contributing.rst:1294
+msgid ":term:`anchor text <participant>`"
+msgstr ""
+
+#: ../../contributing.rst:1299
+msgid "Writing about User Interface"
+msgstr ""
+
+#: ../../contributing.rst:1301
+msgid "Several roles are used when describing user interactions."
+msgstr ""
+
+#: ../../contributing.rst:1305
+msgid "Marks up *actual UI text* of form labels or buttons."
+msgstr ""
+
+#: ../../contributing.rst:1313
+msgid "Marks up the *actual UI text* of a navigation menu or form select element."
+msgstr ""
+
+#: ../../contributing.rst:1319
+msgid "When writing about multi-level menus, use a single ``:menuselection:`` role, and separate menu choices with ``-->``."
+msgstr ""
+
+#: ../../contributing.rst:1327
+msgid "In some situations you might not be clear about which option to use from ``:menuselection:`` and ``:guilabel:``, in which case you should refer to the following rule that we observe in our writing."
+msgstr ""
+
+#: ../../contributing.rst:1329
+msgid "Actual UI text will always receive ``:guilabel:`` role unless the text could reasonably be understood to be part of a menu."
+msgstr ""
+
+#: ../../contributing.rst:1330
+msgid "If the actual UI text could be understood as a menu, ``:menuselection:`` should be used."
+msgstr ""
+
+#: ../../contributing.rst:1334
+msgid "Marks up a sequence of literal keyboard strokes."
+msgstr ""
+
+#: ../../contributing.rst:1342
+msgid "Marks up a terminal command."
+msgstr ""
+
+#: ../../contributing.rst:1350
+msgid "Marks up a terminal command option."
+msgstr ""
+
+#: ../../contributing.rst:1359
+msgid "Custom Text Roles"
+msgstr ""
+
+#: ../../contributing.rst:1361
+msgid "**Custom Text Roles** signify that the enclosed text should be interpreted in a specific way."
+msgstr ""
+
+#: ../../contributing.rst:1363
+msgid "Custom text roles used in ODK documentation are:"
+msgstr ""
+
+#: ../../contributing.rst:1367
+msgid "Stands for table head and refers to a table header cell in the body of text."
+msgstr ""
+
+#: ../../contributing.rst:1371
+msgid "Stands for table cell and describes the table cells in the body of text."
+msgstr ""
+
+#: ../../contributing.rst:1381
+msgid "Specifies the state of the form which could be one of the following:"
+msgstr ""
+
+#: ../../contributing.rst:1383
+msgid "Blank"
+msgstr ""
+
+#: ../../contributing.rst:1384
+msgid "Finalized"
+msgstr ""
+
+#: ../../contributing.rst:1385
+msgid "Saved"
+msgstr ""
+
+#: ../../contributing.rst:1386
+msgid "Sent"
+msgstr ""
+
+#: ../../contributing.rst:1387
+msgid "Deleted"
+msgstr ""
+
+#: ../../contributing.rst:1395
+msgid "Describes a touch screen gesture."
+msgstr ""
+
+#: ../../contributing.rst:1404
+msgid "Other Semantic Markup"
+msgstr ""
+
+#: ../../contributing.rst:1408
+msgid "Marks up an abbreviation. If the role content contains a parenthesized explanation, it will be treated specially: it will be shown in a tool-tip in HTML."
+msgstr ""
+
+#: ../../contributing.rst:1416
+msgid "Marks the defining instance of a term outside the glossary."
+msgstr ""
+
+#: ../../contributing.rst:1424
+msgid "Marks the name of a file or directory. Within the contents, you can use curly braces to indicate a “variable” part."
+msgstr ""
+
+#: ../../contributing.rst:1430
+msgid "In the built documentation, the ``x`` will be displayed differently to indicate that it is variable."
+msgstr ""
+
+#: ../../contributing.rst:1434
+msgid "Marks the name of an executable program."
+msgstr ""
+
+#: ../../contributing.rst:1443
+msgid "Images and Figures"
+msgstr ""
+
+#: ../../contributing.rst:1445
+msgid "Image files should be put in the :file:`/img/` directory in the source, and they should be in a subdirectory with the same name as the document in which they appear. (That is, the filename without the ``.rst`` extension.)"
+msgstr ""
+
+#: ../../contributing.rst:1447
+msgid "You must perform lossless compression on the source images. Following tools can be used to optimize the images:"
+msgstr ""
+
+#: ../../contributing.rst:1449
+msgid "**ImageOptim** is a tool that allows us to optimize the images. It is not format specific which means it can optimize both jpeg as well as png images. You can download it `from here <https://imageoptim.com/howto.html>`_ . After launching ImageOptim.app, dragging and dropping images into its window gives you an in-place optimized file."
+msgstr ""
+
+#: ../../contributing.rst:1451
+msgid "**Pngout** is another option for optimizing png images. Installation and usage instructions can be found `here <http://docs.ewww.io/article/13-installing-pngout/>`_ ."
+msgstr ""
+
+#: ../../contributing.rst:1453
+msgid "**Mozjpeg** can be used to optimize jpeg images. Installation and related information can be found on `this link <https://nystudio107.com/blog/installing-mozjpeg-on-ubuntu-16-04-forge/>`_ ."
+msgstr ""
+
+#: ../../contributing.rst:1455
+msgid "To place an image in a document, use the ``image`` directive."
+msgstr ""
+
+#: ../../contributing.rst:1462
+msgid "Note the *literal* asterisk at the end *in place of a file extension*. Use the asterisk, and omit the file extension."
+msgstr ""
+
+#: ../../contributing.rst:1464
+msgid "Use the ``figure`` to markup an image with a caption."
+msgstr ""
+
+#: ../../contributing.rst:1476
+msgid "Substitutions"
+msgstr ""
+
+#: ../../contributing.rst:1478
+msgid "Substitutions are a useful way to define a value which is needed in many places. Substitution definitions are indicated by an explicit markup start (\".. \") followed by a vertical bar, the substitution text (which gets substituted), another vertical bar, whitespace, and the definition block. A substitution definition block may contain inline-compatible directives such as :ref:`image <images>` or `replace <http://docutils.sourceforge.net/docs/ref/rst/directives.html#replace>`_. For more information, refer this `guide <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#substitution-definitions>`_."
+msgstr ""
+
+#: ../../contributing.rst:1480
+msgid "You can define the value once like this:"
+msgstr ""
+
+#: ../../contributing.rst:1486
+msgid "and then reuse it like this:"
+msgstr ""
+
+#: ../../contributing.rst:1492
+msgid "Here, ``|RST|`` will be replaced by reStructuredText"
+msgstr ""
+
+#: ../../contributing.rst:1494
+msgid "You can also create a reference with styled text:"
+msgstr ""
+
+#: ../../contributing.rst:1501
+msgid "You can use the hyperlink reference by appending a \"_\" at the end of the vertical bars, for example:"
+msgstr ""
+
+#: ../../contributing.rst:1510
+msgid "You can ask about your problem in |slack|_."
+msgstr ""
+
+#: ../../contributing.rst:1512
+msgid "The ``rst_epilog`` in :file:`conf.py` contains a list of global substitutions that can be used from any file. The list is given below:"
+msgstr ""
+
+#: ../../contributing.rst:1514
+msgid "If you want to create a hyperlink reference for ODK Slack, you can use ``|odk-slack|_``."
+msgstr ""
+
+#: ../../contributing.rst:1520
+msgid "You can use |odk-slack|_ to ask your questions."
+msgstr ""
+
+#: ../../contributing.rst:1524
+msgid "To create a hyperlink reference for docs related issues, use ``|docs-issue|_``."
+msgstr ""
+
+#: ../../contributing.rst:1530
+msgid "If you find a problem, file an |docs-issue|_."
+msgstr ""
+
+#: ../../contributing.rst:1534
+msgid "To create a hyperlink reference for ODK Forum, use ``|forum|_``."
+msgstr ""
+
+#: ../../contributing.rst:1540
+msgid "You can ask support questions in |forum|_."
+msgstr ""
+
+#: ../../contributing.rst:1544
+msgid "To create a hyperlink reference for contributors guide, use ``|contrib-guide|_``."
+msgstr ""
+
+#: ../../contributing.rst:1550
+msgid "Be sure to read the |contrib-guide|_."
+msgstr ""
+
+#: ../../contributing.rst:1552
+msgid "You can add inline images in the document using substitutions. The following block of code substitutes arrow in the text with the image specified."
+msgstr ""
+
+#: ../../contributing.rst:1565
+msgid "Image File Names"
+msgstr ""
+
+#: ../../contributing.rst:1567
+msgid "Image file names should:"
+msgstr ""
+
+#: ../../contributing.rst:1569
+msgid "be short yet descriptive"
+msgstr ""
+
+#: ../../contributing.rst:1570
+msgid "contain only lower case characters"
+msgstr ""
+
+#: ../../contributing.rst:1571
+msgid "have no spaces"
+msgstr ""
+
+#: ../../contributing.rst:1572
+msgid "use hyphens as the separator"
+msgstr ""
+
+#: ../../contributing.rst:1574
+msgid "Good image file names:"
+msgstr ""
+
+#: ../../contributing.rst:1576
+msgid ":file:`collect-home-screen.png`"
+msgstr ""
+
+#: ../../contributing.rst:1577
+msgid ":file:`build-data-export-menu.png`"
+msgstr ""
+
+#: ../../contributing.rst:1579
+msgid "Bad image file names:"
+msgstr ""
+
+#: ../../contributing.rst:1581
+msgid ":file:`Collect home screen.png`"
+msgstr ""
+
+#: ../../contributing.rst:1582
+msgid ":file:`collect_home_screen.png`"
+msgstr ""
+
+#: ../../contributing.rst:1583
+msgid ":file:`3987948p2983768ohl84692p094.jpg-large`"
+msgstr ""
+
+#: ../../contributing.rst:1587
+msgid "Be sure to obscure any personally-identifiable information from screen shots. Crop to the smallest relevant screen area. Annotate screen shots with arrows or circles to indicate relevant information."
+msgstr ""
+
+#: ../../contributing.rst:1592
+msgid "Screenshots from ODK Collect"
+msgstr ""
+
+#: ../../contributing.rst:1594
+msgid "If you have set up local :ref:`android-tools`, you can connect your Android device to your computer and take screenshots from the command line."
+msgstr ""
+
+#: ../../contributing.rst:1596
+msgid "Connect your device via USB"
+msgstr ""
+
+#: ../../contributing.rst:1597
+msgid "Enable Developer Settings"
+msgstr ""
+
+#: ../../contributing.rst:1599
+msgid ":menuselection:`Settings --> About phone`"
+msgstr ""
+
+#: ../../contributing.rst:1600
+msgid "Tap :menuselection:`Build number` seven (7) times"
+msgstr ""
+
+#: ../../contributing.rst:1602
+msgid "Turn on USB Debugging"
+msgstr ""
+
+#: ../../contributing.rst:1604
+msgid ":menuselection:`Settings --> Developer options --> USB debugging`"
+msgstr ""
+
+#: ../../contributing.rst:1606
+msgid "Now, at the command line, from the root directory of the :file:`odk-docs` repo:"
+msgstr ""
+
+#: ../../contributing.rst:1612
+msgid "``{document-name}`` is the filename (without extension) where the image will be used."
+msgstr ""
+
+#: ../../contributing.rst:1613
+msgid "``{image-name}`` is the name (without extension) given to the image. - follow the :ref:`image-names` guidelines"
+msgstr ""
+
+#: ../../contributing.rst:1617
+msgid "Make sure you do not overwrite an existing image."
+msgstr ""
+
+#: ../../contributing.rst:1620
+msgid "If you have a problem running ss.py, check to make sure your :ref:`Python 3 virtual environment <docs-venv>` is activated."
+msgstr ""
+
+#: ../../contributing.rst:1625
+msgid "Videos"
+msgstr ""
+
+#: ../../contributing.rst:1627
+msgid "Video files should be put in the :file:`/vid/` directory in the source, and they should be in a subdirectory with the same name as the document in which they appear. (That is, the filename without the ``.rst`` extension.)"
+msgstr ""
+
+#: ../../contributing.rst:1629
+msgid "The length of the videos must be less than a minute."
+msgstr ""
+
+#: ../../contributing.rst:1631
+msgid "There is no ``video`` directive to add a video, so to add a video in a document, you can do the following:"
+msgstr ""
+
+#: ../../contributing.rst:1641
+msgid "**ADB or Android Debug Bridge** can be used to capture a screen recording from collect. This can be done by entering:"
+msgstr ""
+
+#: ../../contributing.rst:1647
+msgid "On pressing the enter key the video recording starts. Recording stops automatically after 3 minutes but since video length has to be less than a minute, to stop the recording in between simply press :command:`Ctrl+C`."
+msgstr ""
+
+#: ../../contributing.rst:1649
+msgid "The video file is saved in your Android device to a file at :file:`/sdcard/example.mp4` file."
+msgstr ""
+
+#: ../../contributing.rst:1651
+msgid "To pull the video locally just type the following command and hit :command:`Enter`."
+msgstr ""
+
+#: ../../contributing.rst:1657
+msgid "where localsavelocation is the location where you want to save your file locally."
+msgstr ""
+
+#: ../../contributing.rst:1662
+msgid "Downloadable files"
+msgstr ""
+
+#: ../../contributing.rst:1664
+msgid "Downloadable files should be put in the :file:`/downloads/` directory in the source, and they should be in a subdirectory with the same name as the document in which they appear. (That is, the filename without the ``.rst`` extension.)"
+msgstr ""
+
+#: ../../contributing.rst:1666
+msgid "To place a downloadable file in a document, use the ``download`` directive."
+msgstr ""
+
+#: ../../contributing.rst:1675
+msgid "Code Samples"
+msgstr ""
+
+#: ../../contributing.rst:1677
+msgid "Use the ``code-block`` directive to markup code samples. Specify the language on the same line as the directive for syntax highlighting."
+msgstr ""
+
+#: ../../contributing.rst:1706
+msgid "**rst** code-blocks wrap overflow lines by default. To unwrap overflow lines, use **unwrap** class with **rst** code-blocks."
+msgstr ""
+
+#: ../../contributing.rst:1713
+msgid "Code-blocks for other languages don't wrap overflow lines. Instead of wrapping, you need to scroll side-ways. To wrap overflow lines with other code-blocks, use **wrap** class with them."
+msgstr ""
+

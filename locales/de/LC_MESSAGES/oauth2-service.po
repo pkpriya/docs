@@ -1,0 +1,344 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Open Data Kit. This document is licensed under a
+# Creative Commons Attribution 4.0 International License
+# This file is distributed under the same license as the Open Data Kit
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Data Kit 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-05 12:11+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: ../../oauth2-service.rst:16
+msgid "OAuth2 Service Account"
+msgstr ""
+
+#: ../../oauth2-service.rst:21
+msgid "Overview"
+msgstr ""
+
+#: ../../oauth2-service.rst:22
+msgid ""
+"Publishing your data into Google Spreadsheets or Google Fusion Tables "
+"requires a Google Oauth2 Service Account."
+msgstr ""
+
+#: ../../oauth2-service.rst:28
+msgid ""
+"Google now throttles requests for all of its APIs. This impacts ODK "
+"Aggregate's Map visualization (which requires an API key) and the "
+"publishing to Google Sheets and the publishing to Google Fusion Tables "
+"(both of which require a service account)."
+msgstr ""
+
+#: ../../oauth2-service.rst:29
+msgid ""
+"If you have difficulties with any of these, go to the Google Cloud "
+"Platform project in which you created your service account, navigate to "
+"the API Manager tab, navigate to the appropriate API (either via the "
+"Dashboard list or via the links on the library sub-tab)."
+msgstr ""
+
+#: ../../oauth2-service.rst:30
+msgid ""
+"If the API is enabled, you will have a graphical overview of your use of "
+"the API. Click on the Quota heading on the page to see the quotas for the"
+" API. By clicking on the pencil icons to the right of these quotas, you "
+"will get a pop-up from which you can request an increase in a quota."
+msgstr ""
+
+#: ../../oauth2-service.rst:31
+msgid ""
+"The quota that most critically needs to be increased is the Google Sheets"
+" quota for write requests per second per user. A better limit is 500 per "
+"second per user, or perhaps higher if your forms have many fields and/or "
+"repeat groups."
+msgstr ""
+
+#: ../../oauth2-service.rst:33
+msgid ""
+"The Google API Key used by the Maps visualization is created and managed "
+"on the same screen as the Google Oauth2 Service Account.This page guides "
+"you through the creation and uploading of these two credentials into ODK "
+"Aggregate"
+msgstr ""
+
+#: ../../oauth2-service.rst:38
+msgid "Create the Google Credentials"
+msgstr ""
+
+#: ../../oauth2-service.rst:40
+msgid "Credentials are associated with a Google Cloud Platform project."
+msgstr ""
+
+#: ../../oauth2-service.rst:42
+msgid ""
+"If you are using App Engine for your ODK Aggregate server, then you have "
+"already set up a Google Cloud Platform project -- you just need to "
+"navigate to it. Otherwise, you will need to create one. In either case, "
+"go to Google Cloud Platform and click on :guilabel:`Console`:"
+msgstr ""
+
+#: ../../oauth2-service.rst:47
+msgid ""
+"If you have never configured a Google Cloud Platform project, please "
+"refer :ref:`this section <install-app-engine>` to configure a project "
+"using App Engine under which aggregate server would run."
+msgstr ""
+
+#: ../../oauth2-service.rst:49
+msgid ""
+"If you have already configured you should be able to see the project "
+"screen, showing the project name in the upper-left side of the screen.In "
+"this case, I named my project \"My Project 80299\" and project id "
+"\"regal-mediator-181503\"."
+msgstr ""
+
+#: ../../oauth2-service.rst:54
+msgid ""
+"Click on the menu icon(three horizontal bars) in the upper-left side of "
+"the screen."
+msgstr ""
+
+#: ../../oauth2-service.rst:59
+msgid ""
+"Now select :guilabel:`APIs & services` from the menu and then select "
+":guilabel:`Library` option"
+msgstr ""
+
+#: ../../oauth2-service.rst:64
+msgid ""
+"This will take you to the lists all the application APIs that Google "
+"offers."
+msgstr ""
+
+#: ../../oauth2-service.rst:70
+msgid ""
+"To be able to publish to Google Sheets and Fusion Tables, and to be able "
+"to view maps, we need to enable this project to use 4 of these "
+"application APIs. The 4 application APIs we need to enable are:"
+msgstr ""
+
+#: ../../oauth2-service.rst:72
+msgid "Google Maps Javascript API v3"
+msgstr ""
+
+#: ../../oauth2-service.rst:73
+msgid "Drive API"
+msgstr ""
+
+#: ../../oauth2-service.rst:74
+msgid "Sheets API"
+msgstr ""
+
+#: ../../oauth2-service.rst:75
+msgid "Fusion Tables API"
+msgstr ""
+
+#: ../../oauth2-service.rst:77
+msgid "The Sheets API is under the same section heading as the Drive API."
+msgstr ""
+
+#: ../../oauth2-service.rst:79
+msgid ""
+"For each of these APIs, click on the API. This takes you to an "
+"information page for that API. On that page, click on the "
+":guilabel:`Enable` button. E.g., on the Google Maps Javascript API v3 "
+"page, it looks like this:"
+msgstr ""
+
+#: ../../oauth2-service.rst:84
+msgid ""
+"After clicking on :guilabel:`Enable`, if you have more application APIs "
+"to enable, click on the back-arrow within the page to return to the list "
+"of application APIs (and repeat the previous step):"
+msgstr ""
+
+#: ../../oauth2-service.rst:89
+msgid ""
+"Otherwise, after enabling it, click on the :guilabel:`Create Credentials`"
+" button:"
+msgstr ""
+
+#: ../../oauth2-service.rst:94
+msgid "And on the credentials page, choose to create a ``service account``."
+msgstr ""
+
+#: ../../oauth2-service.rst:99
+msgid ""
+"This takes you to the list of service accounts for your Google Cloud "
+"Platform project.Click on :guilabel:`Create service account`."
+msgstr ""
+
+#: ../../oauth2-service.rst:106
+msgid ""
+"If you are using App Engine, there will already be a service account "
+"listed that was created and is used by Google's infrastructure. Please "
+"ignore that."
+msgstr ""
+
+#: ../../oauth2-service.rst:108
+msgid ""
+"On the next screen, enter a name for the service account (e.g., \"ODK "
+"Oauth2 Publishing\"), choose to furnish a new private key, select a role,"
+" and request the P12 format. Then click :guilabel:`Create`:"
+msgstr ""
+
+#: ../../oauth2-service.rst:113
+msgid ""
+"The private key for this service account will begin downloading (it will "
+"have a .p12 file extension). After it has downloaded, click "
+":guilabel:`Close`."
+msgstr ""
+
+#: ../../oauth2-service.rst:118
+msgid ""
+"This returns you to the list of service accounts. Click on the the menu "
+"icon to the left of **Google Cloud Platform** and select :guilabel:`APIs "
+"& services` from the menu and then select :guilabel:`Credentials` option."
+msgstr ""
+
+#: ../../oauth2-service.rst:123
+msgid "Choose :guilabel:`Create credentials` and select ``API Key``."
+msgstr ""
+
+#: ../../oauth2-service.rst:128
+msgid ""
+"After selecting ``API key`` an API key will be generated, copy it as it "
+"will be used further and click on :guilabel:`Restrict Key`."
+msgstr ""
+
+#: ../../oauth2-service.rst:133
+msgid ""
+"Enter a name (e.g., \"ODK Aggregate\"), enter the hostname (and port, if "
+"nonstandard) of your ODK Aggregate server, followed by a slash and star "
+"and choose the key restriction(**HTTP referrers**). Then click "
+":guilabel:`Save`:"
+msgstr ""
+
+#: ../../oauth2-service.rst:138
+msgid ""
+"You will be redirected to credentials page, now click on :guilabel:`OAuth"
+" consent screen` tab."
+msgstr ""
+
+#: ../../oauth2-service.rst:143
+msgid ""
+"Enter a product name and email address on this screen and fill in any "
+"additional fields that you might want to provide.Click :guilabel:`Save`."
+msgstr ""
+
+#: ../../oauth2-service.rst:148
+msgid ""
+"Once again, click on the :guilabel:`Credentials` tab if not redirected, "
+"select the ``ODK Oauth2 Publishing`` key that you created above, and "
+"choose ``Manage service accounts``:"
+msgstr ""
+
+#: ../../oauth2-service.rst:153
+msgid ""
+"This takes you to details about that **ODK Oauth2 Publishing** service "
+"account. Keep this browser screen open; you will need to cut and paste "
+"values from this screen into ODK Aggregate. This is what those details "
+"look like:"
+msgstr ""
+
+#: ../../oauth2-service.rst:160
+msgid ""
+"The **Service Account** information and the downloaded private key file "
+"must be uploaded to ODK Aggregate to enable publishing to Google "
+"Spreadsheets and Google Fusion Tables."
+msgstr ""
+
+#: ../../oauth2-service.rst:161
+msgid "The **API Key** is for use by Google Maps."
+msgstr ""
+
+#: ../../oauth2-service.rst:166
+msgid "Entering Credentials into ODK Aggregate 1.3 and higher"
+msgstr ""
+
+#: ../../oauth2-service.rst:167
+msgid ""
+"Once you have created the credentials , you need to upload these "
+"credentials to ODK Aggregate."
+msgstr ""
+
+#: ../../oauth2-service.rst:169
+msgid "The same credentials can be used across multiple ODK Aggregate servers."
+msgstr ""
+
+#: ../../oauth2-service.rst:171
+msgid "To upload the credentials:"
+msgstr ""
+
+#: ../../oauth2-service.rst:173
+msgid ""
+"Log onto ODK Aggregate as a Site Administrator. Click on the "
+":guilabel:`Site Admin` then click on :guilabel:`Preferences` tab.Now, "
+"click on :guilabel:`Change Google API Credentials`."
+msgstr ""
+
+#: ../../oauth2-service.rst:178
+msgid ""
+"This will bring up the **Google API Credentials Upload** dialog.From the "
+"Google website, copy and paste the **API key** into ODK Aggregate's "
+"``Simple API Key`` field."
+msgstr ""
+
+#: ../../oauth2-service.rst:179
+msgid ""
+"Click on :guilabel:`Choose File` and select the previously-downloaded "
+"(from Step 1, above) P12 private key file."
+msgstr ""
+
+#: ../../oauth2-service.rst:180
+msgid ""
+"From the Google website, copy and paste the **Service account** section's"
+" \"Key ID\" into ODK Aggregate's ``ID (Key ID) or perhaps Client ID`` "
+"field."
+msgstr ""
+
+#: ../../oauth2-service.rst:181
+msgid ""
+"From the Google website, copy and paste the **Service account ID** (it "
+"looks like an Email address) into ODK Aggregate's ``Service Account ID "
+"(looks like an Email address)`` field:"
+msgstr ""
+
+#: ../../oauth2-service.rst:186
+msgid ""
+"Click on :guilabel:`Upload Google Credentials`. This should present a "
+"successful-upload pop-up:"
+msgstr ""
+
+#: ../../oauth2-service.rst:191
+msgid ""
+"Click on the :guilabel:`X` to close that pop-up. The ``Simple API Access "
+"Key`` and ``Google OAuth2 Credentials`` should be updated:"
+msgstr ""
+
+#: ../../oauth2-service.rst:196
+msgid ""
+"Your ODK Aggregate server is now configured to support publishing of data"
+" to Google Spreadsheets and Google Fusion Tables."
+msgstr ""
+
+#: ../../oauth2-service.rst:200
+msgid ""
+"If your publishers seems to be stalled in an Active Paused or Paused "
+"state, this is most likely caused by exceeding Google's quota limits. See"
+" :ref:`this section <api-request>` for how to navigate to a pop-up from "
+"which you can request a quota limit increase."
+msgstr ""
+
