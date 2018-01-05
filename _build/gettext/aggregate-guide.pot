@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Open Data Kit. This document is licensed under a Creative Commons Attribution 4.0 International License
+# This file is distributed under the same license as the Open Data Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Data Kit 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-05 12:11+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../aggregate-guide.rst:16
+msgid "ODK Aggregate"
+msgstr ""
+
+#: ../../aggregate-guide.rst:20
+msgid "`ODK Aggregate` provides a ready-to-deploy server and data repository to:"
+msgstr ""
+
+#: ../../aggregate-guide.rst:22
+msgid "provide blank forms to ODK Collect (or other OpenRosa clients)."
+msgstr ""
+
+#: ../../aggregate-guide.rst:23
+msgid "accept finalized forms (submissions) from ODK Collect and manage collected data."
+msgstr ""
+
+#: ../../aggregate-guide.rst:24
+msgid "visualize the collected data using maps and simple graphs."
+msgstr ""
+
+#: ../../aggregate-guide.rst:25
+msgid "export data (e.g., as CSV files for spreadsheets, or as KML files for Google Earth)."
+msgstr ""
+
+#: ../../aggregate-guide.rst:26
+msgid "publish data to external systems (e.g., Google Spreadsheets or Google Fusion Tables)."
+msgstr ""
+

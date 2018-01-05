@@ -1,0 +1,394 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Open Data Kit. This document is licensed under a Creative Commons Attribution 4.0 International License
+# This file is distributed under the same license as the Open Data Kit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Data Kit 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-05 12:11+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../collect-settings.rst:15
+msgid "Collect Menus, Settings, and Security"
+msgstr ""
+
+#: ../../collect-settings.rst:20
+msgid "Main Menu"
+msgstr ""
+
+#: ../../collect-settings.rst:22
+msgid "ODK Collect's main menu contains the following options:"
+msgstr ""
+
+#: ../../collect-settings.rst:28
+msgid ":menuselection:`Fill Blank Form` allows you to fill any blank form already there in your data collection."
+msgstr ""
+
+#: ../../collect-settings.rst:29
+msgid ":menuselection:`Edit Saved Form` looks for forms you've saved, lists them and allows you to edit them."
+msgstr ""
+
+#: ../../collect-settings.rst:30
+msgid ":menuselection:`Send Finalized Form` lists all the finalized forms and gives you an option to send them."
+msgstr ""
+
+#: ../../collect-settings.rst:31
+msgid ":menuselection:`View Sent Form` displays the forms that have been sent even if they were deleted."
+msgstr ""
+
+#: ../../collect-settings.rst:32
+msgid ":menuselection:`Get Blank form` lists all available ODK :term:`Collect` :term:`form` :term:`widget` (question types). The details about which are available on :ref:`basic-form-widgets`."
+msgstr ""
+
+#: ../../collect-settings.rst:33
+msgid ":menuselection:`Delete Saved Form` lists all the Saved and Blank Forms and allows you to delete them."
+msgstr ""
+
+#: ../../collect-settings.rst:38
+msgid "General Settings"
+msgstr ""
+
+#: ../../collect-settings.rst:40
+msgid "General Settings are accessible from the :guilabel:`⋮` menu on the top-right corner."
+msgstr ""
+
+#: ../../collect-settings.rst:46
+msgid "It allows us to configure the following:"
+msgstr ""
+
+#: ../../collect-settings.rst:51
+msgid "Server Settings"
+msgstr ""
+
+#: ../../collect-settings.rst:57
+msgid ":menuselection:`Server` settings manage the connection to an ODK Aggregate server or Google Drive account for form management."
+msgstr ""
+
+#: ../../collect-settings.rst:59
+msgid "See :doc:`collect-connect` for more details."
+msgstr ""
+
+#: ../../collect-settings.rst:64
+msgid "User Interface Settings"
+msgstr ""
+
+#: ../../collect-settings.rst:70
+msgid ":menuselection:`User Interface` settings allow us to customize the way our app looks and behaves. It includes settings for:"
+msgstr ""
+
+#: ../../collect-settings.rst:72
+msgid ":guilabel:`Language` - Allows us to select the device language from 49 available options."
+msgstr ""
+
+#: ../../collect-settings.rst:73
+msgid ":guilabel:`Text font size` - Lets us select the font-size."
+msgstr ""
+
+#: ../../collect-settings.rst:74
+msgid ":guilabel:`Navigation` (Swiping or Buttons) - Allows us to select the navigation method(swipes, buttons or both)."
+msgstr ""
+
+#: ../../collect-settings.rst:75
+msgid ":guilabel:`Splash Screen` - An image to display when the Collect application loads."
+msgstr ""
+
+#: ../../collect-settings.rst:77
+msgid ":menuselection:`User Interface` settings page also consists of the Mapping Settings."
+msgstr ""
+
+#: ../../collect-settings.rst:82
+msgid "Mapping"
+msgstr ""
+
+#: ../../collect-settings.rst:83
+msgid "Map settings are included on the :menuselection:`User Interface` settings page."
+msgstr ""
+
+#: ../../collect-settings.rst:85
+msgid ":guilabel:`Mapping SDK` sets the app used for :ref:`geopoint`, :ref:`geoshape`, and :ref:`geotrace` :doc:`form-widgets`. Options are Google Maps (default) and OpenStreetMap."
+msgstr ""
+
+#: ../../collect-settings.rst:86
+msgid ":guilabel:`Basemap` sets the specific map used when opening the mapping app."
+msgstr ""
+
+#: ../../collect-settings.rst:91
+msgid "Form Management Settings"
+msgstr ""
+
+#: ../../collect-settings.rst:102
+msgid ":menuselection:`Form Management` settings handle default behavior when editing, finalizing, and importing forms."
+msgstr ""
+
+#: ../../collect-settings.rst:105
+msgid "Form submission"
+msgstr ""
+
+#: ../../collect-settings.rst:106
+msgid ":guilabel:`Auto send` When enabled, forms are sent immediately when finalized if the device can connect to the internet. You can specify whether to send over WiFi, cellular data, or both."
+msgstr ""
+
+#: ../../collect-settings.rst:107
+msgid ":guilabel:`Delete after send` When checked, form instances are deleted once they are sent."
+msgstr ""
+
+#: ../../collect-settings.rst:110
+msgid "Form filling"
+msgstr ""
+
+#: ../../collect-settings.rst:111
+msgid ":guilabel:`Default to finalized` When enabled, forms are automatically finalized upon reaching the end of the form. You can opt out of finalizing any form when completing it."
+msgstr ""
+
+#: ../../collect-settings.rst:112
+msgid ":guilabel:`Constraint processing` used to select when response constraints are validated: After each swipe, or at finalization."
+msgstr ""
+
+#: ../../collect-settings.rst:113
+msgid ":guilabel:`High res video` enables or disables high-resolution video recordings if supported by the video application used."
+msgstr ""
+
+#: ../../collect-settings.rst:114
+msgid ":guilabel:`Image size` (v1.11.0+) specifies the maximum number of pixels for the long edge of all images added to forms. Images are scaled down immediately after being added. This setting can be overridden at the form question level. There are five size options available:"
+msgstr ""
+
+#: ../../collect-settings.rst:116
+msgid ":guilabel:`Original size from camera (default)`: images are unchanged when added to a form. Used when images must contain a lot of detail or when the internet connection used to send submissions is fast."
+msgstr ""
+
+#: ../../collect-settings.rst:117
+msgid ":guilabel:`Very small (640px)`: used when images don't need to be detailed and the internet connection used to send submissions is slow."
+msgstr ""
+
+#: ../../collect-settings.rst:118
+msgid ":guilabel:`Small (1024px)`: sufficiently detailed for most on-screen viewing but too small for printing."
+msgstr ""
+
+#: ../../collect-settings.rst:119
+msgid ":guilabel:`Medium (2048px)`: sufficiently detailed for most uses including printing."
+msgstr ""
+
+#: ../../collect-settings.rst:120
+msgid ":guilabel:`Large (3072px)`: used when a lot of detail is needed."
+msgstr ""
+
+#: ../../collect-settings.rst:123
+msgid "Form import"
+msgstr ""
+
+#: ../../collect-settings.rst:124
+msgid ":guilabel:`Import saved forms as finalized` When enabled, forms added directly to the :file:`instances/` directory are automatically set to :formstate:`Finalized`."
+msgstr ""
+
+#: ../../collect-settings.rst:129
+msgid "User and Device Identity Settings"
+msgstr ""
+
+#: ../../collect-settings.rst:138
+msgid "Form Metadata Settings"
+msgstr ""
+
+#: ../../collect-settings.rst:140
+msgid ":menuselection:`User and Device Identity -> Form Metadata` sets identity values which are added to the metadata of forms completed on the device."
+msgstr ""
+
+#: ../../collect-settings.rst:147
+msgid "User-defined"
+msgstr ""
+
+#: ../../collect-settings.rst:148
+msgid "You can edit the following:"
+msgstr ""
+
+#: ../../collect-settings.rst:150
+msgid "Username"
+msgstr ""
+
+#: ../../collect-settings.rst:151
+msgid "Phone number"
+msgstr ""
+
+#: ../../collect-settings.rst:152
+msgid "Email address"
+msgstr ""
+
+#: ../../collect-settings.rst:156
+msgid "If no username is set in Form metadata settings, server username in :ref:`Server settings <server-settings>` is used by default in the form."
+msgstr ""
+
+#: ../../collect-settings.rst:157
+msgid "If username is defined in Form metadata settings as well as in Server settings, username from Form metadata would be visible in form."
+msgstr ""
+
+#: ../../collect-settings.rst:158
+msgid "If you want to ensure that form metadata username can't be changed, you can use the :ref:`admin settings <admin-settings>`."
+msgstr ""
+
+#: ../../collect-settings.rst:161
+msgid "Device-defined"
+msgstr ""
+
+#: ../../collect-settings.rst:162
+msgid "You cannot edit these:"
+msgstr ""
+
+#: ../../collect-settings.rst:164
+msgid "Device ID"
+msgstr ""
+
+#: ../../collect-settings.rst:165
+msgid "Subscriber ID"
+msgstr ""
+
+#: ../../collect-settings.rst:166
+msgid "SIM serial number"
+msgstr ""
+
+#: ../../collect-settings.rst:171
+msgid "Usage data"
+msgstr ""
+
+#: ../../collect-settings.rst:172
+msgid "When enabled, ODK Collect sends usage and error data back to the ODK development team, which helps us improve the application."
+msgstr ""
+
+#: ../../collect-settings.rst:174
+msgid "Usage data is anonymized."
+msgstr ""
+
+#: ../../collect-settings.rst:179
+msgid "Admin Settings"
+msgstr ""
+
+#: ../../collect-settings.rst:182
+msgid "Admin settings can be **password protected**. If you set an :guilabel:`Admin Password` in the Admin settings screen, you will need to re-enter that password to access Admin settings in the future."
+msgstr ""
+
+#: ../../collect-settings.rst:190
+msgid "Admin Security"
+msgstr ""
+
+#: ../../collect-settings.rst:192
+msgid "Admin settings allow you to :ref:`restrict which General Settings are seen by users <user-access-control-settings>`. To access those settings as an Admin (and see all of them), :gesture:`tap` :guilabel:`General Settings` from the Admin settings page."
+msgstr ""
+
+#: ../../collect-settings.rst:197
+msgid "Import/Export settings"
+msgstr ""
+
+#: ../../collect-settings.rst:199
+msgid "When you click on the :guilabel:`Import/Export Settings`, you see a QR Code and a few options."
+msgstr ""
+
+#: ../../collect-settings.rst:206
+msgid "QR Code"
+msgstr ""
+
+#: ../../collect-settings.rst:208
+msgid "QR Code or the Quick Response Code is a two dimensional barcode. QR codes can be used to configure Collect on many devices. The QR image presented contains all of your current General and Admin settings, including admin and server passwords. When this QR code is scanned from the ODK Collect app on another device, these settings are imported."
+msgstr ""
+
+#: ../../collect-settings.rst:211
+msgid "Sharing QR code"
+msgstr ""
+
+#: ../../collect-settings.rst:213
+msgid "You can click on the |share| icon to share the QR code as an image. When you click on it, it displays a list of applications and services like *whatsapp*, *facebook*, *hangouts*, *bluetooth*, *MMS* to name a few, which can be used to share the QR code. This is useful when there are several different data collection sites and all devices have to be configured in the same way, in which case the QR code can be shared from one reference device."
+msgstr ""
+
+#: ../../collect-settings.rst:221
+msgid "Since the QR code may contain the admin and server passwords without encryption, you should be careful about how you share it. It is advised to not send it through an external application but through *bluetooth*, *MMS* or any other such service that doesn't allow the third party to access the data."
+msgstr ""
+
+#: ../../collect-settings.rst:224
+msgid "Saving QR code locally"
+msgstr ""
+
+#: ../../collect-settings.rst:226
+msgid "You can go to :menuselection:`⋮ --> Save settings to disk` to save the QR code."
+msgstr ""
+
+#: ../../collect-settings.rst:229
+msgid "Importing settings from a QR saved on your device"
+msgstr ""
+
+#: ../../collect-settings.rst:231
+msgid "You can import settings from a QR code saved on your device by clicking on :guilabel:`Select Code from SD Card` option."
+msgstr ""
+
+#: ../../collect-settings.rst:234
+msgid "Making your own QR code"
+msgstr ""
+
+#: ../../collect-settings.rst:236
+msgid "QR code is a JSON object with a structure as shown below:"
+msgstr ""
+
+#: ../../collect-settings.rst:250
+msgid "The JSON object isn't encrypted but is compressed using `zlib <http://www.zlib.net/manual.html>`_ before encoding into QRCode. Therefore the creation process can be summarized as follows:"
+msgstr ""
+
+#: ../../collect-settings.rst:252
+msgid "Write a JSON object containing the changed settings with a structure as shown above."
+msgstr ""
+
+#: ../../collect-settings.rst:253
+msgid "Compress it using zlib."
+msgstr ""
+
+#: ../../collect-settings.rst:254
+msgid "Encode into QR code."
+msgstr ""
+
+#: ../../collect-settings.rst:256
+msgid "After you finish generating the QR code, you can transfer it to your device and then import it by clicking on :guilabel:`Select Code from SD Card`  option."
+msgstr ""
+
+#: ../../collect-settings.rst:259
+msgid "List of keys for all settings"
+msgstr ""
+
+#: ../../collect-settings.rst:261
+msgid "Following is the list of keys for all settings and the set of values they can take:"
+msgstr ""
+
+#: ../../collect-settings.rst:374
+msgid "The subkeys in the general key can be a part of the admin key too."
+msgstr ""
+
+#: ../../collect-settings.rst:377
+msgid "QR code only contains settings whose values are not the default values because of the constraints on the amount of data a QR code can hold."
+msgstr ""
+
+#: ../../collect-settings.rst:380
+msgid "The QR code used for settings-import contains the admin and server passwords *in plain text*. To remove them from the code, :gesture:`tap` the warning on the QR code screen."
+msgstr ""
+
+#: ../../collect-settings.rst:385
+msgid "User Access Control Settings"
+msgstr ""
+
+#: ../../collect-settings.rst:387
+msgid "This section allows the admin to hide menu items and settings from the user. It contains the following options:"
+msgstr ""
+
+#: ../../collect-settings.rst:389
+msgid ":guilabel:`Main Menu Settings` : Allows admin to hide some of the main-menu options from the users."
+msgstr ""
+
+#: ../../collect-settings.rst:390
+msgid ":guilabel:`User Settings` : Allows admin to select the options that'll be visible to the users in the :guilabel:`General settings` menu."
+msgstr ""
+
+#: ../../collect-settings.rst:391
+msgid ":guilabel:`Form Entry Settings` : Admin can configure the `form entry items` visible to the users. For example unchecking the :guilabel:`change language` option will prevent the user from changing the device language."
+msgstr ""
+

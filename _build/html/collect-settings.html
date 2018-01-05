@@ -1,0 +1,688 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Collect Menus, Settings, and Security &mdash; Open Data Kit Docs</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/odk-favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Stichwortverzeichnis"
+              href="genindex.html"/>
+        <link rel="search" title="Suche" href="search.html"/>
+    <link rel="top" title="Open Data Kit Docs" href="index.html"/>
+        <link rel="up" title="Using ODK Collect" href="collect-using.html"/>
+        <link rel="next" title="Tips and Best Practices" href="collect-best-practices.html"/>
+        <link rel="prev" title="Filling out Forms with Collect" href="collect-filling-forms.html"/>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91951913-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/odk-logo-wide.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Collect</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="collect-intro.html">ODK Collect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collect-setup.html">Setting Up ODK Collect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="collect-using.html">Using ODK Collect</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="collect-forms.html">Form Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collect-filling-forms.html">Filling out Forms with Collect</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Collect Menus, Settings, and Security</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-menu">Main Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-settings">General Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#server-settings">Server Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-interface-settings">User Interface Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#form-management-settings">Form Management Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-and-device-identity-settings">User and Device Identity Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#admin-settings">Admin Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#admin-security">Admin Security</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#import-export-settings">Import/Export settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-access-control-settings">User Access Control Settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collect-best-practices.html">Tips and Best Practices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Aggregate</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-guide.html">ODK Aggregate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-install.html">Aggregate Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-deployment-planning.html">Aggregate Deployment Planning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-use.html">Aggregate Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-upgrade.html">Aggregate Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-backup.html">Backup Strategies for Aggregate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-uploader.html">Form Uploader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oauth2-service.html">OAuth2 Service Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualize.html">Visualizing Geographic Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-limitations.html">Aggregate Limitations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Briefcase</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-guide.html">ODK Briefcase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-install.html">Briefcase Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-forms.html">Briefcase Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-vs-aggregate.html">Briefcase vs Aggregate</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Form Building</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="form-design-intro.html">Intro to Forms in ODK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odk-build.html">ODK Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xlsform.html">XLSForm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-widgets.html">Form Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-interaction.html">Interaction of constraints, relevants and read only</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-update.html">Updating forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyxform.html">pyxform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="validate.html">ODK Form Validate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch-apps-from-collect.html">Launching External Apps from Collect Forms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to ODK Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cygwin.html">Working with Docs in Windows using Cygwin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing-tips.html">Tips for Making Good Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style-guide.html">Style Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developing with ODK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="openrosa.html">OpenRosa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javarosa.html">ODK JavaRosa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch-collect-from-app.html">Launching ODK Collect from External Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-api.html">Briefcase Aggregate API</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Integration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="encrypted-forms.html">Encrypted Forms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="security-privacy.html">Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verify-downloads.html">Verifying Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Open Data Kit</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="collect-using.html">Using ODK Collect</a> &raquo;</li>
+        
+      <li>Collect Menus, Settings, and Security</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/collect-settings.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="collect-menus-settings-and-security">
+<h1>Collect Menus, Settings, and Security<a class="headerlink" href="#collect-menus-settings-and-security" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="main-menu">
+<span id="id1"></span><h2>Main Menu<a class="headerlink" href="#main-menu" title="Link zu dieser Überschrift">¶</a></h2>
+<p>ODK Collect’s main menu contains the following options:</p>
+<img alt="Main menu of ODK Collect" class="device-screen-vertical" src="img/collect-settings/main-menu.*" />
+<ul class="simple">
+<li><span class="menuselection">Fill Blank Form</span> allows you to fill any blank form already there in your data collection.</li>
+<li><span class="menuselection">Edit Saved Form</span> looks for forms you’ve saved, lists them and allows you to edit them.</li>
+<li><span class="menuselection">Send Finalized Form</span> lists all the finalized forms and gives you an option to send them.</li>
+<li><span class="menuselection">View Sent Form</span> displays the forms that have been sent even if they were deleted.</li>
+<li><span class="menuselection">Get Blank form</span> lists all available ODK <a class="reference internal" href="glossary.html#term-collect"><span class="xref std std-term">Collect</span></a> <a class="reference internal" href="glossary.html#term-form"><span class="xref std std-term">form</span></a> <a class="reference internal" href="glossary.html#term-widget"><span class="xref std std-term">widget</span></a> (question types). The details about which are available on <a class="reference internal" href="form-widgets.html#basic-form-widgets"><span class="std std-ref">Basic Form Widgets</span></a>.</li>
+<li><span class="menuselection">Delete Saved Form</span> lists all the Saved and Blank Forms and allows you to delete them.</li>
+</ul>
+</div>
+<div class="section" id="general-settings">
+<span id="id2"></span><h2>General Settings<a class="headerlink" href="#general-settings" title="Link zu dieser Überschrift">¶</a></h2>
+<p>General Settings are accessible from the <span class="guilabel">⋮</span> menu on the top-right corner.</p>
+<img alt="General settings" class="device-screen-vertical" src="img/collect-settings/general-settings.*" />
+<p>It allows us to configure the following:</p>
+<div class="section" id="server-settings">
+<span id="id3"></span><h3>Server Settings<a class="headerlink" href="#server-settings" title="Link zu dieser Überschrift">¶</a></h3>
+<img alt="Server settings" class="device-screen-vertical" src="img/collect-settings/server-settings.*" />
+<p><span class="menuselection">Server</span> settings manage the connection to an ODK Aggregate server or Google Drive account for form management.</p>
+<p>See <a class="reference internal" href="collect-connect.html"><span class="doc">Connecting to a Server</span></a> for more details.</p>
+</div>
+<div class="section" id="user-interface-settings">
+<span id="interface-settings"></span><h3>User Interface Settings<a class="headerlink" href="#user-interface-settings" title="Link zu dieser Überschrift">¶</a></h3>
+<img alt="User Interface settings" class="device-screen-vertical" src="img/collect-settings/ui-settings.*" />
+<p><span class="menuselection">User Interface</span> settings allow us to customize the way our app looks and behaves. It includes settings for:</p>
+<ul class="simple">
+<li><span class="guilabel">Language</span> - Allows us to select the device language from 49 available options.</li>
+<li><span class="guilabel">Text font size</span> - Lets us select the font-size.</li>
+<li><span class="guilabel">Navigation</span> (Swiping or Buttons) - Allows us to select the navigation method(swipes, buttons or both).</li>
+<li><span class="guilabel">Splash Screen</span> - An image to display when the Collect application loads.</li>
+</ul>
+<p><span class="menuselection">User Interface</span> settings page also consists of the Mapping Settings.</p>
+<p class="rubric">Mapping</p>
+<p>Map settings are included on the <span class="menuselection">User Interface</span> settings page.</p>
+<ul class="simple">
+<li><span class="guilabel">Mapping SDK</span> sets the app used for <a class="reference internal" href="form-widgets.html#geopoint"><span class="std std-ref">Geopoint</span></a>, <a class="reference internal" href="form-widgets.html#geoshape"><span class="std std-ref">GeoShape</span></a>, and <a class="reference internal" href="form-widgets.html#geotrace"><span class="std std-ref">GeoTrace</span></a> <a class="reference internal" href="form-widgets.html"><span class="doc">Form Widgets</span></a>. Options are Google Maps (default) and OpenStreetMap.</li>
+<li><span class="guilabel">Basemap</span> sets the specific map used when opening the mapping app.</li>
+</ul>
+</div>
+<div class="section" id="form-management-settings">
+<span id="id4"></span><h3>Form Management Settings<a class="headerlink" href="#form-management-settings" title="Link zu dieser Überschrift">¶</a></h3>
+<img alt="Form Management settings" class="device-screen-vertical" src="_images/form-management.png" />
+<img alt="Form Management settings" class="device-screen-vertical" src="_images/form-management2.png" />
+<p><span class="menuselection">Form Management</span> settings handle default behavior when editing, finalizing, and importing forms.</p>
+<p class="rubric">Form submission</p>
+<ul class="simple">
+<li><span class="guilabel">Auto send</span> When enabled, forms are sent immediately when finalized if the device can connect to the internet. You can specify whether to send over WiFi, cellular data, or both.</li>
+<li><span class="guilabel">Delete after send</span> When checked, form instances are deleted once they are sent.</li>
+</ul>
+<p class="rubric">Form filling</p>
+<ul class="simple">
+<li><span class="guilabel">Default to finalized</span> When enabled, forms are automatically finalized upon reaching the end of the form. You can opt out of finalizing any form when completing it.</li>
+<li><span class="guilabel">Constraint processing</span> used to select when response constraints are validated: After each swipe, or at finalization.</li>
+<li><span class="guilabel">High res video</span> enables or disables high-resolution video recordings if supported by the video application used.</li>
+<li><span class="guilabel">Image size</span> (v1.11.0+) specifies the maximum number of pixels for the long edge of all images added to forms. Images are scaled down immediately after being added. This setting can be overridden at the form question level. There are five size options available:<ul>
+<li><span class="guilabel">Original size from camera (default)</span>: images are unchanged when added to a form. Used when images must contain a lot of detail or when the internet connection used to send submissions is fast.</li>
+<li><span class="guilabel">Very small (640px)</span>: used when images don’t need to be detailed and the internet connection used to send submissions is slow.</li>
+<li><span class="guilabel">Small (1024px)</span>: sufficiently detailed for most on-screen viewing but too small for printing.</li>
+<li><span class="guilabel">Medium (2048px)</span>: sufficiently detailed for most uses including printing.</li>
+<li><span class="guilabel">Large (3072px)</span>: used when a lot of detail is needed.</li>
+</ul>
+</li>
+</ul>
+<p class="rubric">Form import</p>
+<ul class="simple">
+<li><span class="guilabel">Import saved forms as finalized</span> When enabled, forms added directly to the <code class="file docutils literal"><span class="pre">instances/</span></code> directory are automatically set to <span class="formstate">Finalized</span>.</li>
+</ul>
+</div>
+<div class="section" id="user-and-device-identity-settings">
+<span id="id-settings"></span><h3>User and Device Identity Settings<a class="headerlink" href="#user-and-device-identity-settings" title="Link zu dieser Überschrift">¶</a></h3>
+<img alt="User and Device Identity Settings" class="device-screen-vertical" src="img/collect-settings/und-settings.*" />
+<div class="section" id="form-metadata-settings">
+<span id="id5"></span><h4>Form Metadata Settings<a class="headerlink" href="#form-metadata-settings" title="Link zu dieser Überschrift">¶</a></h4>
+<p><span class="menuselection">User and Device Identity -&gt; Form Metadata</span> sets identity values which are added to the metadata of forms completed on the device.</p>
+<img alt="Form Metadata Settings" class="device-screen-vertical" src="_images/form-metadata.png" />
+<p class="rubric">User-defined</p>
+<p>You can edit the following:</p>
+<ul class="simple">
+<li>Username</li>
+<li>Phone number</li>
+<li>Email address</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<ul class="last simple">
+<li>If no username is set in Form metadata settings, server username in <a class="reference internal" href="#server-settings"><span class="std std-ref">Server settings</span></a> is used by default in the form.</li>
+<li>If username is defined in Form metadata settings as well as in Server settings, username from Form metadata would be visible in form.</li>
+<li>If you want to ensure that form metadata username can’t be changed, you can use the <a class="reference internal" href="#admin-settings"><span class="std std-ref">admin settings</span></a>.</li>
+</ul>
+</div>
+<p class="rubric">Device-defined</p>
+<p>You cannot edit these:</p>
+<ul class="simple">
+<li>Device ID</li>
+<li>Subscriber ID</li>
+<li>SIM serial number</li>
+</ul>
+<p class="rubric" id="usage-data-setting">Usage data</p>
+<p>When enabled, ODK Collect sends usage and error data back to the ODK development team, which helps us improve the application.</p>
+<p>Usage data is anonymized.</p>
+</div>
+</div>
+</div>
+<div class="section" id="admin-settings">
+<span id="id6"></span><h2>Admin Settings<a class="headerlink" href="#admin-settings" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">Admin settings can be <strong>password protected</strong>. If you set an <span class="guilabel">Admin Password</span> in the Admin settings screen, you will need to re-enter that password to access Admin settings in the future.</p>
+</div>
+<img alt="Admin settings menu" class="device-screen-vertical" src="img/collect-settings/admin-settings.*" />
+<div class="section" id="admin-security">
+<span id="id7"></span><h3>Admin Security<a class="headerlink" href="#admin-security" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Admin settings allow you to <a class="reference internal" href="#user-access-control-settings"><span class="std std-ref">restrict which General Settings are seen by users</span></a>. To access those settings as an Admin (and see all of them), <span class="gesture">tap</span> <span class="guilabel">General Settings</span> from the Admin settings page.</p>
+</div>
+<div class="section" id="import-export-settings">
+<span id="id8"></span><h3>Import/Export settings<a class="headerlink" href="#import-export-settings" title="Link zu dieser Überschrift">¶</a></h3>
+<p>When you click on the <span class="guilabel">Import/Export Settings</span>, you see a QR Code and a few options.</p>
+<img alt="Import/export settings menu of ODK Collect" class="device-screen-vertical" src="_images/import-settings.jpg" />
+<div class="section" id="qr-code">
+<h4>QR Code<a class="headerlink" href="#qr-code" title="Link zu dieser Überschrift">¶</a></h4>
+<p>QR Code or the Quick Response Code is a two dimensional barcode. QR codes can be used to configure Collect on many devices. The QR image presented contains all of your current General and Admin settings, including admin and server passwords. When this QR code is scanned from the ODK Collect app on another device, these settings are imported.</p>
+</div>
+<div class="section" id="sharing-qr-code">
+<h4>Sharing QR code<a class="headerlink" href="#sharing-qr-code" title="Link zu dieser Überschrift">¶</a></h4>
+<p>You can click on the <a class="reference internal" href="_images/share-icon.jpg"><img alt="Share icon for sharing the QR code." src="_images/share-icon.jpg" style="width: 43px; height: 43px;" /></a> icon to share the QR code as an image. When you click on it, it displays a list of applications and services like <em>whatsapp</em>, <em>facebook</em>, <em>hangouts</em>, <em>bluetooth</em>, <em>MMS</em> to name a few, which can be used to share the QR code. This is useful when there are several different data collection sites and all devices have to be configured in the same way, in which case the QR code can be shared from one reference device.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warnung</p>
+<p class="last">Since the QR code may contain the admin and server passwords without encryption, you should be careful about how you share it. It is advised to not send it through an external application but through <em>bluetooth</em>, <em>MMS</em> or any other such service that doesn’t allow the third party to access the data.</p>
+</div>
+</div>
+<div class="section" id="saving-qr-code-locally">
+<h4>Saving QR code locally<a class="headerlink" href="#saving-qr-code-locally" title="Link zu dieser Überschrift">¶</a></h4>
+<p>You can go to <span class="menuselection">⋮ ‣ Save settings to disk</span> to save the QR code.</p>
+</div>
+<div class="section" id="importing-settings-from-a-qr-saved-on-your-device">
+<h4>Importing settings from a QR saved on your device<a class="headerlink" href="#importing-settings-from-a-qr-saved-on-your-device" title="Link zu dieser Überschrift">¶</a></h4>
+<p>You can import settings from a QR code saved on your device by clicking on <span class="guilabel">Select Code from SD Card</span> option.</p>
+</div>
+<div class="section" id="making-your-own-qr-code">
+<h4>Making your own QR code<a class="headerlink" href="#making-your-own-qr-code" title="Link zu dieser Überschrift">¶</a></h4>
+<p>QR code is a JSON object with a structure as shown below:</p>
+<div class="highlight-JSON"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;general&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;google_sheets&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;constraint_behavior&quot;</span><span class="p">:</span> <span class="s2">&quot;on_finalize&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;admin&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;edit_saved&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The JSON object isn’t encrypted but is compressed using <a class="reference external" href="http://www.zlib.net/manual.html">zlib</a> before encoding into QRCode. Therefore the creation process can be summarized as follows:</p>
+<ol class="arabic simple">
+<li>Write a JSON object containing the changed settings with a structure as shown above.</li>
+<li>Compress it using zlib.</li>
+<li>Encode into QR code.</li>
+</ol>
+<p>After you finish generating the QR code, you can transfer it to your device and then import it by clicking on <span class="guilabel">Select Code from SD Card</span>  option.</p>
+</div>
+<div class="section" id="list-of-keys-for-all-settings">
+<h4>List of keys for all settings<a class="headerlink" href="#list-of-keys-for-all-settings" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Following is the list of keys for all settings and the set of values they can take:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;admin&quot;</span> <span class="o">:</span> <span class="p">{</span>
+
+    <span class="c1">// Stores the admin password</span>
+    <span class="s2">&quot;admin_password&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;admin_pw&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+
+    <span class="c1">// User access control to the main menu. The default value is true.</span>
+    <span class="s2">&quot;edit_saved&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;send_finalized&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;view_sent&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;get_blank&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;delete_saved&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+
+    <span class="c1">// User access control to form entry</span>
+    <span class="s2">&quot;save_mid&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;jump_to&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;change_language&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;access_settings&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;save_as&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;mark_as_finalized&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+
+    <span class="c1">// User access control settings for General settings</span>
+    <span class="s2">&quot;change_autosend&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;change_navigation&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;change_constraint_behavior&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;change_font_size&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;change_app_language&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;instance_form_sync&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;default_to_finalized&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;delete_after_send&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;high_resolution&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;image_size&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;show_splash_screen&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;show_map_sdk&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;show_map_basemap&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;analytics&quot;</span> <span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;change_form_metadata&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;change_server&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+
+    <span class="c1">// Server</span>
+    <span class="s2">&quot;import_settings&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;change_server&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;change_protocol_settings&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+
+    <span class="p">},</span>
+
+  <span class="s2">&quot;general&quot;</span> <span class="o">:</span> <span class="p">{</span>
+
+    <span class="c1">// Server settings</span>
+    <span class="s2">&quot;protocol&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;odk_default&quot;</span><span class="p">,</span> <span class="s2">&quot;google_sheets&quot;</span><span class="p">,</span> <span class="s2">&quot;other&quot;</span><span class="p">},</span>
+    <span class="c1">// Aggregate specific key</span>
+    <span class="s2">&quot;server_url&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="c1">// Google sheets specific keys</span>
+    <span class="s2">&quot;selected_google_account&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="s2">&quot;google_sheets_url&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="s2">&quot;password&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="c1">// Other specific keys</span>
+    <span class="s2">&quot;formlist_url&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="s2">&quot;submission_url&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+
+    <span class="c1">// User interface</span>
+    <span class="s2">&quot;app_language&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span> <span class="s2">&quot;af&quot;</span><span class="p">,</span> <span class="s2">&quot;am&quot;</span><span class="p">,</span> <span class="s2">&quot;ar&quot;</span><span class="p">,</span> <span class="s2">&quot;bn&quot;</span><span class="p">,</span> <span class="s2">&quot;ca&quot;</span><span class="p">,</span> <span class="s2">&quot;cs&quot;</span><span class="p">,</span> <span class="s2">&quot;de&quot;</span><span class="p">,</span> <span class="s2">&quot;es&quot;</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;et&quot;</span><span class="p">,</span> <span class="s2">&quot;fa&quot;</span><span class="p">,</span> <span class="s2">&quot;fi&quot;</span><span class="p">,</span> <span class="s2">&quot;fr&quot;</span><span class="p">,</span> <span class="s2">&quot;ha&quot;</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">,</span> <span class="s2">&quot;hu&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="s2">&quot;it&quot;</span><span class="p">,</span> <span class="s2">&quot;ja&quot;</span><span class="p">,</span> <span class="s2">&quot;ka&quot;</span><span class="p">,</span> <span class="s2">&quot;zu&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;lt&quot;</span><span class="p">,</span> <span class="s2">&quot;mg&quot;</span><span class="p">,</span> <span class="s2">&quot;mr&quot;</span><span class="p">,</span> <span class="s2">&quot;my&quot;</span><span class="p">,</span> <span class="s2">&quot;ml&quot;</span><span class="p">,</span> <span class="s2">&quot;nb&quot;</span><span class="p">,</span> <span class="s2">&quot;nl&quot;</span><span class="p">,</span> <span class="s2">&quot;no&quot;</span><span class="p">,</span> <span class="s2">&quot;pl&quot;</span><span class="p">,</span> <span class="s2">&quot;ps&quot;</span><span class="p">,</span> <span class="s2">&quot;pt&quot;</span><span class="p">,</span> <span class="s2">&quot;ro&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;ru&quot;</span><span class="p">,</span> <span class="s2">&quot;so&quot;</span><span class="p">,</span><span class="s2">&quot;sq&quot;</span><span class="p">,</span> <span class="s2">&quot;sw&quot;</span><span class="p">,</span> <span class="s2">&quot;ta&quot;</span><span class="p">,</span> <span class="s2">&quot;ti&quot;</span><span class="p">,</span> <span class="s2">&quot;tl&quot;</span><span class="p">,</span> <span class="s2">&quot;tr&quot;</span><span class="p">,</span> <span class="s2">&quot;uk&quot;</span><span class="p">,</span> <span class="s2">&quot;ur&quot;</span><span class="p">,</span> <span class="s2">&quot;vi&quot;</span><span class="p">,</span> <span class="s2">&quot;zh&quot;</span>
+         <span class="p">},</span>
+    <span class="s2">&quot;font_size&quot;</span><span class="o">:</span> <span class="p">{</span><span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">29</span><span class="p">},</span>
+    <span class="s2">&quot;navigation&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;swipe&quot;</span> <span class="p">,</span><span class="s2">&quot;buttons&quot;</span> <span class="p">,</span><span class="s2">&quot;swipe_buttons&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;showSplash&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;splashPath&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="c1">// If showSplash is true, then you specify the path of image here.</span>
+    <span class="s2">&quot;map_sdk_behavior&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;google_maps&quot;</span><span class="p">,</span> <span class="s2">&quot;osmdroid&quot;</span><span class="p">},</span>
+    <span class="c1">// if map_sdk_behavior is google_maps, then map_basemap_behavior can take the following values:</span>
+    <span class="s2">&quot;map_basemap_behavior&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;streets&quot;</span><span class="p">,</span> <span class="s2">&quot;satellite&quot;</span><span class="p">,</span> <span class="s2">&quot;terrain&quot;</span><span class="p">,</span> <span class="s2">&quot;hybrid&quot;</span><span class="p">},</span>
+    <span class="c1">// if map_sdk_behavior is osmdroid, then map_basemap_behavior can take the following values:</span>
+    <span class="s2">&quot;map_basemap_behavior&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;openmap_streets&quot;</span><span class="p">,</span> <span class="s2">&quot;openmap_usgs_topo&quot;</span><span class="p">,</span>
+                              <span class="s2">&quot;openmap_usgs_sat&quot;</span><span class="p">,</span> <span class="s2">&quot;openmap_stamen_terrain&quot;</span><span class="p">,</span>
+                              <span class="s2">&quot;openmap_cartodb_positron&quot;</span><span class="p">,</span> <span class="s2">&quot;openmap_cartodb_darkmatter&quot;</span>
+                          <span class="p">},</span>
+
+    <span class="c1">// Form submission</span>
+    <span class="s2">&quot;delete_send&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;autosend&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;autosend_wifi&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;autosend_network&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+
+    <span class="c1">// Form filling</span>
+    <span class="s2">&quot;constraint_behavior&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;on_swipe&quot;</span><span class="p">,</span> <span class="s2">&quot;on_finalize&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;default_to_finalized&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;high_resolution&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;image_size&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;original&quot;</span><span class="p">,</span> <span class="s2">&quot;small&quot;</span><span class="p">,</span> <span class="s2">&quot;very_small&quot;</span><span class="p">,</span> <span class="s2">&quot;medium&quot;</span><span class="p">,</span> <span class="s2">&quot;large&quot;</span><span class="p">},</span>
+
+    <span class="c1">// Form import</span>
+    <span class="s2">&quot;instance_sync&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+
+    <span class="c1">// User and Device identity</span>
+    <span class="s2">&quot;form_metadata&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="s2">&quot;metadata_migrated&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="s2">&quot;metadata_username&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="s2">&quot;metadata_phonenumber&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="s2">&quot;metadata_email&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="s2">&quot;analytics&quot;</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span> <span class="c1">// Anonymous usage data</span>
+
+  <span class="p">},</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">The subkeys in the general key can be a part of the admin key too.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">QR code only contains settings whose values are not the default values because of the constraints on the amount of data a QR code can hold.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warnung</p>
+<p class="last">The QR code used for settings-import contains the admin and server passwords <em>in plain text</em>. To remove them from the code, <span class="gesture">tap</span> the warning on the QR code screen.</p>
+</div>
+</div>
+</div>
+<div class="section" id="user-access-control-settings">
+<span id="id9"></span><h3>User Access Control Settings<a class="headerlink" href="#user-access-control-settings" title="Link zu dieser Überschrift">¶</a></h3>
+<p>This section allows the admin to hide menu items and settings from the user. It contains the following options:</p>
+<ul class="simple">
+<li><span class="guilabel">Main Menu Settings</span> : Allows admin to hide some of the main-menu options from the users.</li>
+<li><span class="guilabel">User Settings</span> : Allows admin to select the options that’ll be visible to the users in the <span class="guilabel">General settings</span> menu.</li>
+<li><span class="guilabel">Form Entry Settings</span> : Admin can configure the <cite>form entry items</cite> visible to the users. For example unchecking the <span class="guilabel">change language</span> option will prevent the user from changing the device language.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="collect-filling-forms.html" class="btn btn-neutral" title="Filling out Forms with Collect" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Filling out Forms with Collect</a>
+       
+      
+        <a href="collect-best-practices.html" class="btn btn-neutral float-right" title="Tips and Best Practices" accesskey="n" rel="next">Tips and Best Practices <span class="fa fa-arrow-circle-right"></span></a>
+      
+    </div>
+  
+
+  <hr/>
+  <p class="footerText"> 
+
+If you still need help, you can ask support questions in the
+
+ <a href="
+
+https://forum.opendatakit.org/
+
+"> 
+
+ODK Forum
+
+ </a> </p>
+  <p class="footerText"> 
+
+If you find a problem with this documentation, please 
+
+ <a href="
+
+https://github.com/opendatakit/docs/issues
+
+"> 
+
+file an issue
+
+ </a> </p>
+  <p class="footerText"> 
+
+You are also encouraged to
+
+ <a href=" 
+
+https://github.com/opendatakit/docs/
+
+"> 
+
+fork our Github repo 
+
+ </a>  
+
+and 
+
+ <a href="
+
+/contributing/
+
+"> 
+
+become a contributor
+
+ </a></p>
+  
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Open Data Kit. This document is licensed under a Creative Commons Attribution 4.0 International License.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/js/custom.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

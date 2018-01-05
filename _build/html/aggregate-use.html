@@ -1,0 +1,898 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Aggregate Usage &mdash; Open Data Kit Docs</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/odk-favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Stichwortverzeichnis"
+              href="genindex.html"/>
+        <link rel="search" title="Suche" href="search.html"/>
+    <link rel="top" title="Open Data Kit Docs" href="index.html"/>
+        <link rel="next" title="Aggregate Upgrade" href="aggregate-upgrade.html"/>
+        <link rel="prev" title="Aggregate Deployment Planning" href="aggregate-deployment-planning.html"/>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91951913-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/odk-logo-wide.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Collect</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="collect-intro.html">ODK Collect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collect-setup.html">Setting Up ODK Collect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collect-using.html">Using ODK Collect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collect-best-practices.html">Tips and Best Practices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Aggregate</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="aggregate-guide.html">ODK Aggregate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-install.html">Aggregate Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-deployment-planning.html">Aggregate Deployment Planning</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Aggregate Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#form-management">Form Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#managing-forms">Managing forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exporting-form-data">Exporting form data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publishing-form-data">Publishing form data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#viewing-published-data">Viewing Published data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#managing-submissions-manually">Managing Submissions manually</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submissions">Submissions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#filtering-submissions">Filtering Submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visualizing-submissions">Visualizing Submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exporting-submissions">Exporting Submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publishing-submissions">Publishing Submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#viewing-exported-submissions">Viewing Exported Submissions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#site-admin">Site Admin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#permissions">Permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preferences">Preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#help-options">Help Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-transfer-using-aggregate">Data Transfer using Aggregate</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#exporting">Exporting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#csv-comma-separated-values">CSV (comma separated values)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#json">JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kml-keyhole-markup-language">KML (Keyhole Markup Language)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#publishing">Publishing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#google-fusion-tables">Google Fusion Tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#google-spreadsheets">Google Spreadsheets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#json-server">JSON Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#google-maps-engine">Google Maps Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#redcap-server">RedCap Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ohmage-json-server">Ohmage JSON Server</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#apis">APIs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#briefcase-cli">Briefcase CLI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#briefcase-aggregate-api">Briefcase-Aggregate API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#collect-aggregate-api">Collect-Aggregate API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#direct-database-connection">Direct database connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-media">Accessing Media</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-upgrade.html">Aggregate Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-backup.html">Backup Strategies for Aggregate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-uploader.html">Form Uploader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oauth2-service.html">OAuth2 Service Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualize.html">Visualizing Geographic Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregate-limitations.html">Aggregate Limitations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Briefcase</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-guide.html">ODK Briefcase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-install.html">Briefcase Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-forms.html">Briefcase Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-vs-aggregate.html">Briefcase vs Aggregate</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Form Building</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="form-design-intro.html">Intro to Forms in ODK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odk-build.html">ODK Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xlsform.html">XLSForm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-widgets.html">Form Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-interaction.html">Interaction of constraints, relevants and read only</a></li>
+<li class="toctree-l1"><a class="reference internal" href="form-update.html">Updating forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyxform.html">pyxform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="validate.html">ODK Form Validate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch-apps-from-collect.html">Launching External Apps from Collect Forms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to ODK Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cygwin.html">Working with Docs in Windows using Cygwin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing-tips.html">Tips for Making Good Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style-guide.html">Style Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developing with ODK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="openrosa.html">OpenRosa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javarosa.html">ODK JavaRosa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch-collect-from-app.html">Launching ODK Collect from External Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="briefcase-api.html">Briefcase Aggregate API</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Integration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="encrypted-forms.html">Encrypted Forms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="security-privacy.html">Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verify-downloads.html">Verifying Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Open Data Kit</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Aggregate Usage</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/aggregate-use.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aggregate-usage">
+<h1>Aggregate Usage<a class="headerlink" href="#aggregate-usage" title="Link zu dieser Überschrift">¶</a></h1>
+<p>ODK Aggregate can be used to collect data from ODK collect, filter the submitted data and export it to useful formats. It provides a mechanism for hosting the survey forms and gathering the survey results.</p>
+<p>When the URL to the ODK Aggregate server is first opened, you will be presented with the application page showing the <span class="guilabel">Submissions</span> and <span class="guilabel">Form Management</span> tabs. You will also see a <span class="guilabel">Log In</span> option and three help buttons.</p>
+<img alt="Image showing tabs on Aggregate server." src="_images/server-start.png" />
+<div class="section" id="form-management">
+<span id="form-manage"></span><h2>Form Management<a class="headerlink" href="#form-management" title="Link zu dieser Überschrift">¶</a></h2>
+<p>You can add, download and delete forms, export data into useful formats, publish data into another service, manually upload submissions and view the published data. ODK Aggregate provides all these options under the <span class="guilabel">Form Management</span> tab.</p>
+<div class="section" id="managing-forms">
+<span id="create-manage"></span><h3>Managing forms<a class="headerlink" href="#managing-forms" title="Link zu dieser Überschrift">¶</a></h3>
+<p>You can view all your forms, add new forms, delete forms, download forms as well as restrict submissions for a form.</p>
+<p>Click on <span class="guilabel">Forms list</span> tab to see a list of all your forms.</p>
+<img alt="Image showing list of all forms." src="_images/form-list.png" />
+<p>Under the <span class="guilabel">Form list</span> tab, you will see <span class="guilabel">Add New Form</span> button  to upload a new form definition to ODK Aggregate.</p>
+<img alt="Image showing add form button." src="_images/add-form.png" />
+<p>When you click on it a box will open asking for details of the form. <span class="guilabel">Form Definition</span> is required and <span class="guilabel">Media File(s)</span> is optional. Choose the .xml file that will be used. You can also choose the appropriate media files for the form.</p>
+<img alt="Image showing add form options." src="_images/add-form-options.png" />
+<p>You can manage all the forms present on your server in your form list. All options displayed in the form list are as follow:</p>
+<ul class="simple">
+<li>Click on <span class="guilabel">Title</span> to view the XML for a form. You can then download XML for that form by clicking on <span class="guilabel">Download XML</span> in the Form XML Viewer.</li>
+</ul>
+<img alt="Image showing xml viewer for form." src="_images/xml-viewer.png" />
+<ul class="simple">
+<li><span class="guilabel">Form Id</span> is the unique name for the form.</li>
+<li><span class="guilabel">Media Files</span> displays the count of media files you have uploaded for the form.</li>
+<li><span class="guilabel">User</span> is the user who uploaded the form.</li>
+<li>Clicking on <span class="guilabel">Downloadable</span> checkbox enables/disables Aggregate from displaying the form to remote clients so that they can download the form.</li>
+<li>Clicking on <span class="guilabel">Accept Submissions</span> checkbox enables/disables Aggregate ability to accept submissions for the particular form.</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<p class="last">Disable accepting submission by unchecking the <span class="guilabel">Accept Submissions</span> checkbox if you want to prevent users from submitting more data for a particular form.</p>
+</div>
+<ul class="simple">
+<li>Click on <span class="guilabel">Delete</span> when you want to remove a form.</li>
+</ul>
+</div>
+<div class="section" id="exporting-form-data">
+<span id="export-form"></span><h3>Exporting form data<a class="headerlink" href="#exporting-form-data" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Click on <span class="guilabel">Export</span> option in the form list to export form into useful formats and choose the format in which you want to export data. You can also choose a filter which you have saved for the form to export only a certain subset of form. Details on <a class="reference internal" href="#export-data"><span class="std std-ref">exporting data</span></a> are given in the <a class="reference internal" href="#transfer-data"><span class="std std-ref">data transfer</span></a> section.</p>
+</div>
+<div class="section" id="publishing-form-data">
+<span id="publish-form"></span><h3>Publishing form data<a class="headerlink" href="#publishing-form-data" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Click on <span class="guilabel">Publish</span> option in the form list to publish the form into another service. You can choose where you want to publish data and which data you want to publish. Details on <a class="reference internal" href="#publish-data"><span class="std std-ref">publishing data</span></a> are given in the <a class="reference internal" href="#transfer-data"><span class="std std-ref">data transfer</span></a> section.</p>
+</div>
+<div class="section" id="viewing-published-data">
+<span id="view-publish-data"></span><h3>Viewing Published data<a class="headerlink" href="#viewing-published-data" title="Link zu dieser Überschrift">¶</a></h3>
+<p>You can get a view of the published data you have created for a particular form by clicking on <span class="guilabel">Published Data</span>.</p>
+<img alt="Image showing published data." src="_images/published-data.png" />
+<ul class="simple">
+<li>Select the form corresponding to the published data in the <span class="guilabel">Form</span> dropdown.</li>
+<li>Read the message that appears and click on <span class="guilabel">Purge Published Data</span>.</li>
+<li><span class="guilabel">Created By</span> shows the email of the user who created the published file.</li>
+<li><span class="guilabel">Status</span> can be <cite>ACTIVE</cite> (the file is ready to view) or <cite>ESTABLISHED</cite> (something went wrong in the process of exporting.)</li>
+<li><span class="guilabel">Start Date</span> shows the time when you finished filling out the <span class="guilabel">Publish</span> form.</li>
+<li><span class="guilabel">Action</span> is based on your selection of upload only, stream only, or both in the <span class="guilabel">Publish</span> form.</li>
+<li><span class="guilabel">Type</span> shows the type you choose to publish your data to.</li>
+<li><span class="guilabel">Owner</span> shows the owner of the published data.</li>
+<li><span class="guilabel">Name</span> is the place where you published your data. If the type was a Google Fusion Table, click on the link to view the Fusion Table.</li>
+<li>Select delete box in the <span class="guilabel">Delete</span> column if you want to delete your published file.</li>
+</ul>
+</div>
+<div class="section" id="managing-submissions-manually">
+<span id="submission-admin"></span><h3>Managing Submissions manually<a class="headerlink" href="#managing-submissions-manually" title="Link zu dieser Überschrift">¶</a></h3>
+<p>You can manually upload submissions for a form and check incomplete submissions under the <span class="guilabel">Submission Admin</span> tab. Following options are available:</p>
+<img alt="Image showing submission admin tab." src="_images/submission-admin.png" />
+<ul class="simple">
+<li>Click on <span class="guilabel">Manually upload submission data</span> to manually upload submissions.</li>
+</ul>
+<img alt="Image showing window to manually upload submissions." src="_images/submission-upload.png" />
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">Submissions are located under the /odk/instances directory on the phone’s sdcard. This directory will contain subdirectories with names of the form: formID_yyyy-mm-dd_hh-MM-ss. Within each of these subdirectories are the submission data file (named: formID_yyyy-mm-dd_hh-MM-ss.xml),and zero or more associated data files for the images, audio clips, video clips, etc. linked with this submission.</p>
+</div>
+<ul class="simple">
+<li>Select form in the <span class="guilabel">Form</span> dropdown and click on <span class="guilabel">Purge Submission Data</span> if you want remove submission data for a particular form.</li>
+<li>You can also see a list of incomplete submissions for a particular form under the <span class="guilabel">Incomplete Submissions</span> list.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">If you upload the submission, but fail to upload all media attachments, it places the submission in the incomplete submissions bucket. While it resides there, it won’t be published to external servers or downloadable via ODK Briefcase.</p>
+</div>
+</div>
+</div>
+<div class="section" id="submissions">
+<span id="submission-data"></span><h2>Submissions<a class="headerlink" href="#submissions" title="Link zu dieser Überschrift">¶</a></h2>
+<p>You can view the data submitted from ODK Collect here. You can filter the submissions, visualize them using pie chart, bar graph or map, export the submissions into useful formats and publish the submitted data into another service. You can also view all the exported submissions. ODK Aggregate provides all these options under the <span class="guilabel">Submissions</span> tab.</p>
+<div class="section" id="filtering-submissions">
+<span id="filter-submission"></span><h3>Filtering Submissions<a class="headerlink" href="#filtering-submissions" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Submissions from ODK collect can be filtered to view or hide a specific subset of data by creation of filters. Filters give you the ability to see a subset of your data. You can have a single filter as well as multiple filters. If you have multiple filters applied at once, then you have a filter group. You can create and apply filters by using the options under the <span class="guilabel">Filter Submissions</span> tab.</p>
+<p>You can create a single or multiple filters depending on the subset of data you want to view or hide. Creating a filter like <cite>Display Rows where column Gender EQUAL male</cite> specifies that you want to get a list of all rows where gender column has value as male i.e you want to obtain information about all male people in your data. Unless the filter is saved, it is temporary. You can save a filter to make it permanent. Any filter can be deleted if it is no longer needed.</p>
+<p>Various options under this tab can be used as follows:</p>
+<ul class="simple">
+<li>Click on <span class="guilabel">Add Filter</span> to add filter to the data. In the <span class="guilabel">Create filter to</span> dropdown, <span class="menuselection">Display</span> or <span class="menuselection">Hide</span> will specify whether you will be selecting data to show or hide and  <span class="menuselection">Rows</span> or <span class="menuselection">Columns</span> will specify whether you will be working with the rows or columns of the table.</li>
+</ul>
+<img alt="Image showing add filter option." src="_images/add-filter.png" />
+<p>If you select <span class="menuselection">Rows</span> specify a condition you want to apply in the <span class="guilabel">where</span> box.</p>
+<img alt="Image showing row selection." src="_images/row-filter.png" />
+<p>If you selected <span class="menuselection">Columns</span> specify the columns you wish to display or hide in the <span class="guilabel">titled</span> box.</p>
+<img alt="Image showing column selection." src="_images/column-filter.png" />
+<ul class="simple">
+<li>Click on <span class="guilabel">Save</span> to save the filter or filter group for future use. Clicking on <span class="guilabel">Save As</span> allows you to give a name to the filter or filter group.</li>
+<li>Click on <span class="guilabel">Delete</span> to delete a filter or filter group.</li>
+<li>You can check the <span class="guilabel">Display Metadata</span> checkbox to display or hide metadata.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">Metadata provides information about the submissions. There will be information such as date submitted, if the data is complete, version numbers, and id numbers.</p>
+</div>
+<img alt="Image showing save, save as, delete and display metadata options." src="_images/filter-options.png" />
+</div>
+<div class="section" id="visualizing-submissions">
+<span id="visualize-submissions"></span><h3>Visualizing Submissions<a class="headerlink" href="#visualizing-submissions" title="Link zu dieser Überschrift">¶</a></h3>
+<p>ODK Aggregate provides a quick means for basic data visualization. This Visualize functionality is meant to provide a quick means to view early data results in meaningful ways but is not meant to provide complex data analysis functionality. You can view your data in bar graph, pie chart or on a map.</p>
+<p>In both Pie chart and bar graph visualization you can either count the number of times a unique answer occurs in a specified column or calculate sum of values in one column grouped by a value in another column. You can choose a column that you want to map in map visualization.</p>
+<img alt="Image showing visualize option." src="_images/visualize.png" />
+<p>Click on <span class="guilabel">Visualize</span> to visualize the submitted data. Select bar graph, pie chart or map in the <span class="guilabel">Type</span> dropdown. Further options are described as follows:</p>
+<ul>
+<li><p class="first">If you choose Pie Chart, choose whether you would like to count or sum data:</p>
+<blockquote>
+<div><ul class="simple">
+<li>If you select <span class="guilabel">Count</span> option, then select the column in which you want to apply this.</li>
+<li>If you select <span class="guilabel">Sum</span> option, then select the column of values that you want to add and another column that you want to use to group the numbers.</li>
+<li>Then click on <span class="guilabel">Pie It</span> to get the Pie Chart.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<img alt="Image showing pie chart option." src="_images/pie-chart.png" />
+<ul class="simple">
+<li>If you choose Bar Graph, you have the same options as that in case of Pie Chart. Choose the option you want to use and then click on <span class="guilabel">Bar It</span> to get the Bar Graph.</li>
+</ul>
+<img alt="Image showing bar graph option." src="_images/bar-graph.png" />
+<ul class="simple">
+<li>If you choose Map, select a column that you want to map in the <span class="guilabel">GeoPoint to Map</span> dropdown. Click on <span class="guilabel">Map It</span> to get the map. You can click on a point to view a balloon with the other information supplied in the table.</li>
+</ul>
+<img alt="Image showing map option." src="_images/map.png" />
+</div>
+<div class="section" id="exporting-submissions">
+<span id="export-submissions"></span><h3>Exporting Submissions<a class="headerlink" href="#exporting-submissions" title="Link zu dieser Überschrift">¶</a></h3>
+<img alt="Image showing export option." src="_images/export-submission.png" />
+<img alt="Image showing export window." src="_images/export-options.png" />
+<p>Click on <span class="guilabel">Export</span> option to export submitted data into useful formats and choose the format in which you want to export data. You can also choose a filter which you have saved earlier to export only a certain subset of data. Details on <a class="reference internal" href="#export-data"><span class="std std-ref">exporting data</span></a> are given in the <a class="reference internal" href="#transfer-data"><span class="std std-ref">data transfer</span></a> section.</p>
+</div>
+<div class="section" id="publishing-submissions">
+<span id="publish-submissions"></span><h3>Publishing Submissions<a class="headerlink" href="#publishing-submissions" title="Link zu dieser Überschrift">¶</a></h3>
+<img alt="Image showing publish option." src="_images/publish-submission.png" />
+<img alt="Image showing publish window." src="_images/publish-options.png" />
+<p>Click on <span class="guilabel">Publish</span> option to publish the submitted data into another service. You can choose where you want to publish data and which data you want to publish. Details on <a class="reference internal" href="#publish-data"><span class="std std-ref">publishing data</span></a> are given in the <a class="reference internal" href="#transfer-data"><span class="std std-ref">data transfer</span></a> section.</p>
+</div>
+<div class="section" id="viewing-exported-submissions">
+<span id="view-export-data"></span><h3>Viewing Exported Submissions<a class="headerlink" href="#viewing-exported-submissions" title="Link zu dieser Überschrift">¶</a></h3>
+<p>You can to view the list of exported files under the <span class="guilabel">Exported Submissions</span> tab.</p>
+<img alt="Image showing exported submissions." src="_images/exported-submission.png" />
+<ul class="simple">
+<li><span class="guilabel">File Type</span> specifies whether file is <code class="file docutils literal"><span class="pre">.csv</span></code> or <code class="file docutils literal"><span class="pre">.kml</span></code> or <code class="file docutils literal"><span class="pre">.json</span></code> file.</li>
+<li><span class="guilabel">Status</span> will state whether the file being made is in progress, or is now available for viewing.</li>
+<li><span class="guilabel">Time Completed</span> shows the time when the <cite>Export</cite> task is complete and the file is ready.</li>
+<li>Click on the link in <span class="guilabel">Download File</span> to see your exported file.</li>
+<li>Select delete box in the <span class="guilabel">Delete</span> column if you want to delete your exported file.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="site-admin">
+<span id="id1"></span><h2>Site Admin<a class="headerlink" href="#site-admin" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Click the <span class="guilabel">Log In</span> link in the upper right corner of the screen to be presented with the Log onto Aggregate screen. Choose the <span class="guilabel">Sign in with Aggregate password</span> button and enter the super-user username you specified within the installer. The initial password for this account is <cite>aggregate</cite>. When you log in, <span class="guilabel">Site Admin</span> will be visible to you.</p>
+<img alt="Image showing sign in option." src="_images/sign-in.png" />
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<ul class="last simple">
+<li>When signing in with this method, if you do not enter the password correctly, you may need to close all your browser windows and quit your browser before you can try again.</li>
+<li>If the instance name of the server changes (the installer asks for this name), then the passwords for all ODK Aggregate usernames will be cleared (preventing their use) and the super-user username’s password will be reset to aggregate and the above message will also be displayed. In this case, you should log in, change the super-user’s password, and change the passwords for all of your ODK Aggregate usernames.</li>
+<li>In April 2015, the use of Google e-mail accounts for accessing the site (via Sign in with Google) stopped working (Google turned off that functionality).  If you have an existing site running an old version of ODK Aggregate that does not have ODK Aggregate usernames configured for website access (and offers a Sign in with Google sign-in choice), you will need to upgrade to regain access to it.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">Beginning with ODK Aggregate 1.3.2, upon the initial installation of the server, it is configured to allow unauthenticated (<cite>anonymousUser</cite>) submissions from ODK Collect and unauthenticated browser access to the submissions and forms management functionality of ODK Aggregate.</p>
+</div>
+<div class="section" id="permissions">
+<span id="permission-tab"></span><h3>Permissions<a class="headerlink" href="#permissions" title="Link zu dieser Überschrift">¶</a></h3>
+<p>If you have not yet changed your super-user password to something other than <cite>aggregate</cite>, the server will display <strong>This server and its data are not secure! Please change the super-user’s password!</strong> at the top of the web page.</p>
+<img alt="Image showing server not secure warning." src="_images/warning.png" />
+<p>Please visit the <span class="guilabel">Permissions</span> sub-tab under the <span class="guilabel">Site Admin</span> tab to change this user’s password.</p>
+<img alt="Image showing permissions sub-tab." src="_images/permissions.png" />
+<p>You can specify additional usernames with browser access to the server under the <span class="guilabel">Permissions</span> sub-tab. Privileges are as follows:</p>
+<ul class="simple">
+<li><strong>Data Collector</strong>: able to download forms to ODK Collect and submit data from ODK Collect to ODK Aggregate.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<ul class="last simple">
+<li>Only ODK accounts and the anonymousUser can be granted Data Collector rights.</li>
+<li>The anonymousUser must be granted Data Collector rights to accept submissions from unidentified sources (e.g., from ODK Collect 1.1.5 and earlier, or from ODK Collect 1.1.7 and later if not authenticating).</li>
+</ul>
+</div>
+<ul class="simple">
+<li><strong>Data Viewer</strong>: able to log onto the ODK Aggregate website, filter and view submissions, and generate csv or kml files for download.</li>
+<li><strong>Form Manager</strong>: all the capabilities of a Data Viewer plus the abilities to upload a form definition, delete a form and its data, and upload submissions manually through the ODK Aggregate website.</li>
+<li><strong>Site Administrator</strong>: all the capabilities of a Form Manager plus the ability to add users, set passwords, and grant these capabilities to other users.</li>
+</ul>
+<img alt="Image showing privileges." src="_images/privileges.png" />
+<p>Remember to click <span class="guilabel">Save Changes</span> to make these changes take effect. You can also edit the privileges for current users.</p>
+<p>You can upload a <code class="file docutils literal"><span class="pre">.csv</span></code> file of users and their capabilities as well as download the current file.</p>
+</div>
+<div class="section" id="preferences">
+<span id="preference-tab"></span><h3>Preferences<a class="headerlink" href="#preferences" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In the <span class="guilabel">Preferences</span> sub-tab under <span class="guilabel">Site Admin</span> tab, you can manage:</p>
+<ul class="simple">
+<li>Google API credentials: These credentials are used when publishing into Google services. For details on this, see <a class="reference internal" href="oauth2-service.html"><span class="doc">Aggregate OAuth2 info</span></a>.</li>
+</ul>
+<img alt="Image showing google api option." src="_images/google-api-option.png" />
+<ul>
+<li><p class="first"><strong>Enketo credentials</strong>: These credentials are used for Enketo webforms integration. To link Enketo with Aggregate, see <a class="reference external" href="https://accounts.enketo.org/support/aggregate/">this</a>.</p>
+</li>
+<li><p class="first"><strong>ODK 2.0 App name</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><em>ODK Tables Synchronization Functionality</em> - check this to enable ODK Tables functionality i.e.  able to download, upload and alter data records within ODK Tables as restricted by table-access privileges granted to the user.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Aggregate features</strong>: These settings affect the operations of the server.</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Disable faster background actions</em> - check this to reduce AppEngine quota usage.</li>
+<li><em>Skip malformed submissions</em> - check this to ignore corrupted submissions.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<img alt="Image showing other options." src="_images/preferences-options.png" />
+</div>
+</div>
+<div class="section" id="help-options">
+<span id="id2"></span><h2>Help Options<a class="headerlink" href="#help-options" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Aggregate provides three kinds of help accessible by pressing one of three buttons in the upper righthand corner.</p>
+<p>The red question mark will give you instructions for the tab you are currently viewing. When you click the button, a help panel will appear at the bottom of the screen. To hide the help panel, simply click the red question mark again.</p>
+<img alt="Image showing question mark help option." src="_images/question-mark-help.png" />
+<p>The green book will give you the most comprehensive help. When you click the button, a popup will appear providing detailed information as well as video instructions.</p>
+<img alt="Image showing green book help option." src="_images/book-help.png" />
+<p>The blue balloon increases the amount of detail that appears describing the button’s functionality when you hover over most buttons.</p>
+<img alt="Image showing blue balloon help option." src="_images/balloon-help.png" />
+</div>
+<div class="section" id="data-transfer-using-aggregate">
+<span id="transfer-data"></span><h2>Data Transfer using Aggregate<a class="headerlink" href="#data-transfer-using-aggregate" title="Link zu dieser Überschrift">¶</a></h2>
+<p>ODK Aggregate supports three primary mechanisms for data transfer:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#export-data"><span class="std std-ref">Exporting</span></a>:  one time snapshot</li>
+<li><a class="reference internal" href="#publish-data"><span class="std std-ref">Publishing</span></a>: continuous streaming of submissions</li>
+<li><a class="reference internal" href="#odk-api"><span class="std std-ref">APIs</span></a>: programmatic access to the data</li>
+</ul>
+<p>Since ODK supports complex data structures such as question grouping, repeating questions, and multimedia, compromises have been made for each mechanism in regards to these data structures. This document explains each mechanism and what each supports.</p>
+<div class="section" id="exporting">
+<span id="export-data"></span><h3>Exporting<a class="headerlink" href="#exporting" title="Link zu dieser Überschrift">¶</a></h3>
+<p>The easiest way to get data from Aggregate is by using its ‘Export’ feature. Export allows the user to manually export all of the data (or filtered data) at any time into one of the following formats:</p>
+<div class="section" id="csv-comma-separated-values">
+<span id="export-to-csv"></span><h4>CSV (comma separated values)<a class="headerlink" href="#csv-comma-separated-values" title="Link zu dieser Überschrift">¶</a></h4>
+<p>CSV files are a text only, tabular representation of the data. Multimedia files are represented by including standard web links to the files. Repeats are also represented with links to the underlying data. Grouping information is not preserved. Metadata is only preserved if a filter is created with the metadata.</p>
+<p>To download CSV files of forms with repeats, consider using ODK Briefcase instead of ODK Aggregate’s export functionality. Instead of repeats that are represented with links to the underlying data, ODK Briefcase will export a set of CSV files, one for each repeating group. ODK Briefcase will also export any multimedia as files (e.g., pictures will get exported as JPEGs). The only metadata that is preserved is the submission date in the CSV is preserved, but the XML files that ODK Briefcase downloads has all form metadata.</p>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">To import CSVs into Excel, you cannot download and open in one step; nor can you double-click on the CSV. You must open Excel and choose Import. If you are asked, the file origin or encoding is UTF-8.</p>
+</div>
+</div>
+<div class="section" id="json">
+<span id="export-to-json"></span><h4>JSON<a class="headerlink" href="#json" title="Link zu dieser Überschrift">¶</a></h4>
+<p>JSON is a text only representation of the data in a key:value format. Multimedia files are represented by including standard web links to the files. Repeating data is preserved, but grouping information not related to repeats is not. Metadata is only preserved if a filter is created with the metadata.</p>
+</div>
+<div class="section" id="kml-keyhole-markup-language">
+<span id="export-to-kml"></span><h4>KML (Keyhole Markup Language)<a class="headerlink" href="#kml-keyhole-markup-language" title="Link zu dieser Überschrift">¶</a></h4>
+<p>KML is a text only representation of the data similar to XML, but used for mapping applications like Google Earth. Multimedia files are represented by including standard web links to the files hosted on the server. Pictures will appear embedded in popup windows (when pushpins are clicked) in programs that render .kml files. Repeats and grouping information is not preserved. Metadata is only preserved if a filter is created with the metadata.</p>
+<table border="1" class="colwidths-auto docutils" id="id8">
+<caption><span class="caption-text"><strong>Export Data Summary</strong></span><a class="headerlink" href="#id8" title="Link zu dieser Tabelle">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Format</th>
+<th class="head">Groups</th>
+<th class="head">Repeats</th>
+<th class="head">Multimedia</th>
+<th class="head">Metadata</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>CSV(Aggregate)</td>
+<td>not preserved</td>
+<td>links to</td>
+<td>links to</td>
+<td>preservable</td>
+</tr>
+<tr class="row-odd"><td>CSV(Briefcase)</td>
+<td>not preserved</td>
+<td>split into separate CSVs</td>
+<td>exported as files</td>
+<td>only submission date</td>
+</tr>
+<tr class="row-even"><td>JSON</td>
+<td>not preserved</td>
+<td>preserved</td>
+<td>links to</td>
+<td>preservable</td>
+</tr>
+<tr class="row-odd"><td>KML</td>
+<td>not preserved</td>
+<td>not preserved</td>
+<td>links to</td>
+<td>preservable</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="publishing">
+<span id="publish-data"></span><h3>Publishing<a class="headerlink" href="#publishing" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Aggregate provides mechanism for either bulk publishing data to another service, or for streaming incoming data to a service as it is received, or both.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warnung</p>
+<p class="last">Under certain failure conditions, the downstream service can receive multiple copies of a given submission. This is known, expected, behavior.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<ul class="last simple">
+<li>Duplicates typically occur if the downstream service is slow to respond or acknowledge a request.</li>
+<li>It is your responsibility to detect and eliminate these duplicates should they occur (they will always have exactly the same information in all fields).</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<ul class="last simple">
+<li>If ODK Aggregate aborts its publishing attempt before it gets an acknowledgement, it will re-send the submission a short time later. If the downstream server successfully processed the first request, the re-send of that same submission can cause a duplicate record of it to appear in the downstream system. The instance ID of the submission will appear as the metainstanceid column in Google Sheets and as the <em>meta-instance-id</em> column in Google Fusion tables.</li>
+<li>When the downstream server fails to respond or responds with an error code, ODK Aggregate first delays a re-send for 60 seconds, and, if that also fails, it then backs off its publishing attempts, and will re-send at either 7.5-minute or 15-minute intervals until the downstream service successfully responds, after which ODK Aggregate will resume its normal publishing behavior.</li>
+</ul>
+</div>
+<p>Aggregate currently supports publishing data to the following services or in the following formats:</p>
+<div class="section" id="google-fusion-tables">
+<span id="fusion-table"></span><h4>Google Fusion Tables<a class="headerlink" href="#google-fusion-tables" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Fusion Tables is an experimental data visualization web application to gather, visualize, and share larger data tables. Multimedia files are represented by including standard web links to the files. Repeating groups of questions are split into separate tables. All metadata is preserved. Fusion Tables is hosted in Google’s cloud infrastructure. We know of no row limit, but one may exist. Fusion Tables also has an API that can be used to export/publish data.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warnung</p>
+<p class="last">Non-repeating grouping information is not preserved. This implies that if your form has a non-repeating group <cite>purchaser</cite> and a second non-repeating group <cite>supplier</cite> and within each of these groups, you have a <cite>name</cite> field, then when you publish to Fusion Tables, there will be two columns called <cite>name</cite>. Unfortunately, that badly confuses Fusion Tables, and generally results in data not transferring successfully into Fusion Tables.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tipp</p>
+<p class="last">The solution is to the problem in above example is to design your forms with field names like <cite>purchaser_name</cite> and <cite>supplier_name</cite>.</p>
+</div>
+</div>
+<div class="section" id="google-spreadsheets">
+<span id="google-spreadsheet"></span><h4>Google Spreadsheets<a class="headerlink" href="#google-spreadsheets" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Spreadsheets is Google’s cloud-hosted spreadsheet solution. Multimedia files are represented by including standard web links to the files. Repeats are also represented with links to the underlying data. All metadata is preserved. Spreadsheets has a 400,000 cell limit, above which errors will be reported. Spreadsheets also has an API that can be used to export/publish data. Similar to Google Fusion tables, non-repeating grouping information is not preserved.</p>
+</div>
+<div class="section" id="json-server">
+<span id="id3"></span><h4>JSON Server<a class="headerlink" href="#json-server" title="Link zu dieser Überschrift">¶</a></h4>
+<p>JSON preserves grouping and repeat structures. The user can choose to let multimedia files be represented as web links or embedded as base64 encoded strings. All metadata is preserved.</p>
+</div>
+<div class="section" id="google-maps-engine">
+<span id="google-map-engine"></span><h4>Google Maps Engine<a class="headerlink" href="#google-maps-engine" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Maps Engine is a cloud-hosted service to easily create and share maps. Multimedia files are represented by including standard web links to the files. Grouping information is preserved in the variable names. Repeating groups are forbidden and submissions must have at least one geopoint. Maps Engine also has an API that can be used to export/publish data.</p>
+</div>
+<div class="section" id="redcap-server">
+<span id="id4"></span><h4>RedCap Server<a class="headerlink" href="#redcap-server" title="Link zu dieser Überschrift">¶</a></h4>
+<p>RedCap servers ignore grouping and repeating information. Multimedia files are sent as binary form elements in POST.</p>
+</div>
+<div class="section" id="ohmage-json-server">
+<span id="ohmag-json-server"></span><h4>Ohmage JSON Server<a class="headerlink" href="#ohmage-json-server" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Ohmage JSON preserves grouping and repeat structures. Multimedia files are sent as binary form elements in POST.</p>
+<p>For more details on JSON Server, RedCap Server and Ohmage JSON Server see <a class="reference external" href="https://github.com/opendatakit/opendatakit/wiki/Aggregate-Publishers-Implementation-Details">Aggregate Publishers Implementation Details</a></p>
+<table border="1" class="colwidths-auto docutils" id="id9">
+<caption><span class="caption-text"><strong>Publish data Summary</strong></span><a class="headerlink" href="#id9" title="Link zu dieser Tabelle">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Service</th>
+<th class="head">Groups</th>
+<th class="head">Repeats</th>
+<th class="head">Multimedia</th>
+<th class="head">Metadata</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Google Fusion Tables</td>
+<td>not preserved</td>
+<td>split into separate tables</td>
+<td>links to</td>
+<td>preserved</td>
+</tr>
+<tr class="row-odd"><td>Google Spreadsheets</td>
+<td>not preserved</td>
+<td>links to</td>
+<td>links to</td>
+<td>preserved</td>
+</tr>
+<tr class="row-even"><td>JSON Server</td>
+<td>preserved</td>
+<td>preserved</td>
+<td>links to or embedded as base64</td>
+<td>preserved</td>
+</tr>
+<tr class="row-odd"><td>Google Maps Engine</td>
+<td>preserved</td>
+<td>forbidden</td>
+<td>links to</td>
+<td>not preserved</td>
+</tr>
+<tr class="row-even"><td>RedCap Server</td>
+<td>not preserved</td>
+<td>not preserved</td>
+<td>binary elements in POST</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Ohmage JSON Server</td>
+<td>preserved</td>
+<td>preserved</td>
+<td>binary elements in POST</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="apis">
+<span id="odk-api"></span><h3>APIs<a class="headerlink" href="#apis" title="Link zu dieser Überschrift">¶</a></h3>
+<p>ODK has public APIs defined for sending data to and from its various components. This section gives references to those API implementations that can be used for connecting new applications to the ODK ecosystem.</p>
+<div class="section" id="briefcase-cli">
+<span id="id5"></span><h4>Briefcase CLI<a class="headerlink" href="#briefcase-cli" title="Link zu dieser Überschrift">¶</a></h4>
+<p>ODK Briefcase 1.4.4 introduces a new Command Line Interface (CLI) to automate downloading forms from ODK Aggregate (or ODK Collect) and exporting the forms to an Excel-compatible format like CSV. For more details, see <a class="reference internal" href="briefcase-forms.html#cli-use"><span class="std std-ref">Working with command line on Briefcase</span></a>.</p>
+</div>
+<div class="section" id="briefcase-aggregate-api">
+<span id="briefacse-aggregate-api"></span><h4>Briefcase-Aggregate API<a class="headerlink" href="#briefcase-aggregate-api" title="Link zu dieser Überschrift">¶</a></h4>
+<p>ODK Briefcase uses an API that external applications can use to pull all data from and push data to ODK Aggregate.</p>
+<p>Interfaces used during pull actions are:</p>
+<ul class="simple">
+<li>OpenRosa Form Discovery API</li>
+<li>download forms and media files using URLs form discovery</li>
+<li><code class="docutils literal"><span class="pre">view/submissionList</span></code> to obtain a chunk of submission keys</li>
+<li><code class="docutils literal"><span class="pre">view/downloadSubmission</span></code> to download an individual submission</li>
+</ul>
+<p>Interfaces used during push actions are:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">formUpload</span></code> to upload a form and its media files to ODK Aggregate</li>
+<li><code class="docutils literal"><span class="pre">view/submissionList</span></code> to obtain a chunk of submission keys</li>
+<li>OpenRosa Form Submission/Overwite API (with extensions)</li>
+</ul>
+<p>For more details, see <a class="reference external" href="https://github.com/opendatakit/opendatakit/wiki/Briefcase-Aggregate-API">Briefcase Aggregate API</a>.</p>
+</div>
+<div class="section" id="collect-aggregate-api">
+<span id="id7"></span><h4>Collect-Aggregate API<a class="headerlink" href="#collect-aggregate-api" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Collect and Aggregate define APIs for pulling form information from Aggregate to Collect, and for sending collected form data from Collect to Aggregate.</p>
+<p>For details, see these links:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://bitbucket.org/javarosa/javarosa/wiki/OpenRosaAPI">https://bitbucket.org/javarosa/javarosa/wiki/OpenRosaAPI</a></li>
+<li><a class="reference external" href="https://bitbucket.org/javarosa/javarosa/wiki/FormListAPI">https://bitbucket.org/javarosa/javarosa/wiki/FormListAPI</a></li>
+<li><a class="reference external" href="https://bitbucket.org/javarosa/javarosa/wiki/FormSubmissionAPI">https://bitbucket.org/javarosa/javarosa/wiki/FormSubmissionAPI</a></li>
+</ul>
+</div>
+<div class="section" id="direct-database-connection">
+<span id="direct-database"></span><h4>Direct database connection<a class="headerlink" href="#direct-database-connection" title="Link zu dieser Überschrift">¶</a></h4>
+<p>If you are running on a Tomcat server, you have access to the underlying MySQL or PostgreSQL tables. The structure of those tables are documented at <a class="reference external" href="https://github.com/opendatakit/opendatakit/wiki/Aggregate-Database-Structure">Aggregate Database Structure</a>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warnung</p>
+<p class="last">This is a fragile way to pull data from Aggregate because table structure could change between versions. Moreover, changing any of this data could corrupt your Aggregate install.</p>
+</div>
+</div>
+</div>
+<div class="section" id="accessing-media">
+<span id="media-access"></span><h3>Accessing Media<a class="headerlink" href="#accessing-media" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Many of the export and publishing options provide a URL to the media (image, audio or video) without providing the content itself. To enable the viewing (following) of this link without requiring a log-in:</p>
+<ul class="simple">
+<li>Go to the <span class="guilabel">Permissions</span> sub-tab under the <span class="guilabel">Site Admin</span> tab.</li>
+<li>Check the checkbox for: <cite>Allow anonymous retrieval of images, audio and video data (needed for GoogleEarth balloon displays)</cite>.</li>
+<li>Click the <span class="guilabel">Save Changes</span> button.</li>
+</ul>
+<p>This allows anyone to view the media files on your server. Even though you are granting anyone access to this information, it is still quite secure because the users would need to have a valid URL.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="aggregate-deployment-planning.html" class="btn btn-neutral" title="Aggregate Deployment Planning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Aggregate Deployment Planning</a>
+       
+      
+        <a href="aggregate-upgrade.html" class="btn btn-neutral float-right" title="Aggregate Upgrade" accesskey="n" rel="next">Aggregate Upgrade <span class="fa fa-arrow-circle-right"></span></a>
+      
+    </div>
+  
+
+  <hr/>
+  <p class="footerText"> 
+
+If you still need help, you can ask support questions in the
+
+ <a href="
+
+https://forum.opendatakit.org/
+
+"> 
+
+ODK Forum
+
+ </a> </p>
+  <p class="footerText"> 
+
+If you find a problem with this documentation, please 
+
+ <a href="
+
+https://github.com/opendatakit/docs/issues
+
+"> 
+
+file an issue
+
+ </a> </p>
+  <p class="footerText"> 
+
+You are also encouraged to
+
+ <a href=" 
+
+https://github.com/opendatakit/docs/
+
+"> 
+
+fork our Github repo 
+
+ </a>  
+
+and 
+
+ <a href="
+
+/contributing/
+
+"> 
+
+become a contributor
+
+ </a></p>
+  
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Open Data Kit. This document is licensed under a Creative Commons Attribution 4.0 International License.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/js/custom.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
